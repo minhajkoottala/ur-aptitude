@@ -1,0 +1,658 @@
+[
+  {
+    "id": "systems-architect",
+    "traits": [
+      "Investigative",
+      "Realistic"
+    ],
+    "primaryAptitude": "Logical",
+    "explorer": {
+      "title": "The Master Builder",
+      "badge": "🛠️",
+      "tagline": "You figure out how complex gadgets, games, and machines work from the inside out!",
+      "superpowers": [
+        "Solving intricate puzzles fast",
+        "Designing & building models",
+        "Root-cause thinking"
+      ],
+      "funQuests": [
+        "Build a custom game level in Roblox or Scratch",
+        "Assemble a DIY robotics or electronics kit"
+      ],
+      "parentTip": "Nurture their curiosity with open-ended building tools, coding platforms, and mechanical toys rather than rigid instructions."
+    },
+    "navigator": {
+      "title": "The Systems Architect",
+      "badge": "⚡",
+      "tagline": "Deconstructs complex problems, spots hidden patterns, and engineers scalable systems.",
+      "superpowers": [
+        "High-dimensional logic",
+        "Systematic deconstruction",
+        "Spatial simulation"
+      ],
+      "flowTriggers": "Tackling unstructured, challenging technical or algorithmic problems with high autonomy.",
+      "frictionTriggers": "Repetitive bureaucratic tasks with rigid manual rules and zero optimization freedom.",
+      "strategicFields": [
+        "Computer Science & Distributed Systems",
+        "Robotics & Autonomous Mechatronics",
+        "System Architecture & Engineering Physics"
+      ],
+      "streamFit": "PCM with Computer Science / Applied Math"
+    }
+  },
+  {
+    "id": "creative-visionary",
+    "traits": [
+      "Artistic",
+      "Investigative"
+    ],
+    "primaryAptitude": "Spatial",
+    "explorer": {
+      "title": "The Imagitative Designer",
+      "badge": "🎨",
+      "tagline": "You blend wild creativity with deep curiosity to create things nobody else has thought of!",
+      "superpowers": [
+        "Visualizing 3D worlds",
+        "Original storytelling",
+        "Connecting abstract ideas"
+      ],
+      "funQuests": [
+        "Draw a comic book series or world map",
+        "Experiment with digital animation & 3D design"
+      ],
+      "parentTip": "Give them quiet time to create. Value their unique perspectives and encourage visual expression."
+    },
+    "navigator": {
+      "title": "The Creative Visionary",
+      "badge": "✨",
+      "tagline": "Fuses high-level aesthetic intuition with deep conceptual depth to design the future.",
+      "superpowers": [
+        "Spatial mental rendering",
+        "Concept synthesis",
+        "Aesthetic innovation"
+      ],
+      "flowTriggers": "Designing brand new concepts, visual media, or immersive user experiences from scratch.",
+      "frictionTriggers": "Strictly regimented, number-heavy environments where creative risk is discouraged.",
+      "strategicFields": [
+        "UI/UX & Product Experience Design",
+        "Game Architecture & Virtual Production",
+        "Industrial Design & Creative Technology"
+      ],
+      "streamFit": "Design / Applied Arts / Humanities with Digital Media"
+    }
+  },
+  {
+    "id": "growth-strategist",
+    "traits": [
+      "Enterprising",
+      "Investigative"
+    ],
+    "primaryAptitude": "Numerical",
+    "explorer": {
+      "title": "The Business Mind",
+      "badge": "🚀",
+      "tagline": "You spot great ideas quickly and love turning fun plans into big team wins!",
+      "superpowers": [
+        "Quick math & trade-offs",
+        "Convincing squad leader",
+        "Spotting opportunities"
+      ],
+      "funQuests": [
+        "Set up a fun game stall at school fest",
+        "Run a mini squad challenge with prize pools"
+      ],
+      "parentTip": "Support their entrepreneurial spark! Help them set up small projects where they manage a budget."
+    },
+    "navigator": {
+      "title": "The Growth Strategist",
+      "badge": "📈",
+      "tagline": "Identifies market leverage, decodes data trends, and scales ideas into high-impact ventures.",
+      "superpowers": [
+        "Quantitative risk analysis",
+        "Persuasive strategy",
+        "Market trend decoding"
+      ],
+      "flowTriggers": "Analyzing competitive markets, setting growth strategy, and pitching high-stakes ideas.",
+      "frictionTriggers": "Maintenance jobs where metrics are stagnant and there is no room for initiative.",
+      "strategicFields": [
+        "Venture Capital & FinTech",
+        "Product Growth & Quantitative Strategy",
+        "Tech Entrepreneurship & Market Analysis"
+      ],
+      "streamFit": "Commerce / Economics with Mathematics or Computer Applications"
+    }
+  },
+  {
+    "id": "tech-alchemist",
+    "traits": [
+      "Realistic",
+      "Investigative"
+    ],
+    "primaryAptitude": "Spatial",
+    "explorer": {
+      "title": "The Hardware Wizard",
+      "badge": "🔬",
+      "tagline": "You love hands-on experiments, modding gear, and figuring out what makes tech tick!",
+      "superpowers": [
+        "Hands-on tinkering",
+        "3D visual memory",
+        "Hardware problem-solving"
+      ],
+      "funQuests": [
+        "Mod a gaming controller or custom PC case",
+        "Build a mini drone or RC car from scratch"
+      ],
+      "parentTip": "Provide safe environments for physical tinkering, dismantling old electronics, and hands-on science."
+    },
+    "navigator": {
+      "title": "The Tech Alchemist",
+      "badge": "⚙️",
+      "tagline": "Bridges physical mechanics and software logic to craft cutting-edge physical technology.",
+      "superpowers": [
+        "Spatial mechanics",
+        "Hardware-software integration",
+        "Empirical debugging"
+      ],
+      "flowTriggers": "Working directly with physical prototypes, IoT devices, robotics, or custom hardware.",
+      "frictionTriggers": "Purely theoretical debate without tangible testing or real-world execution.",
+      "strategicFields": [
+        "Mechatronics & IoT Hardware Engineering",
+        "Aerospace & Drone Technology",
+        "Embedded Systems & Defense Tech"
+      ],
+      "streamFit": "PCM with Physics & Electronics / Vocational Tech"
+    }
+  },
+  {
+    "id": "empathetic-storyteller",
+    "traits": [
+      "Social",
+      "Artistic"
+    ],
+    "primaryAptitude": "Verbal",
+    "explorer": {
+      "title": "The Heart & Voice",
+      "badge": "🌟",
+      "tagline": "You express feelings amazingly well and always make people feel connected and understood!",
+      "superpowers": [
+        "Word magic & storytelling",
+        "Deep empathy",
+        "Making everyone feel included"
+      ],
+      "funQuests": [
+        "Write podcast scripts or short stories",
+        "Host school events or drama performances"
+      ],
+      "parentTip": "Encourage their writing, public speaking, and creative performance. Validate their high emotional intelligence."
+    },
+    "navigator": {
+      "title": "The Empathetic Storyteller",
+      "badge": "🎙️",
+      "tagline": "Master communicator who crafts resonant narratives that inspire communities and spark movement.",
+      "superpowers": [
+        "Verbal synthesis",
+        "Emotional resonance",
+        "Narrative framing"
+      ],
+      "flowTriggers": "Crafting compelling campaigns, interviewing inspiring people, or writing high-impact content.",
+      "frictionTriggers": "Isolated, sterile environments focused purely on cold data with zero human touch.",
+      "strategicFields": [
+        "Media, Journalism & Content Strategy",
+        "Brand Communications & Narrative Design",
+        "Psychology & Human Experience Research"
+      ],
+      "streamFit": "Humanities / Psychology / Journalism & Mass Comm"
+    }
+  },
+  {
+    "id": "ops-maestro",
+    "traits": [
+      "Conventional",
+      "Enterprising"
+    ],
+    "primaryAptitude": "Logical",
+    "explorer": {
+      "title": "The Master Organizer",
+      "badge": "📋",
+      "tagline": "You keep everything running smoothly, on schedule, and neatly organized!",
+      "superpowers": [
+        "Super schedule management",
+        "Accuracy & detail precision",
+        "Keeping squad organized"
+      ],
+      "funQuests": [
+        "Create a master gaming schedule for friends",
+        "Organize family trip itineraries"
+      ],
+      "parentTip": "Appreciate their structure and organization! Let them take charge of planning family schedules."
+    },
+    "navigator": {
+      "title": "The Ops Maestro",
+      "badge": "🎯",
+      "tagline": "The execution engine that transforms chaos into clockwork operational efficiency.",
+      "superpowers": [
+        "Logical process optimization",
+        "Precision execution",
+        "Resource allocation"
+      ],
+      "flowTriggers": "Structuring messy workflows, setting up automation systems, and managing timelines.",
+      "frictionTriggers": "Vague, unorganized projects with constantly shifting goalposts and zero guidelines.",
+      "strategicFields": [
+        "Operations Engineering & Supply Chain",
+        "Project Management & Operations Tech",
+        "Financial Operations & Compliance Systems"
+      ],
+      "streamFit": "Commerce / Business Administration / Industrial Engineering"
+    }
+  },
+  {
+    "id": "quantitative-pioneer",
+    "traits": [
+      "Investigative",
+      "Conventional"
+    ],
+    "primaryAptitude": "Numerical",
+    "explorer": {
+      "title": "The Number Ninja",
+      "badge": "🔢",
+      "tagline": "You see patterns in numbers that others miss and love cracking math puzzles!",
+      "superpowers": [
+        "Mental math speed",
+        "Pattern spotter",
+        "High accuracy under pressure"
+      ],
+      "funQuests": [
+        "Solve Sudoku & math olympiad teasers",
+        "Analyze stats of your favorite sports team"
+      ],
+      "parentTip": "Feed their passion for math games, statistics, and logic puzzles. Support advanced math learning."
+    },
+    "navigator": {
+      "title": "The Quantitative Pioneer",
+      "badge": "📊",
+      "tagline": "Unlocks hidden truths buried inside complex datasets, financial models, and mathematical structures.",
+      "superpowers": [
+        "Numerical fluency",
+        "Statistical modeling",
+        "Data rigor"
+      ],
+      "flowTriggers": "Analyzing complex data sets, building financial algorithms, or proving mathematical models.",
+      "frictionTriggers": "Subjective arguments lacking empirical evidence or verifiable data.",
+      "strategicFields": [
+        "Data Science & Predictive Analytics",
+        "Quantitative Finance & Actuarial Science",
+        "Biostatistics & Computational Economics"
+      ],
+      "streamFit": "PCM / Economics with Statistics & Advanced Mathematics"
+    }
+  },
+  {
+    "id": "human-centric-leader",
+    "traits": [
+      "Social",
+      "Enterprising"
+    ],
+    "primaryAptitude": "Verbal",
+    "explorer": {
+      "title": "The Captain",
+      "badge": "👑",
+      "tagline": "You naturally lead the squad, inspire confidence, and bring out the best in everyone!",
+      "superpowers": [
+        "Rallying people together",
+        "Persuasive speaking",
+        "Conflict resolution"
+      ],
+      "funQuests": [
+        "Run for school captain or club head",
+        "Organize a charity drive or sports tourney"
+      ],
+      "parentTip": "Guide their natural leadership skills with lessons in empathy, teamwork, and responsible influence."
+    },
+    "navigator": {
+      "title": "The Human-Centric Leader",
+      "badge": "⚡",
+      "tagline": "Rallies diverse teams around a shared vision, steering collective momentum toward ambitious goals.",
+      "superpowers": [
+        "Verbal persuasion",
+        "Team alignment",
+        "Strategic diplomacy"
+      ],
+      "flowTriggers": "Leading mission-driven teams, managing stakeholders, and driving strategic direction.",
+      "frictionTriggers": "Isolated back-office work with zero interpersonal interaction or team influence.",
+      "strategicFields": [
+        "Product Management & Tech Leadership",
+        "Organizational Strategy & Human Capital",
+        "Public Policy & Educational Leadership"
+      ],
+      "streamFit": "Humanities / Commerce / Business Studies with Public Speaking"
+    }
+  },
+  {
+    "id": "digital-craftsman",
+    "traits": [
+      "Realistic",
+      "Artistic"
+    ],
+    "primaryAptitude": "Spatial",
+    "explorer": {
+      "title": "The Digital Creator",
+      "badge": "🎬",
+      "tagline": "You love making things look cool, editing videos, designing graphics, and building visuals!",
+      "superpowers": [
+        "Eye for visual detail",
+        "Hands-on creation",
+        "Spatial aesthetic sense"
+      ],
+      "funQuests": [
+        "Edit a viral-style video clip",
+        "Design custom stickers or digital art"
+      ],
+      "parentTip": "Support their interest in digital creative tools (Canva, Blender, Premiere, Figma)."
+    },
+    "navigator": {
+      "title": "The Digital Craftsman",
+      "badge": "🖌️",
+      "tagline": "Crafts pixel-perfect digital artifacts, blending technical craft with aesthetic finesse.",
+      "superpowers": [
+        "Spatial composition",
+        "Craft precision",
+        "Visual execution"
+      ],
+      "flowTriggers": "Building high-fidelity UI components, 3D modeling, or editing cinematic media.",
+      "frictionTriggers": "Purely verbal/administrative meetings with no opportunity to create artifacts.",
+      "strategicFields": [
+        "3D Animation & Motion Graphics",
+        "Front-End Engineering & Creative Web",
+        "VFX Production & Virtual Art"
+      ],
+      "streamFit": "Arts / Applied Arts / Computer Graphics & Web Design"
+    }
+  },
+  {
+    "id": "data-detective",
+    "traits": [
+      "Investigative",
+      "Conventional"
+    ],
+    "primaryAptitude": "Logical",
+    "explorer": {
+      "title": "The Sleuth",
+      "badge": "🕵️",
+      "tagline": "Nothing gets past you! You love hunting for clues, finding mistakes, and solving mysteries.",
+      "superpowers": [
+        "Eagle-eye accuracy",
+        "Deductive detective work",
+        "Unflappable focus"
+      ],
+      "funQuests": [
+        "Solve mystery escape rooms or riddle threads",
+        "Find hidden easter eggs in software/games"
+      ],
+      "parentTip": "Challenge them with mystery books, logic puzzles, and forensic-style problem solving."
+    },
+    "navigator": {
+      "title": "The Data Detective",
+      "badge": "🔍",
+      "tagline": "Hunts down anomalies, uncovers root vulnerabilities, and verifies truth in complex systems.",
+      "superpowers": [
+        "Logical deduction",
+        "Anomaly detection",
+        "Rigorous audit"
+      ],
+      "flowTriggers": "Debugging complex codebase errors, investigating cybersecurity breaches, or auditing data.",
+      "frictionTriggers": "Superficial overviews that skip deep inspection and ignore edge cases.",
+      "strategicFields": [
+        "Cybersecurity & Digital Forensics",
+        "Quality Assurance & Automated Testing",
+        "Financial Crime Audit & Intelligence"
+      ],
+      "streamFit": "PCM with Computer Science / Cyber Security"
+    }
+  },
+  {
+    "id": "community-builder",
+    "traits": [
+      "Social",
+      "Conventional"
+    ],
+    "primaryAptitude": "Verbal",
+    "explorer": {
+      "title": "The Squad Anchor",
+      "badge": "🤝",
+      "tagline": "You make sure everyone feels safe, included, and cared for in any group setting!",
+      "superpowers": [
+        "Friendly listening",
+        "Keeping promises",
+        "Creating welcoming spaces"
+      ],
+      "funQuests": [
+        "Start a welcome buddy system at school",
+        "Organize peer study groups"
+      ],
+      "parentTip": "Celebrate their reliability, kindness, and skill in keeping friendships strong and harmonious."
+    },
+    "navigator": {
+      "title": "The Community Builder",
+      "badge": "🌐",
+      "tagline": "Creates safe, structured, and thriving ecosystems where people collaborate and grow.",
+      "superpowers": [
+        "Empathy & active listening",
+        "Systemic hospitality",
+        "Verbal clarity"
+      ],
+      "flowTriggers": "Managing developer communities, organizing events, and building support infrastructure.",
+      "frictionTriggers": "Aggressive sales environments that prioritize short-term profit over people.",
+      "strategicFields": [
+        "Developer Relations & Community Ops",
+        "Human Resources & Talent Experience",
+        "Social Impact & Non-Profit Leadership"
+      ],
+      "streamFit": "Humanities / Psychology / Social Work / HR"
+    }
+  },
+  {
+    "id": "product-strategist",
+    "traits": [
+      "Enterprising",
+      "Artistic"
+    ],
+    "primaryAptitude": "Logical",
+    "explorer": {
+      "title": "The Idea Catalyst",
+      "badge": "💡",
+      "tagline": "You come up with creative concepts that look amazing AND actually work in real life!",
+      "superpowers": [
+        "Creative vision + logic",
+        "Cool product ideas",
+        "Expressive pitches"
+      ],
+      "funQuests": [
+        "Pitch a new app idea to your family",
+        "Design a futuristic vehicle concept"
+      ],
+      "parentTip": "Encourage them to balance creative ideation with simple logical feasibility tests."
+    },
+    "navigator": {
+      "title": "The Product Strategist",
+      "badge": "📐",
+      "tagline": "Combines user empathy, aesthetic flair, and business logic to build irresistible products.",
+      "superpowers": [
+        "Product vision",
+        "Logical prioritization",
+        "Market alignment"
+      ],
+      "flowTriggers": "Defining product roadmaps, user research synthesis, and rapid prototype testing.",
+      "frictionTriggers": "Legacy environments unwilling to innovate or pivot based on user feedback.",
+      "strategicFields": [
+        "Product Management (PM)",
+        "Design Strategy & UX Research",
+        "Tech Innovation & EdTech / Consumer Tech"
+      ],
+      "streamFit": "Interdisciplinary: Science or Commerce with Design / IT"
+    }
+  },
+  {
+    "id": "mechanical-innovator",
+    "traits": [
+      "Realistic",
+      "Conventional"
+    ],
+    "primaryAptitude": "Spatial",
+    "explorer": {
+      "title": "The Master Mechanic",
+      "badge": "🔩",
+      "tagline": "You love precision tools, clean assemblies, and making machines run flawlessly!",
+      "superpowers": [
+        "Spatial precision",
+        "Tool mastery",
+        "Methodical assembly"
+      ],
+      "funQuests": [
+        "Build complex LEGO Technic sets",
+        "Help fix household appliances safely"
+      ],
+      "parentTip": "Provide structural building challenges, woodwork/robotics workshops, and precision crafts."
+    },
+    "navigator": {
+      "title": "The Mechanical Innovator",
+      "badge": "⚙️",
+      "tagline": "Engineers physical products with high structural integrity and tight tolerances.",
+      "superpowers": [
+        "Spatial tolerance modeling",
+        "Structural integrity",
+        "Methodical execution"
+      ],
+      "flowTriggers": "CAD design, 3D printing, mechanical stress testing, and hardware fabrication.",
+      "frictionTriggers": "Purely abstract philosophical debates without physical applicability.",
+      "strategicFields": [
+        "Mechanical & Structural Engineering",
+        "Automotive & EV Technology",
+        "Robotics Fabrication & Additive Manufacturing"
+      ],
+      "streamFit": "PCM with Mechanical / Automobile / Civil Engineering"
+    }
+  },
+  {
+    "id": "scientific-explorer",
+    "traits": [
+      "Investigative",
+      "Social"
+    ],
+    "primaryAptitude": "Logical",
+    "explorer": {
+      "title": "The Curiosity Champ",
+      "badge": "🧬",
+      "tagline": "You ask big questions about life, nature, and science, and love sharing answers with friends!",
+      "superpowers": [
+        "Deep curiosity",
+        "Explaining science simply",
+        "Caring for living things"
+      ],
+      "funQuests": [
+        "Create a mini biology/space blog",
+        "Conduct fun home chemistry experiments"
+      ],
+      "parentTip": "Feed their passion for nature, science museums, space, and medical breakthroughs."
+    },
+    "navigator": {
+      "title": "The Scientific Explorer",
+      "badge": "🔬",
+      "tagline": "Dedicated to discovering scientific breakthroughs that improve human health and sustainability.",
+      "superpowers": [
+        "Scientific method rigor",
+        "Empathetic research",
+        "Complex logic"
+      ],
+      "flowTriggers": "Laboratory research, clinical data analysis, and environmental science studies.",
+      "frictionTriggers": "Jobs that prioritize speed over accuracy and scientific truth.",
+      "strategicFields": [
+        "Biotechnology & Bio-Engineering",
+        "Medicine, Neuroscience & Healthcare Tech",
+        "Environmental Science & CleanTech"
+      ],
+      "streamFit": "PCB (Physics, Chemistry, Biology) / Bio-Tech"
+    }
+  },
+  {
+    "id": "venture-catalyst",
+    "traits": [
+      "Enterprising",
+      "Realistic"
+    ],
+    "primaryAptitude": "Numerical",
+    "explorer": {
+      "title": "The Action Leader",
+      "badge": "⚡",
+      "tagline": "You get things done fast in the real world and love building practical things that earn!",
+      "superpowers": [
+        "Practical hustle",
+        "Real-world speed",
+        "Financial instinct"
+      ],
+      "funQuests": [
+        "Organize a local recycling or yard sale drive",
+        "Build a simple service project"
+      ],
+      "parentTip": "Encourage practical projects that combine real-world physical action with financial planning."
+    },
+    "navigator": {
+      "title": "The Venture Catalyst",
+      "badge": "💥",
+      "tagline": "Executes high-velocity projects in the real world, turning physical assets into value.",
+      "superpowers": [
+        "Pragmatic execution",
+        "Financial leverage",
+        "Real-world speed"
+      ],
+      "flowTriggers": "Launching real-world operations, real estate tech, supply chain setups, or hardware ventures.",
+      "frictionTriggers": "Endless passive discussions with no bias toward physical action.",
+      "strategicFields": [
+        "E-Commerce & Supply Chain Logistics",
+        "Real Estate Tech & Infrastructure",
+        "Agritech & Industrial Hardware Operations"
+      ],
+      "streamFit": "Commerce / Vocational Business & Applied Tech"
+    }
+  },
+  {
+    "id": "expressive-communicator",
+    "traits": [
+      "Artistic",
+      "Social"
+    ],
+    "primaryAptitude": "Verbal",
+    "explorer": {
+      "title": "The Story Creator",
+      "badge": "🎭",
+      "tagline": "You bring stories, plays, and ideas to life with amazing enthusiasm and charm!",
+      "superpowers": [
+        "Expressive speaking",
+        "Creative imagination",
+        "Winning hearts"
+      ],
+      "funQuests": [
+        "Direct a short skit with friends",
+        "Write catchy lyrics or poetry"
+      ],
+      "parentTip": "Celebrate their expressive energy in drama, debate, creative writing, and social performance."
+    },
+    "navigator": {
+      "title": "The Expressive Communicator",
+      "badge": "✨",
+      "tagline": "Captivates audiences through powerful verbal storytelling, performing arts, and social influence.",
+      "superpowers": [
+        "Verbal eloquence",
+        "Performance art",
+        "Social influence"
+      ],
+      "flowTriggers": "Public speaking, content hosting, theatrical production, and brand storytelling.",
+      "frictionTriggers": "Dry numeric data entry with no room for personal expression or storytelling.",
+      "strategicFields": [
+        "Performing Arts, Theatre & Acting",
+        "Public Relations & Influencer Strategy",
+        "Podcast Hosting & Broadcasting"
+      ],
+      "streamFit": "Arts & Humanities / Performing Arts / Mass Media"
+    }
+  }
+]

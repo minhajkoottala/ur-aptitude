@@ -1,0 +1,1675 @@
+
+## batch 1
+
+{
+"interests": [
+{
+"id": "int_01",
+"scenario": "Your college fest is in total chaos. How do you step in?",
+"optionA": {
+"text": "Fix the broken sound system wiring.",
+"trait": "Realistic"
+},
+"optionB": {
+"text": "Take a mic and calm the crowd down.",
+"trait": "Social"
+}
+},
+{
+"id": "int_02",
+"scenario": "Your brand new phone screen shatters. What's your first move?",
+"optionA": {
+"text": "Buy a toolkit and replace the glass yourself.",
+"trait": "Realistic"
+},
+"optionB": {
+"text": "Research the exact material science of why it broke.",
+"trait": "Investigative"
+}
+},
+{
+"id": "int_03",
+"scenario": "You're launching a new YouTube channel with your squad.",
+"optionA": {
+"text": "Design the sickest thumbnail aesthetics and logos.",
+"trait": "Artistic"
+},
+"optionB": {
+"text": "Figure out the monetization and brand collab strategy.",
+"trait": "Enterprising"
+}
+},
+{
+"id": "int_04",
+"scenario": "It's group project time and the deadline is tomorrow.",
+"optionA": {
+"text": "Keep everyone motivated, hydrated, and vibing.",
+"trait": "Social"
+},
+"optionB": {
+"text": "Create the master Google Doc and assign strict timelines.",
+"trait": "Conventional"
+}
+},
+{
+"id": "int_05",
+"scenario": "You stumble upon a weird glitch in Valorant or BGMI.",
+"optionA": {
+"text": "Try to figure out the code logic causing the bug.",
+"trait": "Investigative"
+},
+"optionB": {
+"text": "Log a support ticket with exact reproduction steps.",
+"trait": "Conventional"
+}
+},
+{
+"id": "int_06",
+"scenario": "You finally get a free weekend to chill.",
+"optionA": {
+"text": "Get your hands dirty modding your bike or PC.",
+"trait": "Realistic"
+},
+"optionB": {
+"text": "Shoot and edit a cinematic reel for your grid.",
+"trait": "Artistic"
+}
+},
+{
+"id": "int_07",
+"scenario": "Your college society is planning a mass trip to Goa.",
+"optionA": {
+"text": "Negotiate a crazy group discount with the hotel.",
+"trait": "Enterprising"
+},
+"optionB": {
+"text": "Make sure no one feels left out of the plans.",
+"trait": "Social"
+}
+},
+{
+"id": "int_08",
+"scenario": "Setting up a complicated new smart TV at home.",
+"optionA": {
+"text": "Read the manual and cable-manage everything perfectly.",
+"trait": "Conventional"
+},
+"optionB": {
+"text": "Just plug it in and figure out the remote by testing.",
+"trait": "Realistic"
+}
+},
+{
+"id": "int_09",
+"scenario": "You get dragged to a modern art gallery.",
+"optionA": {
+"text": "Analyze the historical context of the exhibit.",
+"trait": "Investigative"
+},
+"optionB": {
+"text": "Just get lost in the raw emotion of the paintings.",
+"trait": "Artistic"
+}
+},
+{
+"id": "int_10",
+"scenario": "Running a momo stall at the Diwali mela.",
+"optionA": {
+"text": "Hustle hard to upsell extra plates to everyone passing by.",
+"trait": "Enterprising"
+},
+"optionB": {
+"text": "Keep strict track of every single UPI payment on a sheet.",
+"trait": "Conventional"
+}
+},
+{
+"id": "int_11",
+"scenario": "Your best friend is stressing out hard about finals.",
+"optionA": {
+"text": "Listen to them vent over a late-night chai.",
+"trait": "Social"
+},
+"optionB": {
+"text": "Analyze their syllabus to find the easiest scoring topics.",
+"trait": "Investigative"
+}
+},
+{
+"id": "int_12",
+"scenario": "Your new startup finally got an empty office space.",
+"optionA": {
+"text": "Build the IKEA desks and paint the walls yourself.",
+"trait": "Realistic"
+},
+"optionB": {
+"text": "Pitch to angel investors to fund a better setup.",
+"trait": "Enterprising"
+}
+},
+{
+"id": "int_13",
+"scenario": "Organizing a massive 48-hour hackathon.",
+"optionA": {
+"text": "Design the badass event logo and streetwear merch.",
+"trait": "Artistic"
+},
+"optionB": {
+"text": "Manage the backend database for 500+ registrations.",
+"trait": "Conventional"
+}
+},
+{
+"id": "int_14",
+"scenario": "Binge-watching Shark Tank India.",
+"optionA": {
+"text": "Critique the complex math behind their valuation.",
+"trait": "Investigative"
+},
+"optionB": {
+"text": "Imagine how you would aggressively pitch your own idea.",
+"trait": "Enterprising"
+}
+},
+{
+"id": "int_15",
+"scenario": "Your locality is hosting a Sunday clean-up drive.",
+"optionA": {
+"text": "Rally the neighborhood kids and hype them up to join.",
+"trait": "Social"
+},
+"optionB": {
+"text": "Operate the heavy-duty power washer to blast the grime.",
+"trait": "Realistic"
+}
+},
+{
+"id": "int_16",
+"scenario": "Writing a comedy skit for the college annual day.",
+"optionA": {
+"text": "Focus on writing the sharpest, wittiest dialogue.",
+"trait": "Artistic"
+},
+"optionB": {
+"text": "Make sure every actor feels confident and heard.",
+"trait": "Social"
+}
+},
+{
+"id": "int_17",
+"scenario": "Trying to stop going broke by mid-month.",
+"optionA": {
+"text": "Use a strict budget tracking app for every rupee.",
+"trait": "Conventional"
+},
+"optionB": {
+"text": "Build a custom algorithm to predict your future spending.",
+"trait": "Investigative"
+}
+},
+{
+"id": "int_18",
+"scenario": "Working a part-time shift at a hyped sneaker store.",
+"optionA": {
+"text": "Clean, prep, and physically restore vintage Jordans.",
+"trait": "Realistic"
+},
+"optionB": {
+"text": "Do a massive inventory check for all sizes in the back.",
+"trait": "Conventional"
+}
+},
+{
+"id": "int_19",
+"scenario": "Managing your friend's up-and-coming indie band.",
+"optionA": {
+"text": "Book gigs and negotiate their cut of the door sales.",
+"trait": "Enterprising"
+},
+"optionB": {
+"text": "Direct the moody aesthetic of their first music video.",
+"trait": "Artistic"
+}
+},
+{
+"id": "int_20",
+"scenario": "Reading a wild true-crime thread on X.",
+"optionA": {
+"text": "Feel deep empathy for what the victims' families went through.",
+"trait": "Social"
+},
+"optionB": {
+"text": "Try to logically piece together the mystery before the cops.",
+"trait": "Investigative"
+}
+}
+],
+"aptitude": [
+{
+"id": "apt_01",
+"domain": "Logical",
+"question": "If all coders drink chai, and Rohan is a coder, which is definitely true?",
+"options": [
+"Rohan hates coffee",
+"Rohan drinks chai",
+"Everyone who drinks chai codes",
+"Rohan writes bugs"
+],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_02",
+"domain": "Numerical",
+"question": "You order food for ₹400. Zomato gives a 25% discount. What's the price before delivery fees?",
+"options": [
+"₹300",
+"₹325",
+"₹350",
+"₹375"
+],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_03",
+"domain": "Spatial",
+"question": "If you rotate the capital letter 'W' exactly 180 degrees clockwise, what does it look like?",
+"options": [
+"W",
+"M",
+"E",
+"3"
+],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_04",
+"domain": "Verbal",
+"question": "Which of these words does NOT belong in the group?",
+"options": [
+"Reel",
+"Short",
+"TikTok",
+"Kindle"
+],
+"correctIndex": 3,
+"difficulty": "easy"
+},
+{
+"id": "apt_05",
+"domain": "Logical",
+"question": "You're in a marathon and you just overtook the person in second place. What position are you in now?",
+"options": [
+"First",
+"Second",
+"Third",
+"Last"
+],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_06",
+"domain": "Numerical",
+"question": "Three friends split a ₹1200 café bill equally. You add a ₹50 tip from your own pocket. How much do you pay in total?",
+"options": [
+"₹400",
+"₹450",
+"₹500",
+"₹1250"
+],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_07",
+"domain": "Spatial",
+"question": "Think of a standard 3x3 Rubik's cube. How many center pieces does it have in total?",
+"options": [
+"1",
+"6",
+"8",
+"9"
+],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_08",
+"domain": "Verbal",
+"question": "Which word means the exact opposite of 'Authentic'?",
+"options": [
+"Real",
+"Fake",
+"Based",
+"Valid"
+],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_09",
+"domain": "Logical",
+"question": "If A is taller than B, and B is taller than C, who is the shortest?",
+"options": [
+"A",
+"B",
+"C",
+"Cannot be determined"
+],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_10",
+"domain": "Numerical",
+"question": "You score a 10% cashback on a ₹5000 sneaker drop. How much money actually hits your bank account?",
+"options": [
+"₹50",
+"₹100",
+"₹500",
+"₹5000"
+],
+"correctIndex": 2,
+"difficulty": "easy"
+}
+]
+}
+
+## batch 2
+
+{
+"interests": [
+{
+"id": "int_21",
+"scenario": "College fest is a week away and your club is panicking.",
+"optionA": { "text": "Hustle and pitch to local cafes for sponsorships", "trait": "Enterprising" },
+"optionB": { "text": "Design aesthetic posters for the main stage", "trait": "Artistic" }
+},
+{
+"id": "int_22",
+"scenario": "Your laptop suddenly crashes mid-game.",
+"optionA": { "text": "Open the back panel and check the RAM", "trait": "Realistic" },
+"optionB": { "text": "Google the exact error code to find a fix", "trait": "Investigative" }
+},
+{
+"id": "int_23",
+"scenario": "You're running the college tech club.",
+"optionA": { "text": "Manage the budget and track all expenses on Excel", "trait": "Conventional" },
+"optionB": { "text": "Host a mentoring session for confused freshers", "trait": "Social" }
+},
+{
+"id": "int_24",
+"scenario": "It's a long weekend and the squad wants a plan.",
+"optionA": { "text": "Go trekking and set up a campsite in the ghats", "trait": "Realistic" },
+"optionB": { "text": "Binge a 4-hour true crime documentary analysis", "trait": "Investigative" }
+},
+{
+"id": "int_25",
+"scenario": "You and your bestie are launching a campus startup.",
+"optionA": { "text": "Code the backend architecture from scratch", "trait": "Investigative" },
+"optionB": { "text": "Pitch the idea to investors for seed money", "trait": "Enterprising" }
+},
+{
+"id": "int_26",
+"scenario": "Your friend is crying over a bad breakup.",
+"optionA": { "text": "Listen patiently and validate their feelings", "trait": "Social" },
+"optionB": { "text": "Convince them to start a gym revenge arc", "trait": "Enterprising" }
+},
+{
+"id": "int_27",
+"scenario": "Goa trip finally made it out of the group chat.",
+"optionA": { "text": "Shoot and color-grade an aesthetic travel vlog", "trait": "Artistic" },
+"optionB": { "text": "Plan the exact daily itinerary and bookings", "trait": "Conventional" }
+},
+{
+"id": "int_28",
+"scenario": "3 AM hunger strikes the hostel.",
+"optionA": { "text": "Fire up the kettle and cook Maggi for everyone", "trait": "Realistic" },
+"optionB": { "text": "Keep the vibes high and spill the latest tea", "trait": "Social" }
+},
+{
+"id": "int_29",
+"scenario": "Shopping trip at Sarojini or Colaba Causeway.",
+"optionA": { "text": "Haggle ruthlessly to drop the price by half", "trait": "Enterprising" },
+"optionB": { "text": "Analyze the fabric quality before buying", "trait": "Investigative" }
+},
+{
+"id": "int_30",
+"scenario": "Your Spotify is a mess.",
+"optionA": { "text": "Sort all playlists strictly by genre and BPM", "trait": "Conventional" },
+"optionB": { "text": "Design custom cover art for each playlist", "trait": "Artistic" }
+},
+{
+"id": "int_31",
+"scenario": "A new crypto token just went viral.",
+"optionA": { "text": "Read the whitepaper to understand the blockchain tech", "trait": "Investigative" },
+"optionB": { "text": "Hype it up in group chats to boost the price", "trait": "Enterprising" }
+},
+{
+"id": "int_32",
+"scenario": "You just became a mod on a huge Discord server.",
+"optionA": { "text": "De-escalate fights between toxic members", "trait": "Social" },
+"optionB": { "text": "Set up strict automated bot rules and roles", "trait": "Conventional" }
+},
+{
+"id": "int_33",
+"scenario": "You found a pair of rare sneakers at a thrift store.",
+"optionA": { "text": "Clean, glue, and restore them by hand", "trait": "Realistic" },
+"optionB": { "text": "Flip them on Instagram for a 3x profit", "trait": "Enterprising" }
+},
+{
+"id": "int_34",
+"scenario": "A new dance trend is blowing up on Reels.",
+"optionA": { "text": "Add your own creative choreography twist", "trait": "Artistic" },
+"optionB": { "text": "Patiently teach the steps to your two left feet friends", "trait": "Social" }
+},
+{
+"id": "int_35",
+"scenario": "Group project time! What's your role?",
+"optionA": { "text": "Find and fix bugs in the open-source code", "trait": "Investigative" },
+"optionB": { "text": "Format the final report so it looks professional", "trait": "Conventional" }
+},
+{
+"id": "int_36",
+"scenario": "Moving into a new PG room.",
+"optionA": { "text": "Assemble the IKEA desk and fix the wobbly fan", "trait": "Realistic" },
+"optionB": { "text": "Arrange fairy lights, polaroids, and aesthetic decor", "trait": "Artistic" }
+},
+{
+"id": "int_37",
+"scenario": "Starting a YouTube channel.",
+"optionA": { "text": "Deep dive into YouTube algorithm analytics", "trait": "Investigative" },
+"optionB": { "text": "Host Q&As and build a strong community", "trait": "Social" }
+},
+{
+"id": "int_38",
+"scenario": "Taking an auto from the metro station.",
+"optionA": { "text": "Negotiate a fixed price instead of meter", "trait": "Enterprising" },
+"optionB": { "text": "Calculate the exact fare per km on your phone", "trait": "Conventional" }
+},
+{
+"id": "int_39",
+"scenario": "Your favorite anime just dropped a new season.",
+"optionA": { "text": "Draw amazing fanart of the main character", "trait": "Artistic" },
+"optionB": { "text": "Build a foam cosplay prop from scratch", "trait": "Realistic" }
+},
+{
+"id": "int_40",
+"scenario": "Wi-Fi is down in the entire hostel.",
+"optionA": { "text": "Log into the router admin panel to diagnose it", "trait": "Investigative" },
+"optionB": { "text": "Calm down your roommates who are mid-game", "trait": "Social" }
+},
+{
+"id": "int_41",
+"scenario": "End of the month and everyone is broke.",
+"optionA": { "text": "Track all pending UPI dues on Splitwise", "trait": "Conventional" },
+"optionB": { "text": "Start a side hustle selling custom notes", "trait": "Enterprising" }
+},
+{
+"id": "int_42",
+"scenario": "College tech fest is hosting a drone race.",
+"optionA": { "text": "Solder wires and assemble the physical drone", "trait": "Realistic" },
+"optionB": { "text": "Code the aerodynamic flight algorithms", "trait": "Investigative" }
+},
+{
+"id": "int_43",
+"scenario": "Local animal shelter needs help.",
+"optionA": { "text": "Feed, bathe, and play with the stray pups", "trait": "Social" },
+"optionB": { "text": "Paint a massive, colorful mural on their wall", "trait": "Artistic" }
+},
+{
+"id": "int_44",
+"scenario": "Starting an anonymous campus page.",
+"optionA": { "text": "Monetize it by doing paid shoutouts", "trait": "Enterprising" },
+"optionB": { "text": "Organize all tea and confessions into daily threads", "trait": "Conventional" }
+},
+{
+"id": "int_45",
+"scenario": "You have a massive sneaker collection.",
+"optionA": { "text": "Build custom wooden floating shelves for them", "trait": "Realistic" },
+"optionB": { "text": "Catalog them by brand and release year", "trait": "Conventional" }
+},
+{
+"id": "int_46",
+"scenario": "Shooting a short film for a competition.",
+"optionA": { "text": "Write a gripping, emotional script", "trait": "Artistic" },
+"optionB": { "text": "Figure out the budget and shooting schedule", "trait": "Conventional" }
+},
+{
+"id": "int_47",
+"scenario": "AI tools are taking over.",
+"optionA": { "text": "Read a 50-page deep dive on neural networks", "trait": "Investigative" },
+"optionB": { "text": "Start an AI newsletter and get sponsors", "trait": "Enterprising" }
+},
+{
+"id": "int_48",
+"scenario": "Planning a surprise birthday for a friend.",
+"optionA": { "text": "Secretly coordinate with their parents and friends", "trait": "Social" },
+"optionB": { "text": "Create a shared Google Doc for the gift registry", "trait": "Conventional" }
+},
+{
+"id": "int_49",
+"scenario": "You have a free rooftop space.",
+"optionA": { "text": "Get your hands dirty and plant an organic garden", "trait": "Realistic" },
+"optionB": { "text": "Sell the organic veggies to local cafes", "trait": "Enterprising" }
+},
+{
+"id": "int_50",
+"scenario": "Getting into Notion.",
+"optionA": { "text": "Design a highly aesthetic, color-coded dashboard", "trait": "Artistic" },
+"optionB": { "text": "Build complex linked databases with formulas", "trait": "Investigative" }
+},
+{
+"id": "int_51",
+"scenario": "Missed the assignment deadline.",
+"optionA": { "text": "Smooth-talk the professor into giving an extension", "trait": "Enterprising" },
+"optionB": { "text": "Admit fault and politely ask how to make it up", "trait": "Social" }
+},
+{
+"id": "int_52",
+"scenario": "A junior is stressed about placements.",
+"optionA": { "text": "Do mock interviews to boost their confidence", "trait": "Social" },
+"optionB": { "text": "Help them format their resume strictly to ATS standards", "trait": "Conventional" }
+},
+{
+"id": "int_53",
+"scenario": "A crazy rumor is spreading in the class group chat.",
+"optionA": { "text": "Investigate and fact-check the source", "trait": "Investigative" },
+"optionB": { "text": "Pin a message summarizing the actual facts", "trait": "Conventional" }
+},
+{
+"id": "int_54",
+"scenario": "Building a custom mechanical keyboard.",
+"optionA": { "text": "Lube the switches and assemble the parts yourself", "trait": "Realistic" },
+"optionB": { "text": "Design 3D custom artisan keycaps", "trait": "Artistic" }
+},
+{
+"id": "int_55",
+"scenario": "Organizing a charity drive in college.",
+"optionA": { "text": "Stand at the booth and convince people to donate", "trait": "Enterprising" },
+"optionB": { "text": "Analyze which dorms donate the most data-wise", "trait": "Investigative" }
+}
+],
+"aptitude": [
+{
+"id": "apt_11",
+"domain": "Spatial",
+"question": "Which arrow completes the 90-degree clockwise sequence: ⬆️, ➡️, ⬇️, [ ? ]",
+"options": ["↙️", "⬅️", "↖️", "↗️"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_12",
+"domain": "Spatial",
+"question": "Find the missing piece in the matrix: 🔴 ⬜ 🔴 | 🔵 ⬛ 🔵 | 🟢 ⬜ [ ? ]",
+"options": ["🔴", "⬛", "🟢", "🟦"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_13",
+"domain": "Spatial",
+"question": "Opposite faces of a standard die always sum to 7. If the top face is ⚄ (5), what is at the bottom?",
+"options": ["⚀ (1)", "⚁ (2)", "⚃ (4)", "⚅ (6)"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_14",
+"domain": "Spatial",
+"question": "Which shape is perfectly mirrored across a vertical axis? ◢ -> [ ? ]",
+"options": ["◣", "◤", "◥", "▶"],
+"correctIndex": 0,
+"difficulty": "medium"
+},
+{
+"id": "apt_15",
+"domain": "Numerical",
+"question": "You split a ₹1200 cafe bill among 5 friends. You applied a 10% Zomato discount before splitting. How much does each person UPI you?",
+"options": ["₹240", "₹220", "₹216", "₹210"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_16",
+"domain": "Numerical",
+"question": "You get 5% cashback on a ₹800 Amazon order and 10% cashback on a ₹500 Swiggy order. Total cashback earned?",
+"options": ["₹80", "₹90", "₹100", "₹110"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_17",
+"domain": "Numerical",
+"question": "Your IG reel got your followers from 4,000 to 5,000 overnight. What is the percentage increase?",
+"options": ["20%", "25%", "30%", "15%"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_18",
+"domain": "Numerical",
+"question": "The metro takes 4 minutes to travel 2 stations. At this speed, how long to travel 10 stations? (Assuming zero wait time)",
+"options": ["20 mins", "15 mins", "30 mins", "40 mins"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_19",
+"domain": "Logical",
+"question": "Meme trends peak every 4 days. If a trend started on Monday, on what day will the 3rd trend start?",
+"options": ["Sunday", "Monday", "Tuesday", "Wednesday"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_20",
+"domain": "Logical",
+"question": "In your BGMI squad: Aman snipes better than Raj. Raj snipes better than Dev. Which statement MUST be true?",
+"options": ["Aman is the worst sniper", "Dev is the best sniper", "Aman is the best sniper", "Raj is the worst sniper"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_21",
+"domain": "Logical",
+"question": "If it rains, Delhi traffic jams. If there's a jam, you're late to college. Today, you arrived exactly on time. This means:",
+"options": ["It did not rain", "It rained heavily", "There was a massive jam", "You took a cab"],
+"correctIndex": 0,
+"difficulty": "medium"
+},
+{
+"id": "apt_22",
+"domain": "Logical",
+"question": "Find the odd one out: Paytm, PhonePe, GPay, Zomato.",
+"options": ["Paytm", "PhonePe", "GPay", "Zomato"],
+"correctIndex": 3,
+"difficulty": "easy"
+},
+{
+"id": "apt_23",
+"domain": "Verbal",
+"question": "Complete the analogy. Reel is to Scroll as Podcast is to [ ? ]",
+"options": ["Watch", "Listen", "Swipe", "Double-tap"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_24",
+"domain": "Verbal",
+"question": "'Sus' is the opposite of 'Trustworthy'. 'Savage' is the opposite of [ ? ]",
+"options": ["Brutal", "Polite", "Cool", "Lit"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_25",
+"domain": "Verbal",
+"question": "Unscramble the letters R O T C A E R to find a popular modern career.",
+"options": ["TRACTOR", "CREATOR", "CARTOON", "REACTOR"],
+"correctIndex": 1,
+"difficulty": "easy"
+}
+]
+}
+
+## batch 3
+
+{
+"interests": [
+{
+"id": "int_56",
+"scenario": "Hostel mess food is terrible again.",
+"optionA": { "text": "Research the exact nutritional deficiencies in the menu", "trait": "Investigative" },
+"optionB": { "text": "Start a hunger strike petition and rally everyone", "trait": "Social" }
+},
+{
+"id": "int_57",
+"scenario": "Your startup just got ₹50k seed funding.",
+"optionA": { "text": "Allocate it exactly into a spreadsheet budget", "trait": "Conventional" },
+"optionB": { "text": "Spend it on flashy branding and aesthetic merch", "trait": "Artistic" }
+},
+{
+"id": "int_58",
+"scenario": "A stray cat keeps sneaking into your PG.",
+"optionA": { "text": "Build it a cozy cardboard shelter with scraps", "trait": "Realistic" },
+"optionB": { "text": "Track its daily routine to find the entry point", "trait": "Investigative" }
+},
+{
+"id": "int_59",
+"scenario": "A hyped sneaker drops tomorrow.",
+"optionA": { "text": "Pre-order with bots and scalp for 2x profit", "trait": "Enterprising" },
+"optionB": { "text": "Catalogue the release dates of all upcoming drops", "trait": "Conventional" }
+},
+{
+"id": "int_60",
+"scenario": "Planning the seniors' farewell party.",
+"optionA": { "text": "Curate the aesthetic playlist and stage decor", "trait": "Artistic" },
+"optionB": { "text": "Handle the ticketing, finances, and venue booking", "trait": "Conventional" }
+},
+{
+"id": "int_61",
+"scenario": "Your group project is falling apart.",
+"optionA": { "text": "Counsel the fighting members and restore peace", "trait": "Social" },
+"optionB": { "text": "Format the final document so it looks professional", "trait": "Conventional" }
+},
+{
+"id": "int_62",
+"scenario": "You discover a hidden momo stall.",
+"optionA": { "text": "Partner with the uncle to list on Swiggy", "trait": "Enterprising" },
+"optionB": { "text": "Make an aesthetic reel that goes viral", "trait": "Artistic" }
+},
+{
+"id": "int_63",
+"scenario": "Flat tire on a scooty trip to Nandi Hills.",
+"optionA": { "text": "Fix the puncture yourself using a repair kit", "trait": "Realistic" },
+"optionB": { "text": "Hitchhike and chat up a local for help", "trait": "Social" }
+},
+{
+"id": "int_64",
+"scenario": "College Wi-Fi blocks Netflix.",
+"optionA": { "text": "Code a custom DNS bypass from scratch", "trait": "Investigative" },
+"optionB": { "text": "Sell VPN access to everyone in your block", "trait": "Enterprising" }
+},
+{
+"id": "int_65",
+"scenario": "Inter-college drama fest is here.",
+"optionA": { "text": "Act as the lead character on stage", "trait": "Artistic" },
+"optionB": { "text": "Handle the heavy stage props and lighting rig", "trait": "Realistic" }
+},
+{
+"id": "int_66",
+"scenario": "Someone leaked the mid-sem question paper.",
+"optionA": { "text": "Verify the metadata to see if the leak is legit", "trait": "Investigative" },
+"optionB": { "text": "Report it to the admin via a formal email", "trait": "Conventional" }
+},
+{
+"id": "int_67",
+"scenario": "Buying a second-hand laptop.",
+"optionA": { "text": "Open it up and check the motherboard condition", "trait": "Realistic" },
+"optionB": { "text": "Negotiate the price down by at least 40%", "trait": "Enterprising" }
+},
+{
+"id": "int_68",
+"scenario": "Freshers' orientation needs volunteers.",
+"optionA": { "text": "Welcome the nervous newbies and break the ice", "trait": "Social" },
+"optionB": { "text": "Manage the ID card distribution queue strictly", "trait": "Conventional" }
+},
+{
+"id": "int_69",
+"scenario": "A viral meme trend is dying.",
+"optionA": { "text": "Create a fresh, creative template to revive it", "trait": "Artistic" },
+"optionB": { "text": "Analyze the engagement metrics of its downfall", "trait": "Investigative" }
+},
+{
+"id": "int_70",
+"scenario": "Building a custom PC for gaming.",
+"optionA": { "text": "Assemble the CPU, thermal paste, and cooler yourself", "trait": "Realistic" },
+"optionB": { "text": "Spreadsheet every component to find the best price", "trait": "Conventional" }
+},
+{
+"id": "int_71",
+"scenario": "You're the designated driver for a Goa road trip.",
+"optionA": { "text": "Drive the rented Thar safely through rough terrain", "trait": "Realistic" },
+"optionB": { "text": "Keep group vibes elite with carpool karaoke", "trait": "Social" }
+},
+{
+"id": "int_72",
+"scenario": "A free period in college.",
+"optionA": { "text": "Sketch portraits in the back of your notebook", "trait": "Artistic" },
+"optionB": { "text": "Read a deep dive article on quantum physics", "trait": "Investigative" }
+},
+{
+"id": "int_73",
+"scenario": "Working on a campus NGO campaign.",
+"optionA": { "text": "Teach underprivileged kids at the local slum", "trait": "Social" },
+"optionB": { "text": "Pitch to local corporates to secure funding", "trait": "Enterprising" }
+},
+{
+"id": "int_74",
+"scenario": "Your old Air Force 1s look beat up.",
+"optionA": { "text": "Custom paint them with a dope anime design", "trait": "Artistic" },
+"optionB": { "text": "Deep clean and restore the leather manually", "trait": "Realistic" }
+},
+{
+"id": "int_75",
+"scenario": "Someone is cyberbullying your junior.",
+"optionA": { "text": "Comfort the junior and help rebuild their confidence", "trait": "Social" },
+"optionB": { "text": "Track the IP address of the fake account", "trait": "Investigative" }
+},
+{
+"id": "int_76",
+"scenario": "Deciding a career path.",
+"optionA": { "text": "Build your personal brand and network on LinkedIn", "trait": "Enterprising" },
+"optionB": { "text": "Study a structured syllabus for the UPSC exams", "trait": "Conventional" }
+},
+{
+"id": "int_77",
+"scenario": "The society uncle is yelling about your cricket game.",
+"optionA": { "text": "De-escalate the situation and apologize sweetly", "trait": "Social" },
+"optionB": { "text": "Convince him to let you play for 10 more minutes", "trait": "Enterprising" }
+},
+{
+"id": "int_78",
+"scenario": "Your phone screen just shattered.",
+"optionA": { "text": "Order a DIY screen replacement kit and fix it", "trait": "Realistic" },
+"optionB": { "text": "Check your exact warranty terms and insurance policy", "trait": "Conventional" }
+},
+{
+"id": "int_79",
+"scenario": "New Valorant patch notes just dropped.",
+"optionA": { "text": "Analyze the weapon damage stats and meta changes", "trait": "Investigative" },
+"optionB": { "text": "Create a sick montage of your best kills", "trait": "Artistic" }
+},
+{
+"id": "int_80",
+"scenario": "You just won a college hackathon.",
+"optionA": { "text": "Pitch the project to an angel investor", "trait": "Enterprising" },
+"optionB": { "text": "Solder the hardware prototype for mass production", "trait": "Realistic" }
+},
+{
+"id": "int_81",
+"scenario": "Planning a bike trip to Spiti Valley.",
+"optionA": { "text": "Create a strict hour-by-hour budget and itinerary", "trait": "Conventional" },
+"optionB": { "text": "Pack your DSLR and drone for cinematic shots", "trait": "Artistic" }
+},
+{
+"id": "int_82",
+"scenario": "Finding a new flatmate in Bangalore.",
+"optionA": { "text": "Interview them over coffee to check their vibe", "trait": "Social" },
+"optionB": { "text": "Draft a strict flatmate agreement on chores", "trait": "Conventional" }
+},
+{
+"id": "int_83",
+"scenario": "Creating a college magazine.",
+"optionA": { "text": "Design the cover and layout aesthetics", "trait": "Artistic" },
+"optionB": { "text": "Secure expensive ads from local coaching centers", "trait": "Enterprising" }
+},
+{
+"id": "int_84",
+"scenario": "Cooking dinner with your broke roommates.",
+"optionA": { "text": "Chop the veggies and physically handle the stove", "trait": "Realistic" },
+"optionB": { "text": "Keep everyone entertained with the latest gossip", "trait": "Social" }
+},
+{
+"id": "int_85",
+"scenario": "The crypto market is crashing.",
+"optionA": { "text": "Read whitepapers to find fundamentally strong projects", "trait": "Investigative" },
+"optionB": { "text": "Move all your funds to a safe FD", "trait": "Conventional" }
+},
+{
+"id": "int_86",
+"scenario": "Designing a new web app.",
+"optionA": { "text": "Create the smooth UI/UX animations and transitions", "trait": "Artistic" },
+"optionB": { "text": "Debug the backend server memory leak", "trait": "Investigative" }
+},
+{
+"id": "int_87",
+"scenario": "You found an injured stray dog.",
+"optionA": { "text": "Foster it, feed it, and give it love", "trait": "Social" },
+"optionB": { "text": "Start a crowdfunding campaign for its vet bills", "trait": "Enterprising" }
+},
+{
+"id": "int_88",
+"scenario": "Organizing a campus gaming tournament.",
+"optionA": { "text": "Set up the brackets, rules, and timings strictly", "trait": "Conventional" },
+"optionB": { "text": "Cable manage the LAN setup and heavy monitors", "trait": "Realistic" }
+},
+{
+"id": "int_89",
+"scenario": "The professor gives an open-ended final assignment.",
+"optionA": { "text": "Turn it into a viable business model", "trait": "Enterprising" },
+"optionB": { "text": "Make an avant-garde short film about it", "trait": "Artistic" }
+},
+{
+"id": "int_90",
+"scenario": "Your fav indie band is coming to town.",
+"optionA": { "text": "Analyze their past setlists to predict the songs", "trait": "Investigative" },
+"optionB": { "text": "Coordinate the transport and meetup for 10 friends", "trait": "Social" }
+}
+],
+"aptitude": [
+{
+"id": "apt_26",
+"domain": "Spatial",
+"question": "Which clock completes the 3-hour clockwise sequence: 🕛, 🕒, 🕕, [ ? ]",
+"options": ["🕖", "🕗", "🕘", "🕙"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_27",
+"domain": "Spatial",
+"question": "Find the missing symbol in the symmetry matrix: ⬆️ ⬇️ ⬆️ | ⬅️ ➡️ ⬅️ | ↗️ ↙️ [ ? ]",
+"options": ["↖️", "↘️", "↗️", "↙️"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_28",
+"domain": "Spatial",
+"question": "Opposite faces of a die sum to 7. If the front face is ⚃ (4), what is the back face?",
+"options": ["⚀ (1)", "⚁ (2)", "⚂ (3)", "⚄ (5)"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_29",
+"domain": "Spatial",
+"question": "Which symbol is perfectly mirrored across a vertical axis? ◧ -> [ ? ]",
+"options": ["◨", "◩", "◪", "▣"],
+"correctIndex": 0,
+"difficulty": "medium"
+},
+{
+"id": "apt_30",
+"domain": "Numerical",
+"question": "A ₹600 auto fare is split between 3 friends. If A pays ₹200 and B pays ₹150, how much does C owe?",
+"options": ["₹200", "₹250", "₹300", "₹350"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_31",
+"domain": "Numerical",
+"question": "A ₹1000 Steam game is 50% off. You apply a 10% creator code on the discounted price. What's the final price?",
+"options": ["₹400", "₹450", "₹500", "₹550"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_32",
+"domain": "Numerical",
+"question": "You type at 50 Words Per Minute. How many minutes will it take to finish a 250-word discussion post?",
+"options": ["4", "5", "6", "10"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_33",
+"domain": "Logical",
+"question": "Swiggy says delivery takes exactly 35 mins. If you want food right at 9:00 PM for a watch party, when must you order?",
+"options": ["8:15 PM", "8:25 PM", "8:35 PM", "8:45 PM"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_34",
+"domain": "Logical",
+"question": "Your YouTube subscribers are doubling every month. 100 -> 200 -> 400 -> 800. What's next?",
+"options": ["1000", "1200", "1400", "1600"],
+"correctIndex": 3,
+"difficulty": "easy"
+},
+{
+"id": "apt_35",
+"domain": "Logical",
+"question": "All true gamers stay up till 3 AM. Dev goes to sleep at 10 PM. Therefore:",
+"options": ["Dev is tired", "Dev is a true gamer", "Dev is not a true gamer", "Dev plays mobile games"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_36",
+"domain": "Logical",
+"question": "You walk 5 meters North to the canteen, 5 meters East to the library, then 5 meters South to the gate. Where are you relative to the start?",
+"options": ["5m North", "5m South", "5m East", "5m West"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_37",
+"domain": "Verbal",
+"question": "Complete the analogy. Zomato is to Food as Myntra is to [ ? ]",
+"options": ["Movies", "Fashion", "Cabs", "Groceries"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_38",
+"domain": "Verbal",
+"question": "Unscramble the letters E A R S M E T R to find a popular modern internet career.",
+"options": ["STREAMER", "SMARTENER", "MASTERER", "REMASTER"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_39",
+"domain": "Verbal",
+"question": "In internet slang, if a situation is highly suspicious, it is called [ ? ]",
+"options": ["Lit", "Salty", "Sus", "Cap"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_40",
+"domain": "Verbal",
+"question": "If your friend says they are 'ghosting' someone, they mean they are:",
+"options": ["Haunting them", "Dressing up for Halloween", "Cutting off all communication", "Creating a fake account"],
+"correctIndex": 2,
+"difficulty": "medium"
+}
+]
+}
+
+## batch 4
+
+{
+"interests": [
+{
+"id": "int_91",
+"scenario": "Your electric scooter breaks down in the middle of the road.",
+"optionA": { "text": "Grab a wrench and try fixing the motor hub yourself", "trait": "Realistic" },
+"optionB": { "text": "Google the battery error codes to diagnose the issue", "trait": "Investigative" }
+},
+{
+"id": "int_92",
+"scenario": "College cultural night is just hours away.",
+"optionA": { "text": "Choreograph a sick hip-hop routine for the main event", "trait": "Artistic" },
+"optionB": { "text": "Hype up the nervous performers backstage to boost morale", "trait": "Social" }
+},
+{
+"id": "int_93",
+"scenario": "Hosting a massive campus e-sports tournament.",
+"optionA": { "text": "Pitch sponsorships to local gaming cafes for prize money", "trait": "Enterprising" },
+"optionB": { "text": "Organize the exact match schedule meticulously on Excel", "trait": "Conventional" }
+},
+{
+"id": "int_94",
+"scenario": "Revamping your chaotic PG room.",
+"optionA": { "text": "Build a custom wooden bookshelf using basic tools", "trait": "Realistic" },
+"optionB": { "text": "Paint a massive, aesthetic mural on the blank wall", "trait": "Artistic" }
+},
+{
+"id": "int_95",
+"scenario": "Choosing a new smartphone to buy.",
+"optionA": { "text": "Read deep-dive benchmark and CPU architecture reviews", "trait": "Investigative" },
+"optionB": { "text": "Compare spec sheets in a side-by-side spreadsheet", "trait": "Conventional" }
+},
+{
+"id": "int_96",
+"scenario": "A junior is failing their core classes.",
+"optionA": { "text": "Listen to their struggles and offer emotional support", "trait": "Social" },
+"optionB": { "text": "Tutor them in the subject for a reasonable hourly fee", "trait": "Enterprising" }
+},
+{
+"id": "int_97",
+"scenario": "Volunteering at the local animal shelter.",
+"optionA": { "text": "Clean the cages and physically groom the rescue dogs", "trait": "Realistic" },
+"optionB": { "text": "Run the adoption awareness drive to find them homes", "trait": "Social" }
+},
+{
+"id": "int_98",
+"scenario": "Exploring a new city over the long weekend.",
+"optionA": { "text": "Read up on its historical architecture and urban planning", "trait": "Investigative" },
+"optionB": { "text": "Shoot and edit a cinematic street photography vlog", "trait": "Artistic" }
+},
+{
+"id": "int_99",
+"scenario": "Launching a college merch brand with your friends.",
+"optionA": { "text": "Hustle to pre-sell 100 hoodies in the first week", "trait": "Enterprising" },
+"optionB": { "text": "Maintain a strict ledger of raw material costs", "trait": "Conventional" }
+},
+{
+"id": "int_100",
+"scenario": "Setting up the tech fest main stage.",
+"optionA": { "text": "Wire the heavy sound system and set up the lighting rig", "trait": "Realistic" },
+"optionB": { "text": "Keep a strict inventory log of all rented equipment", "trait": "Conventional" }
+},
+{
+"id": "int_101",
+"scenario": "You find a lost wallet at the metro station.",
+"optionA": { "text": "Play detective with the receipts to track down the owner", "trait": "Investigative" },
+"optionB": { "text": "Hand it to metro security and wait with them", "trait": "Social" }
+},
+{
+"id": "int_102",
+"scenario": "Starting a brand new YouTube channel.",
+"optionA": { "text": "Focus heavily on aesthetic video editing and color grading", "trait": "Artistic" },
+"optionB": { "text": "Optimize thumbnails and titles to maximize click-through rates", "trait": "Enterprising" }
+},
+{
+"id": "int_103",
+"scenario": "You bought a beat-up used motorcycle.",
+"optionA": { "text": "Rebuild the carburetor and engine with your own hands", "trait": "Realistic" },
+"optionB": { "text": "Fix it up quickly and flip it online for profit", "trait": "Enterprising" }
+},
+{
+"id": "int_104",
+"scenario": "Learning a new programming language.",
+"optionA": { "text": "Dive deep into the core logic of data structures", "trait": "Investigative" },
+"optionB": { "text": "Follow a strict daily curriculum step-by-step", "trait": "Conventional" }
+},
+{
+"id": "int_105",
+"scenario": "Group assignment on a local social issue.",
+"optionA": { "text": "Design an impactful, visually stunning graphic novel", "trait": "Artistic" },
+"optionB": { "text": "Conduct empathetic, in-depth interviews with the locals", "trait": "Social" }
+},
+{
+"id": "int_106",
+"scenario": "Trekking in the Himalayas with your squad.",
+"optionA": { "text": "Chop wood and pitch the tents manually at basecamp", "trait": "Realistic" },
+"optionB": { "text": "Study the unique local flora and rock formations", "trait": "Investigative" }
+},
+{
+"id": "int_107",
+"scenario": "Planning a massive freshers' welcome party.",
+"optionA": { "text": "Collect and track UPI payments meticulously in a sheet", "trait": "Conventional" },
+"optionB": { "text": "Mingle with the freshers to ensure everyone feels included", "trait": "Social" }
+},
+{
+"id": "int_108",
+"scenario": "Running a popular campus meme page.",
+"optionA": { "text": "Do paid collabs with local cafes for easy money", "trait": "Enterprising" },
+"optionB": { "text": "Draw original comic strips that are highly relatable", "trait": "Artistic" }
+},
+{
+"id": "int_109",
+"scenario": "Investing your very first internship stipend.",
+"optionA": { "text": "Research market trends deeply for long-term stock picks", "trait": "Investigative" },
+"optionB": { "text": "Day-trade crypto for quick adrenaline and fast gains", "trait": "Enterprising" }
+},
+{
+"id": "int_110",
+"scenario": "Buying groceries for your shared flat.",
+"optionA": { "text": "Pick the freshest veggies at the local street mandi", "trait": "Realistic" },
+"optionB": { "text": "Make a strict shopping list to stay under budget", "trait": "Conventional" }
+},
+{
+"id": "int_111",
+"scenario": "Taking notes during a boring lecture.",
+"optionA": { "text": "Use color-coded highlighters and beautiful calligraphy", "trait": "Artistic" },
+"optionB": { "text": "Write perfectly structured bullet points with headers", "trait": "Conventional" }
+},
+{
+"id": "int_112",
+"scenario": "Someone spreads fake news in the family WhatsApp group.",
+"optionA": { "text": "Calm down the uncles arguing in the chat politely", "trait": "Social" },
+"optionB": { "text": "Find the original source and debunk the claim with facts", "trait": "Investigative" }
+},
+{
+"id": "int_113",
+"scenario": "You get a free weekend pottery class.",
+"optionA": { "text": "Focus heavily on the physical technique of the spinning wheel", "trait": "Realistic" },
+"optionB": { "text": "Sculpt an avant-garde, abstract vase shape", "trait": "Artistic" }
+},
+{
+"id": "int_114",
+"scenario": "Hosting a new college podcast.",
+"optionA": { "text": "Hustle to get the most famous alumni as exclusive guests", "trait": "Enterprising" },
+"optionB": { "text": "Focus on having genuine mental health chats with students", "trait": "Social" }
+},
+{
+"id": "int_115",
+"scenario": "A massive new software update drops for your phone.",
+"optionA": { "text": "Read the official patch notes document end-to-end", "trait": "Conventional" },
+"optionB": { "text": "Dig into the developer logs for hidden beta features", "trait": "Investigative" }
+},
+{
+"id": "int_116",
+"scenario": "Your laptop battery dies during a long power cut.",
+"optionA": { "text": "Rig a temporary power bank connection to keep it alive", "trait": "Realistic" },
+"optionB": { "text": "Rent out your roommate's laptop for ₹50 an hour", "trait": "Enterprising" }
+},
+{
+"id": "int_117",
+"scenario": "Celebrating a best friend's birthday at midnight.",
+"optionA": { "text": "Bake and decorate a custom-themed aesthetic cake", "trait": "Artistic" },
+"optionB": { "text": "Coordinate the surprise flawlessly with their entire squad", "trait": "Social" }
+},
+{
+"id": "int_118",
+"scenario": "Organizing your chaotic digital life.",
+"optionA": { "text": "Test out five different productivity apps to find the best", "trait": "Investigative" },
+"optionB": { "text": "Clean up your Google Drive into neat, dated folders", "trait": "Conventional" }
+},
+{
+"id": "int_119",
+"scenario": "Stuck in a massive local traffic jam.",
+"optionA": { "text": "Physically move the barricades to open up a side lane", "trait": "Realistic" },
+"optionB": { "text": "Direct the frustrated drivers politely to clear the block", "trait": "Social" }
+},
+{
+"id": "int_120",
+"scenario": "Selling thrifted vintage clothes online.",
+"optionA": { "text": "Run targeted Instagram ads for maximum sales reach", "trait": "Enterprising" },
+"optionB": { "text": "Style the clothes for a high-fashion, aesthetic photoshoot", "trait": "Artistic" }
+},
+{
+"id": "int_121",
+"scenario": "Watching a confusing, mind-bending sci-fi movie.",
+"optionA": { "text": "Analyze the time-travel paradoxes on Reddit for hours", "trait": "Investigative" },
+"optionB": { "text": "Admire the breathtaking CGI and visual cinematography", "trait": "Artistic" }
+},
+{
+"id": "int_122",
+"scenario": "Managing a local gully cricket team.",
+"optionA": { "text": "Keep track of player stats and net run rates on a notepad", "trait": "Conventional" },
+"optionB": { "text": "Carry the heavy kit bags and maintain the pitch yourself", "trait": "Realistic" }
+},
+{
+"id": "int_123",
+"scenario": "A powerful new AI generation tool is released.",
+"optionA": { "text": "Use it immediately to freelance and make quick money", "trait": "Enterprising" },
+"optionB": { "text": "Read research papers to understand how its neural network operates", "trait": "Investigative" }
+},
+{
+"id": "int_124",
+"scenario": "Dealing with an extremely strict professor.",
+"optionA": { "text": "Charm them with polite small talk before class starts", "trait": "Social" },
+"optionB": { "text": "Follow every single assignment formatting rule perfectly", "trait": "Conventional" }
+},
+{
+"id": "int_125",
+"scenario": "Upgrading your gaming PC desk setup.",
+"optionA": { "text": "Install custom RGB lights that sync beautifully to your music", "trait": "Artistic" },
+"optionB": { "text": "Cable-manage the whole desk flawlessly with zip ties", "trait": "Realistic" }
+}
+],
+"aptitude": [
+{
+"id": "apt_41",
+"domain": "Spatial",
+"question": "Which arrow completes the 90-degree clockwise sequence: ↖️, ↗️, ↘️, [ ? ]",
+"options": ["↙️", "⬅️", "⬇️", "↖️"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_42",
+"domain": "Spatial",
+"question": "Opposite faces of a standard die always sum to 7. If the right face is ⚁ (2), what is on the left face?",
+"options": ["⚃ (4)", "⚄ (5)", "⚅ (6)", "⚀ (1)"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_43",
+"domain": "Spatial",
+"question": "Find the missing symbol in the matrix: ➕ ➖ ➕ | ✖️ ➗ ✖️ | 🔺 🔻 [ ? ]",
+"options": ["🔻", "➕", "🔺", "➖"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_44",
+"domain": "Spatial",
+"question": "Which shape is perfectly mirrored across a horizontal axis? 🔼 -> [ ? ]",
+"options": ["▶️", "◀️", "🔽", "⏫"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_45",
+"domain": "Numerical",
+"question": "A ₹1500 dinner bill is split among 3 friends. You ordered a ₹300 personal meal, and the other two split the rest equally. How much do they each pay?",
+"options": ["₹500", "₹600", "₹750", "₹400"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_46",
+"domain": "Numerical",
+"question": "You have ₹500 in your wallet. You buy a ₹400 game skin and get 10% cashback on the spend. What is your final wallet balance?",
+"options": ["₹100", "₹120", "₹140", "₹150"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_47",
+"domain": "Numerical",
+"question": "An auto-rickshaw takes 3 minutes to travel 1 km. Assuming no traffic, how long will a 5 km ride to college take?",
+"options": ["10 mins", "12 mins", "15 mins", "20 mins"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_48",
+"domain": "Numerical",
+"question": "You need 10,000 followers for monetization. You currently have 8,500 and gain 500 a week. How many weeks until you hit the goal?",
+"options": ["2 weeks", "3 weeks", "4 weeks", "5 weeks"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_49",
+"domain": "Logical",
+"question": "If the Wi-Fi goes down, you play the Chrome Dino game. Right now, you are playing Valorant online with friends. Therefore:",
+"options": ["The Wi-Fi is down", "The Wi-Fi is working fine", "You are using mobile data", "Valorant works offline"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_50",
+"domain": "Logical",
+"question": "Riya has a higher Snap streak than Aman. Aman has a higher Snap streak than Dev. Who has the lowest streak?",
+"options": ["Riya", "Aman", "Dev", "Cannot be determined"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_51",
+"domain": "Logical",
+"question": "Find the odd one out among these apps: Instagram, Snapchat, Excel, BeReal.",
+"options": ["Instagram", "Snapchat", "Excel", "BeReal"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_52",
+"domain": "Logical",
+"question": "Identify the next number in this sequence: 1, 4, 9, 16, [ ? ]",
+"options": ["20", "24", "25", "36"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_53",
+"domain": "Verbal",
+"question": "Complete the analogy. Spotify is to Music as Pinterest is to [ ? ]",
+"options": ["Videos", "Audio", "Aesthetics", "Text"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_54",
+"domain": "Verbal",
+"question": "If a friend says 'No Cap' after telling a crazy story, they mean:",
+"options": ["They lost their hat", "They are lying", "They are not lying", "It was a joke"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_55",
+"domain": "Verbal",
+"question": "Unscramble the letters P C O A D S T to find a popular form of modern content.",
+"options": ["POSTCARD", "PODCAST", "CATPODS", "DOTCAPS"],
+"correctIndex": 1,
+"difficulty": "easy"
+}
+]
+}
+
+# batch 5
+
+{
+"interests": [
+{
+"id": "int_126",
+"scenario": "Your society is hosting a grand Diwali mela.",
+"optionA": { "text": "Set up a snack stall to maximize your profits", "trait": "Enterprising" },
+"optionB": { "text": "Wire the fairy lights and speaker systems perfectly", "trait": "Realistic" }
+},
+{
+"id": "int_127",
+"scenario": "Starting a new gym fitness journey.",
+"optionA": { "text": "Create a strict daily macro-tracking Excel sheet", "trait": "Conventional" },
+"optionB": { "text": "Read scientific journals on muscle hypertrophy", "trait": "Investigative" }
+},
+{
+"id": "int_128",
+"scenario": "The squad is bored on a lazy Sunday.",
+"optionA": { "text": "Host a massive board game night to bond", "trait": "Social" },
+"optionB": { "text": "Paint custom tote bags while blasting indie music", "trait": "Artistic" }
+},
+{
+"id": "int_129",
+"scenario": "Your college portal app keeps crashing during registration.",
+"optionA": { "text": "Read the server error logs to find the bug", "trait": "Investigative" },
+"optionB": { "text": "File a highly detailed bug report to the admin", "trait": "Conventional" }
+},
+{
+"id": "int_130",
+"scenario": "Buying a used PS5 from an OLX seller.",
+"optionA": { "text": "Negotiate aggressively to drop the price by 20%", "trait": "Enterprising" },
+"optionB": { "text": "Open the faceplates and clean the cooling fan yourself", "trait": "Realistic" }
+},
+{
+"id": "int_131",
+"scenario": "Creating a Notion workspace for the new semester.",
+"optionA": { "text": "Design an incredibly aesthetic, visually pleasing dashboard", "trait": "Artistic" },
+"optionB": { "text": "Build a hyper-organized syllabus tracker for all subjects", "trait": "Conventional" }
+},
+{
+"id": "int_132",
+"scenario": "A junior is crying over a terrible mid-sem grade.",
+"optionA": { "text": "Buy them a cutting chai and talk it out", "trait": "Social" },
+"optionB": { "text": "Analyze their past papers to find weak conceptual areas", "trait": "Investigative" }
+},
+{
+"id": "int_133",
+"scenario": "Organizing a flash mob for the cultural fest.",
+"optionA": { "text": "Choreograph a viral hook step for the crowd", "trait": "Artistic" },
+"optionB": { "text": "Pitch the event to local brands for sponsorship", "trait": "Enterprising" }
+},
+{
+"id": "int_134",
+"scenario": "Setting up a rooftop terrace garden.",
+"optionA": { "text": "Mix the soil, compost, and plant the seeds manually", "trait": "Realistic" },
+"optionB": { "text": "Host a weekend terrace party for your whole block", "trait": "Social" }
+},
+{
+"id": "int_135",
+"scenario": "Web3 and crypto are going mainstream.",
+"optionA": { "text": "Start a consulting gig teaching freshers about Web3", "trait": "Enterprising" },
+"optionB": { "text": "Read the complex cryptographic logic behind blockchain hashes", "trait": "Investigative" }
+},
+{
+"id": "int_136",
+"scenario": "You found a dope underground thrift store.",
+"optionA": { "text": "Curate a high-fashion Instagram lookbook reel", "trait": "Artistic" },
+"optionB": { "text": "Sort and tag the vintage jackets by exact decade", "trait": "Conventional" }
+},
+{
+"id": "int_137",
+"scenario": "Organizing a campus blood donation drive.",
+"optionA": { "text": "Comfort the donors who are terrified of needles", "trait": "Social" },
+"optionB": { "text": "Manage the exact inventory and storage temperatures of blood", "trait": "Realistic" }
+},
+{
+"id": "int_138",
+"scenario": "The WiFi router at the PG is completely dead.",
+"optionA": { "text": "Crack it open and re-solder the broken antenna", "trait": "Realistic" },
+"optionB": { "text": "Call the ISP and threaten to switch providers immediately", "trait": "Enterprising" }
+},
+{
+"id": "int_139",
+"scenario": "Working on a true crime podcast.",
+"optionA": { "text": "Deep dive into cold case files and autopsy reports", "trait": "Investigative" },
+"optionB": { "text": "Design the chilling, atmospheric cover art for the show", "trait": "Artistic" }
+},
+{
+"id": "int_140",
+"scenario": "A friend wants to start a YouTube channel.",
+"optionA": { "text": "Help them script, shoot, and be their hype person", "trait": "Social" },
+"optionB": { "text": "Set up a content calendar and strict upload schedule", "trait": "Conventional" }
+},
+{
+"id": "int_141",
+"scenario": "Your favorite indie game has a massive game-breaking bug.",
+"optionA": { "text": "Reverse engineer the game code to create a patch", "trait": "Investigative" },
+"optionB": { "text": "Rally the Discord community to demand a fix together", "trait": "Social" }
+},
+{
+"id": "int_142",
+"scenario": "You're running the college photography club.",
+"optionA": { "text": "Maintain the expensive lens inventory and booking logs", "trait": "Conventional" },
+"optionB": { "text": "Hustle to get a paid gig covering the main fest", "trait": "Enterprising" }
+},
+{
+"id": "int_143",
+"scenario": "Getting ready for the upcoming Comic Con.",
+"optionA": { "text": "Craft complex EVA foam armor with a heat gun", "trait": "Realistic" },
+"optionB": { "text": "Sketch an original cyberpunk variant of a superhero", "trait": "Artistic" }
+},
+{
+"id": "int_144",
+"scenario": "A heated political debate in the WhatsApp group.",
+"optionA": { "text": "Drop well-researched statistics to win the argument logically", "trait": "Investigative" },
+"optionB": { "text": "Defuse the tension with a perfectly timed reaction meme", "trait": "Social" }
+},
+{
+"id": "int_145",
+"scenario": "You want to upgrade your trusty scooty.",
+"optionA": { "text": "Install custom LED under-glow lights and a fresh wrap", "trait": "Artistic" },
+"optionB": { "text": "Tune the engine and replace the spark plug yourself", "trait": "Realistic" }
+},
+{
+"id": "int_146",
+"scenario": "Managing the campus debate team.",
+"optionA": { "text": "Book the venues and keep track of all travel funds", "trait": "Conventional" },
+"optionB": { "text": "Market the event aggressively to double the audience size", "trait": "Enterprising" }
+},
+{
+"id": "int_147",
+"scenario": "Your friend is starting a late-night cloud kitchen.",
+"optionA": { "text": "Design their quirky brand logo and packaging aesthetics", "trait": "Artistic" },
+"optionB": { "text": "Build a spreadsheet calculating exact ingredient costs per dish", "trait": "Conventional" }
+},
+{
+"id": "int_148",
+"scenario": "You found an abandoned indie puppy on the street.",
+"optionA": { "text": "Take it to the vet and research its medical needs", "trait": "Investigative" },
+"optionB": { "text": "Foster it and give it endless love and cuddles", "trait": "Social" }
+},
+{
+"id": "int_149",
+"scenario": "College election season is finally here.",
+"optionA": { "text": "Run for President and debate the opposition fiercely", "trait": "Enterprising" },
+"optionB": { "text": "Physically build and paint the massive campaign banners", "trait": "Realistic" }
+},
+{
+"id": "int_150",
+"scenario": "Hosting a Minecraft server for your friends.",
+"optionA": { "text": "Mod the server with custom biomes and creative aesthetics", "trait": "Artistic" },
+"optionB": { "text": "Monitor the server's RAM usage and bandwidth limits", "trait": "Investigative" }
+}
+],
+"aptitude": [
+{
+"id": "apt_56",
+"domain": "Spatial",
+"question": "Which arrow completes the 90-degree clockwise sequence: ↘️, ↙️, ↖️, [ ? ]",
+"options": ["↗️", "⬆️", "➡️", "⬇️"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_57",
+"domain": "Spatial",
+"question": "Find the missing symbol in the symmetry matrix: 🟩 ⚪ 🟩 | 🟨 ⚫ 🟨 | 🟥 ⚪ [ ? ]",
+"options": ["⚫", "🟥", "🟨", "⚪"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_58",
+"domain": "Spatial",
+"question": "Opposite faces of a standard die always sum to 7. If the top face is ⚅ (6), what is at the bottom?",
+"options": ["⚀ (1)", "⚁ (2)", "⚂ (3)", "⚃ (4)"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_59",
+"domain": "Spatial",
+"question": "Which shape is perfectly mirrored across a vertical axis? ◖ -> [ ? ]",
+"options": ["◗", "◐", "◑", "◒"],
+"correctIndex": 0,
+"difficulty": "easy"
+},
+{
+"id": "apt_60",
+"domain": "Numerical",
+"question": "You and two friends order an ₹800 pizza. You ate exactly half of it, and the other two split the rest. How much should you UPI?",
+"options": ["₹266", "₹400", "₹300", "₹200"],
+"correctIndex": 1,
+"difficulty": "medium"
+},
+{
+"id": "apt_61",
+"domain": "Numerical",
+"question": "You buy a ₹1200 hoodie on Myntra with a 25% off coupon. How much do you actually pay?",
+"options": ["₹800", "₹900", "₹1000", "₹1100"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_62",
+"domain": "Numerical",
+"question": "A Rapido bike takes 5 minutes to cover 2 km in traffic. At this rate, how long will a 6 km ride take?",
+"options": ["10 mins", "12 mins", "15 mins", "20 mins"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_63",
+"domain": "Numerical",
+"question": "Your reel gets 1,000 views in hour one, and doubles every hour. How many total views will it have during hour three?",
+"options": ["2,000", "3,000", "4,000", "8,000"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_64",
+"domain": "Logical",
+"question": "If it rains, you order Zepto. If you order Zepto, you eat Maggi. You are eating home-cooked dal today. This means:",
+"options": ["It is raining heavily", "You ordered from Swiggy instead", "It is not raining", "Zepto was down"],
+"correctIndex": 2,
+"difficulty": "medium"
+},
+{
+"id": "apt_65",
+"domain": "Logical",
+"question": "Find the odd one out among these apps: Swiggy, Zomato, Blinkit, Netflix.",
+"options": ["Swiggy", "Zomato", "Blinkit", "Netflix"],
+"correctIndex": 3,
+"difficulty": "easy"
+},
+{
+"id": "apt_66",
+"domain": "Logical",
+"question": "In your BGMI squad: Kabir pushes faster than Dev. Dev pushes faster than Rohan. Who is the slowest pusher?",
+"options": ["Kabir", "Dev", "Rohan", "Everyone is fast"],
+"correctIndex": 2,
+"difficulty": "easy"
+},
+{
+"id": "apt_67",
+"domain": "Logical",
+"question": "A viral meme peaks every 3 days. If the first peak was on Monday, what day is the third peak?",
+"options": ["Thursday", "Friday", "Saturday", "Sunday"],
+"correctIndex": 3,
+"difficulty": "medium"
+},
+{
+"id": "apt_68",
+"domain": "Verbal",
+"question": "Complete the analogy. WhatsApp is to Texting as Discord is to [ ? ]",
+"options": ["Images", "Voice Chat", "Emails", "Reels"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_69",
+"domain": "Verbal",
+"question": "In Gen Z slang, if someone's outfit is described as 'Mid', it means it is:",
+"options": ["Amazing", "Average or boring", "Terrible", "Expensive"],
+"correctIndex": 1,
+"difficulty": "easy"
+},
+{
+"id": "apt_70",
+"domain": "Verbal",
+"question": "Unscramble the letters F U E N C L N R E I to find a popular modern career.",
+"options": ["FREELANCER", "INFLUENCER", "FINANCIER", "CONFLUENCE"],
+"correctIndex": 1,
+"difficulty": "medium"
+}
+]
+}
