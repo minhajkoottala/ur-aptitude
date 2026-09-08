@@ -18,7 +18,7 @@ const fontJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ur.aptitue.vercel.app"),
+  metadataBase: new URL("https://ur-aptitue.vercel.app"),
   title: {
     default: "Apti Test | Know Your Potential",
     template: "%s | Apti Test",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Minhaj Engapuzha and team" }],
   creator: "Minhaj Engapuzha and team",
-  publisher: "ur.aptitue.vercel.app",
+  publisher: "ur-aptitue.vercel.app",
   formatDetection: {
     email: false,
     address: false,
@@ -48,16 +48,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ur.aptitue.vercel.app",
-    siteName: "ur.aptitue.vercel.app",
+    url: "https://ur-aptitue.vercel.app",
+    siteName: "Apti Test",
     title: "Apti Test | Know Your Potential",
     description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
     images: [
       {
-        url: "https://ur.aptitue.vercel.app/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         type: "image/jpeg",
+        alt: "Apti Test - Know Your Potential",
+      },
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
         alt: "Apti Test - Know Your Potential",
       },
     ],
@@ -66,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Apti Test | Know Your Potential",
     description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
-    images: ["https://ur.aptitue.vercel.app/og-image.jpg"],
+    images: ["/og-image.jpg"],
     creator: "@AptiTest",
   },
   robots: {
