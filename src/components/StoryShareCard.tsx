@@ -1,32 +1,13 @@
 "use client";
 
 import React, { forwardRef } from "react";
-import { LucideIcon, Briefcase, GraduationCap, CheckCircle2 } from "lucide-react";
+import { LucideIcon, CheckCircle2, Sparkles, GraduationCap } from "lucide-react";
 
 interface StoryShareCardProps {
-  archetype: {
-    id: string;
-    traits: string[];
-    primaryAptitude?: string;
-    recommendedStream?: {
-      category: string;
-      stream: string;
-      why: string;
-      electives?: string[];
-    };
-    broadCareers?: Array<string | { title: string; description: string; degrees: string; exams: string }>;
-    coreSkills?: string[];
-  };
-  viewData: {
-    title: string;
-    tagline: string;
-    superpowers: string[];
-    strategicFields?: string[];
-    funQuests?: string[];
-    streamFit?: string;
-  };
+  archetype: any;
+  viewData: any;
   BadgeIcon: LucideIcon;
-  rScores: { key: string; count: number }[];
+  rScores?: { key: string; count: number }[];
   isExplorer: boolean;
 }
 
@@ -34,7 +15,7 @@ const TRAITS = ["Realistic", "Investigative", "Artistic", "Social", "Enterprisin
 
 export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
   ({ archetype, viewData, BadgeIcon, rScores, isExplorer }, ref) => {
-    // Mini Radar Chart for the 9:16 formal card (360x640px)
+    // Radar Chart Calculations
     const MAX_SCORE = 10;
     const scoreMap = (rScores || []).reduce((acc, curr) => {
       acc[curr.key] = Math.min(curr.count, MAX_SCORE) / MAX_SCORE;
@@ -58,10 +39,6 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
     const polygonPath = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
     const gridLevels = [0.33, 0.66, 1];
 
-    const streamCategory = archetype.recommendedStream?.category || "Commerce";
-    const topCareer = archetype.broadCareers?.[0];
-    const topCareerTitle = typeof topCareer === "object" ? topCareer.title : topCareer;
-
     return (
       <div
         ref={ref}
@@ -75,61 +52,61 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
         className="relative flex flex-col justify-between p-5 overflow-hidden select-none box-border border border-slate-200"
       >
         {/* Top Header Banner */}
-        <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div className="flex items-center justify-between pb-2.5 border-b border-slate-100">
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-[#1A73E8] flex items-center justify-center text-white text-xs font-bold">
-              ✦
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Apti Test" 
+              className="w-6 h-6 rounded-full object-contain border border-slate-200 shrink-0" 
+            />
             <div>
-              <span className="text-[11px] font-bold tracking-tight text-slate-900 block leading-tight">
-                Aptitude<span className="text-[#1A73E8]">Engine</span>
+              <span className="text-[13px] font-bold tracking-tight text-slate-900 block leading-tight">
+                Apti<span className="text-[#1A73E8]">Test</span>
               </span>
-              <span className="text-[8px] text-slate-500 uppercase tracking-wider block">
-                Standard Assessment Report
+              <span className="text-[9px] text-slate-500 uppercase tracking-wider block font-semibold">
+                Know Your Potential
               </span>
             </div>
           </div>
-          <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-blue-50 text-[#1A73E8] border border-blue-100">
+          <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-[#1A73E8] border border-blue-100 shrink-0">
             {isExplorer ? "Explorer (Ages 8-13)" : "Navigator (14+)"}
           </span>
         </div>
 
         {/* Profile Card Header */}
-        <div className="text-center mt-1">
-          <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1A73E8] mx-auto mb-2 shadow-xs">
+        <div className="text-center space-y-1 my-0.5">
+          <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1A73E8] mx-auto shadow-xs">
             <BadgeIcon size={24} className="text-[#1A73E8]" />
           </div>
 
-          <span className="text-[9px] font-bold uppercase tracking-widest text-[#1A73E8] block mb-0.5">
-            Verified Cognitive Profile
+          <span className="text-[9.5px] font-bold uppercase tracking-widest text-[#1A73E8] block">
+            Your Mind Archetype
           </span>
 
-          <h1 className="text-[19px] font-bold text-slate-900 leading-tight mb-1 tracking-tight">
-            {viewData.title}
+          <h1 className="text-[20px] font-bold text-slate-900 leading-tight tracking-tight">
+            {viewData?.title}
           </h1>
 
-          <p className="text-[10px] text-slate-600 font-medium leading-snug italic px-4 line-clamp-2">
-            &ldquo;{viewData.tagline}&rdquo;
+          <p className="text-[11px] text-slate-600 font-medium leading-snug italic px-2 line-clamp-2">
+            &ldquo;{viewData?.tagline}&rdquo;
           </p>
         </div>
 
-        {/* +2 Stream Fit Banner */}
-        {archetype.recommendedStream && (
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mx-1">
-            <div className="flex items-center justify-between text-[9px] font-bold uppercase text-slate-500 mb-1">
-              <span>+2 Stream Fit</span>
-              <span className="text-[#1A73E8] bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
-                {streamCategory}
-              </span>
+        {/* Practical Strength Summary */}
+        {archetype?.practicalStrength && (
+          <div className="bg-slate-50 border border-slate-200/90 rounded-lg p-2.5 space-y-1 text-left">
+            <div className="flex items-center gap-1 text-[9.5px] font-bold uppercase tracking-wider text-[#1A73E8]">
+              <Sparkles size={12} />
+              <span>Your Practical Strength</span>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 leading-snug">
-              {archetype.recommendedStream.stream}
-            </div>
+            <p className="text-[11px] text-slate-700 leading-normal line-clamp-3 font-normal">
+              {archetype.practicalStrength}
+            </p>
           </div>
         )}
 
-        {/* Mini RIASEC Radar */}
-        <div className="flex flex-col items-center my-0.5">
+        {/* Mini Radar Chart */}
+        <div className="flex flex-col items-center my-1">
           <svg width={size} height={size} className="overflow-visible">
             {gridLevels.map((level, i) => {
               const points = TRAITS.map((_, j) => getPoint(level, j));
@@ -139,7 +116,7 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
                   key={i}
                   points={path}
                   fill="none"
-                  stroke="#E2E8F0"
+                  stroke="#CBD5E1"
                   strokeWidth="1"
                 />
               );
@@ -154,7 +131,7 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
                   y1={center}
                   x2={outerPoint.x}
                   y2={outerPoint.y}
-                  stroke="#E2E8F0"
+                  stroke="#CBD5E1"
                   strokeWidth="1"
                 />
               );
@@ -162,9 +139,9 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
 
             <polygon
               points={polygonPath}
-              fill="rgba(26, 115, 232, 0.18)"
+              fill="rgba(26, 115, 232, 0.20)"
               stroke="#1A73E8"
-              strokeWidth="1.75"
+              strokeWidth="2"
             />
 
             {dataPoints.map((p, i) => (
@@ -178,8 +155,8 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
                   key={i}
                   x={labelPoint.x}
                   y={labelPoint.y}
-                  fill="#64748B"
-                  fontSize="7.5"
+                  fill="#475569"
+                  fontSize="8.5"
                   fontWeight="700"
                   textAnchor="middle"
                   dominantBaseline="middle"
@@ -192,27 +169,29 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
           </svg>
         </div>
 
-        {/* Career & Skills Summary */}
-        <div className="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mx-1 space-y-1.5">
-          {topCareerTitle && (
-            <div className="flex items-center justify-between text-[10px] pb-1 border-b border-slate-200">
-              <span className="text-slate-500 font-semibold flex items-center gap-1">
-                <Briefcase size={11} className="text-[#1A73E8]" />
-                <span>Primary Pathway:</span>
+        {/* Roadmap / Strengths Summary */}
+        <div className="bg-slate-50 border border-slate-200/90 rounded-lg p-2.5 space-y-1.5 text-left">
+          {!isExplorer && viewData?.simpleStream && (
+            <div className="flex items-center justify-between pb-1 border-b border-slate-200">
+              <span className="text-[9.5px] font-bold uppercase text-slate-500 flex items-center gap-1">
+                <GraduationCap size={12} className="text-[#1A73E8]" />
+                <span>Optimal +2 Stream</span>
               </span>
-              <span className="text-slate-900 font-bold truncate max-w-[170px]">{topCareerTitle}</span>
+              <span className="text-[10px] font-bold text-[#1A73E8] bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
+                {viewData.simpleStream} Stream
+              </span>
             </div>
           )}
 
           <div className="space-y-1">
-            <span className="text-[8px] font-bold text-slate-500 uppercase tracking-wider block">
-              Core Competencies:
+            <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+              Core Strengths:
             </span>
-            <div className="grid grid-cols-2 gap-1 text-[9.5px]">
-              {(archetype.coreSkills || viewData.superpowers).slice(0, 4).map((skill, idx) => (
-                <div key={idx} className="flex items-center gap-1 text-slate-700 truncate">
-                  <CheckCircle2 size={10} className="text-[#1A73E8] shrink-0" />
-                  <span className="truncate">{skill}</span>
+            <div className="grid grid-cols-1 gap-1 text-[10.5px]">
+              {(viewData?.superpowers || []).map((power: string, idx: number) => (
+                <div key={idx} className="flex items-center gap-1.5 text-slate-800 font-medium truncate">
+                  <CheckCircle2 size={12} className="text-[#1A73E8] shrink-0" />
+                  <span className="truncate">{power}</span>
                 </div>
               ))}
             </div>
@@ -220,9 +199,9 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
         </div>
 
         {/* Card Footer */}
-        <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[9px] text-slate-400">
-          <span>Official Evaluation Summary</span>
-          <span className="font-semibold text-slate-600">aptitude.app</span>
+        <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500">
+          <span className="font-medium">Apti Test Result</span>
+          <span className="font-bold text-slate-700">ur.aptitude.vercel.app</span>
         </div>
       </div>
     );

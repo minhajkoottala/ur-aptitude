@@ -24,8 +24,9 @@ export interface AptitudeQuestion {
 
 export type AssessmentStage = 'onboarding' | 'interests' | 'aptitude' | 'calculating' | 'results';
 
-type TraitScores = Record<string, { count: number; totalTimeMs: number }>;
-type DomainScores = Record<string, { count: number; totalTimeMs: number }>;
+// We now track 'presented' counts to calculate percentages.
+type TraitScores = Record<string, { count: number; presentedCount: number; totalTimeMs: number }>;
+type DomainScores = Record<string, { count: number; totalPresented: number; totalTimeMs: number }>;
 
 interface AssessmentState {
   // Session State
@@ -44,7 +45,7 @@ interface AssessmentState {
   // Actions
   setAgeGroup: (group: AgeGroup) => void;
   startAssessment: () => void;
-  answerInterest: (trait: string, timeMs: number) => void;
+  answerInterest: (chosenTrait: string, timeMs: number) => void;
   answerAptitude: (domain: string, isCorrect: boolean, timeMs: number) => void;
   calculateResults: () => string; // Returns the URL encoded string
   resetAssessment: () => void;
@@ -75,8 +76,24 @@ export const useAssessmentStore = create<AssessmentState>()(
       setAgeGroup: (group) => set({ ageGroup: group }),
 
       startAssessment: () => {
+        // Quota Sampling for Interests: We just pick 20 random (balanced in the JSON)
         const shuffledInterests = shuffleArray(questionData.interests as InterestQuestion[]).slice(0, 20);
-        const shuffledAptitudes = shuffleArray(questionData.aptitude as AptitudeQuestion[]).slice(0, 15);
+        
+        // Quota Sampling for Aptitude: Balance across domains
+        const allAptitudes = questionData.aptitude as AptitudeQuestion[];
+        const domains = [...new Set(allAptitudes.map(q => q.domain))]; // Usually 4-6 domains
+        const questionsPerDomain = 4; // Target 4 per domain = 16 questions total, or adapt as needed.
+        let balancedAptitudes: AptitudeQuestion[] = [];
+        
+        for (const d of domains) {
+            const domainQs = allAptitudes.filter(q => q.domain === d);
+            // If a domain has fewer than questionsPerDomain, take all it has
+            const selected = shuffleArray(domainQs).slice(0, questionsPerDomain);
+            balancedAptitudes.push(...selected);
+        }
+        
+        // Shuffle the final balanced set
+        const shuffledAptitudes = shuffleArray(balancedAptitudes);
 
         set({
           stage: 'interests',
@@ -88,16 +105,22 @@ export const useAssessmentStore = create<AssessmentState>()(
         });
       },
 
-      answerInterest: (trait, timeMs) => {
+      answerInterest: (chosenTrait, timeMs) => {
         set((state) => {
-          const currentScore = state.riasecScores[trait] || { count: 0, totalTimeMs: 0 };
-          const newScores = {
-            ...state.riasecScores,
-            [trait]: {
-              count: currentScore.count + 1,
-              totalTimeMs: currentScore.totalTimeMs + timeMs,
-            }
-          };
+          const currentQuestion = state.sessionInterests[state.currentQuestionIndex];
+          const optionATrait = currentQuestion.optionA.trait;
+          const optionBTrait = currentQuestion.optionB.trait;
+
+          // Initialize if not exist
+          const newScores = { ...state.riasecScores };
+          if (!newScores[optionATrait]) newScores[optionATrait] = { count: 0, presentedCount: 0, totalTimeMs: 0 };
+          if (!newScores[optionBTrait]) newScores[optionBTrait] = { count: 0, presentedCount: 0, totalTimeMs: 0 };
+
+          newScores[optionATrait].presentedCount += 1;
+          newScores[optionBTrait].presentedCount += 1;
+          
+          newScores[chosenTrait].count += 1;
+          newScores[chosenTrait].totalTimeMs += timeMs; // Add time only to chosen
 
           const nextIndex = state.currentQuestionIndex + 1;
           const isDone = nextIndex >= state.sessionInterests.length;
@@ -112,11 +135,12 @@ export const useAssessmentStore = create<AssessmentState>()(
 
       answerAptitude: (domain, isCorrect, timeMs) => {
         set((state) => {
-          const currentScore = state.aptitudeScores[domain] || { count: 0, totalTimeMs: 0 };
+          const currentScore = state.aptitudeScores[domain] || { count: 0, totalPresented: 0, totalTimeMs: 0 };
           const newScores = {
             ...state.aptitudeScores,
             [domain]: {
               count: currentScore.count + (isCorrect ? 1 : 0),
+              totalPresented: currentScore.totalPresented + 1,
               totalTimeMs: currentScore.totalTimeMs + timeMs,
             }
           };
@@ -135,37 +159,61 @@ export const useAssessmentStore = create<AssessmentState>()(
       calculateResults: () => {
         const state = get();
         
-        // Helper to sort by score (desc), then timeMs (asc for tie-breaker)
-        const sortScores = (scores: Record<string, { count: number; totalTimeMs: number }>) => {
-          return Object.entries(scores)
-            .map(([key, data]) => ({ key, ...data }))
-            .sort((a, b) => {
-              if (b.count !== a.count) return b.count - a.count; // Higher score wins
-              return a.totalTimeMs - b.totalTimeMs; // Lower time wins tiebreaker
-            });
-        };
+        // --- 1. Normalized Aptitude (%) ---
+        const aptitudePercentages = Object.entries(state.aptitudeScores).map(([key, data]) => {
+          return {
+            key,
+            percentage: data.totalPresented > 0 ? (data.count / data.totalPresented) : 0,
+            totalTimeMs: data.totalTimeMs
+          };
+        }).sort((a, b) => {
+          if (Math.abs(b.percentage - a.percentage) > 0.01) return b.percentage - a.percentage;
+          return a.totalTimeMs - b.totalTimeMs; // Tie-breaker: speed
+        });
+        
+        const topAptitude = aptitudePercentages.length > 0 ? aptitudePercentages[0].key : 'Logical';
 
-        const sortedRiasec = sortScores(state.riasecScores);
-        const sortedAptitude = sortScores(state.aptitudeScores);
+        // --- 2. Normalized RIASEC Vector (%) ---
+        const traitsOrder = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"];
+        const riasecPercentages = traitsOrder.map(trait => {
+           const data = state.riasecScores[trait];
+           if (!data || data.presentedCount === 0) return 0.1; // Baseline if missing
+           return data.count / data.presentedCount;
+        });
 
-        // Get Top 2 RIASEC traits and Top 1 Aptitude
-        const topTraits = sortedRiasec.slice(0, 2).map(t => t.key);
-        const topAptitude = sortedAptitude.length > 0 ? sortedAptitude[0].key : 'Logical'; // Fallback
-
-        // Find matching archetype
+        // --- 3. Cosine Similarity Matching for Archetype ---
         let bestMatch = archetypesData[0].id;
+        let highestSim = -1;
+        
         for (const arch of archetypesData) {
-          // Check if the top 2 traits match the archetype's traits (in any order)
-          const matchesTraits = arch.traits.every(t => topTraits.includes(t));
-          if (matchesTraits) {
-            bestMatch = arch.id;
-            break;
-          }
+            // Create the archetype's ideal vector (1 for primary traits, 0 for others)
+            const archVector = traitsOrder.map(t => arch.traits.includes(t) ? 1.0 : 0.0);
+            
+            // Calculate Cosine Similarity
+            let dotProduct = 0;
+            let normUser = 0;
+            let normArch = 0;
+            
+            for (let i = 0; i < 6; i++) {
+                dotProduct += riasecPercentages[i] * archVector[i];
+                normUser += riasecPercentages[i] * riasecPercentages[i];
+                normArch += archVector[i] * archVector[i];
+            }
+            
+            const sim = (normUser === 0 || normArch === 0) ? 0 : dotProduct / (Math.sqrt(normUser) * Math.sqrt(normArch));
+            
+            // If the primary aptitude matches the archetype's primary aptitude, give a slight boost (e.g. +0.05)
+            // Assuming archetypesData might have a primaryAptitude field
+            const finalSim = (arch as any).primaryAptitude === topAptitude ? sim + 0.05 : sim;
+
+            if (finalSim > highestSim) {
+                highestSim = finalSim;
+                bestMatch = arch.id;
+            }
         }
         
-        // Extract RIASEC counts in standard order for compact URL: R,I,A,S,E,C
-        const traitsOrder = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"];
-        const rScores = traitsOrder.map(t => state.riasecScores[t]?.count || 0).join(",");
+        // Scale user vector to 0-10 for the URL param to keep it compact and backward-compatible
+        const rScores = riasecPercentages.map(v => Math.round(v * 10)).join(",");
 
         const params = new URLSearchParams({
           arch: bestMatch,

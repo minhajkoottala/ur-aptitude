@@ -75,26 +75,26 @@ export default function InterestsSwipe() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
-              Behavioral & Interest Inventory
+              Interests & Preferences
             </h2>
 
             <p className="text-text-muted text-xs sm:text-sm leading-relaxed max-w-lg mx-auto font-normal">
-              Compare paired occupational scenarios and select the activity that aligns more closely with your genuine interest and natural curiosity.
+              Compare paired activities and select the option that appeals to you more.
             </p>
           </div>
 
           <div className="formal-card p-4 sm:p-5 rounded-xl space-y-3 bg-bg-surface">
             <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
               <CheckCircle size={16} className="text-brand-blue shrink-0" />
-              <span>20 Paired choice scenario items</span>
+              <span>20 preference comparison questions</span>
             </div>
             <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
               <CheckCircle size={16} className="text-brand-blue shrink-0" />
-              <span>Calibrates Holland's RIASEC vocational dimensions</span>
+              <span>Helps map your vocational interests</span>
             </div>
             <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
               <CheckCircle size={16} className="text-brand-blue shrink-0" />
-              <span>Select your authentic preference without overthinking</span>
+              <span>Pick whichever choice feels more natural to you</span>
             </div>
           </div>
 
@@ -117,7 +117,7 @@ export default function InterestsSwipe() {
         <div className="flex justify-between items-center text-xs text-text-muted font-medium">
           <span className="font-semibold text-brand-blue flex items-center gap-1.5">
             <FileQuestion size={14} />
-            <span>Behavioral Preference Inventory</span>
+            <span>Interests & Preferences</span>
           </span>
           <span className="font-semibold text-xs px-2.5 py-0.5 rounded-full bg-bg-subtle text-text-muted border border-border-subtle">
             Item {currentQuestionIndex + 1} of {sessionInterests.length}
@@ -146,11 +146,8 @@ export default function InterestsSwipe() {
             transition={{ duration: 0.18, ease: "easeInOut" }}
             className="space-y-4"
           >
-            {/* Scenario Header */}
+            {/* Question Header */}
             <div className="formal-card p-4 sm:p-6 rounded-xl text-center bg-bg-surface space-y-1">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-text-subtle block">
-                Comparative Scenario
-              </span>
               <h2 className="text-base sm:text-lg md:text-xl font-display font-bold leading-snug text-text-main">
                 {currentQ.scenario}
               </h2>

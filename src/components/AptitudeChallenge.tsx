@@ -117,7 +117,7 @@ export default function AptitudeChallenge() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
-              Timed Cognitive Aptitude Battery
+              Timed Cognitive Assessment
             </h2>
 
             <p className="text-text-muted text-xs sm:text-sm leading-relaxed max-w-lg mx-auto font-normal">
@@ -144,7 +144,7 @@ export default function AptitudeChallenge() {
             onClick={handleStart}
             className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-display font-bold py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer text-sm sm:text-base"
           >
-            <span>Start Timed Battery</span>
+            <span>Start Timed Assessment</span>
             <ArrowRight size={18} />
           </button>
         </motion.div>

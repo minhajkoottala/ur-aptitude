@@ -180,11 +180,11 @@ function ResultsContent() {
   }
 
   const isExplorer = data.age === "explorer";
-  const viewData = isExplorer ? archetype.explorer : archetype.navigator;
+  const viewData = (isExplorer ? archetype.explorer : archetype.navigator) as any;
   const BadgeIcon = ARCHETYPE_ICONS[archetype.id] || Compass;
 
   return (
-    <main className="w-full max-w-4xl mx-auto py-4 sm:py-8 px-3 sm:px-6 space-y-6">
+    <main className="w-full max-w-3xl mx-auto py-4 sm:py-8 px-3 sm:px-6 space-y-6">
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-lg bg-text-main text-bg-surface text-xs sm:text-sm font-semibold shadow-lg flex items-center gap-2 animate-in fade-in zoom-in-95">
@@ -193,256 +193,125 @@ function ResultsContent() {
         </div>
       )}
 
-      {/* Official Report Header Banner with Streamlined Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border-subtle">
-        <div>
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold bg-brand-blue-light text-brand-blue border border-brand-blue/20 mb-1">
-            <FileCheck size={12} />
-            <span>Official Assessment Report</span>
-          </div>
-          <h1 className="text-xl sm:text-2xl font-display font-bold text-text-main">
-            Cognitive Aptitude & Stream Guidance Profile
-          </h1>
-          <p className="text-xs text-text-muted mt-0.5">
-            Track: {isExplorer ? "Explorer Track (Ages 8–13)" : "Navigator Track (Ages 14+ / High School)"} • Verified Evaluation
-          </p>
-        </div>
-
-        {/* Consolidated Action Bar */}
-        <div className="flex items-center gap-2 print:hidden shrink-0">
-          <button 
-            onClick={copyCleanLink}
-            className="px-3 py-1.5 rounded-lg border border-border-subtle bg-bg-surface hover:bg-bg-subtle text-xs font-semibold text-text-muted hover:text-text-main transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
-            title="Copy Report Link"
-          >
-            <Copy size={13} />
-            <span className="hidden sm:inline">Copy Link</span>
-          </button>
-
-          <button 
-            onClick={handlePrint}
-            className="px-3 py-1.5 rounded-lg border border-border-subtle bg-bg-surface hover:bg-bg-subtle text-xs font-semibold text-text-muted hover:text-text-main transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
-            title="Print or Save PDF"
-          >
-            <Printer size={13} />
-            <span>Print / PDF</span>
-          </button>
-
-          <button 
-            onClick={() => setShowPreviewModal(true)}
-            className="px-3.5 py-1.5 rounded-lg bg-brand-blue hover:bg-brand-blue-hover text-white text-xs font-semibold transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
-          >
-            <Eye size={13} />
-            <span>Scorecard</span>
-          </button>
-        </div>
+      {/* Header */}
+      <div className="pb-4 border-b border-border-subtle">
+        <h1 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+          Your Profile
+        </h1>
       </div>
 
-      {/* SECTION 1: PRIMARY COGNITIVE PROFILE */}
-      <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface border-l-4 border-l-brand-blue">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      {/* SECTION 1: WHO AM I? (HERO CARD) */}
+      <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface border-l-4 border-l-brand-blue space-y-4">
+        <div className="flex items-start gap-4">
           <div className="w-14 h-14 rounded-xl bg-brand-blue-light text-brand-blue flex items-center justify-center shrink-0">
             <BadgeIcon size={28} />
           </div>
-
           <div className="flex-1 space-y-1">
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-brand-blue">
-                Primary Cognitive Profile
-              </span>
-              {archetype.primaryAptitude && (
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-bg-subtle text-text-muted border border-border-subtle">
-                  Aptitude: {archetype.primaryAptitude}
-                </span>
-              )}
-            </div>
-
-            <h2 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-brand-blue">
+              Your Cognitive Archetype
+            </span>
+            <h2 className="text-2xl font-display font-bold text-text-main">
               {viewData.title}
             </h2>
-
-            <p className="text-xs sm:text-sm text-text-muted font-medium italic">
+            <p className="text-sm text-text-muted font-medium italic">
               &ldquo;{viewData.tagline}&rdquo;
             </p>
           </div>
         </div>
+        
+        {/* Practical Strength Explanation */}
+        <div className="pt-4 border-t border-border-subtle">
+          <p className="text-sm text-text-main leading-relaxed">
+            <strong className="text-brand-blue">Your Practical Strength:</strong> {archetype.practicalStrength}
+          </p>
+        </div>
       </div>
 
-      {/* SECTION 2: HIGHER SECONDARY (+2) STREAM RECOMMENDATION */}
-      {archetype.recommendedStream && (
-        <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3.5">
-          <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
-            <div className="flex items-center gap-2">
-              <GraduationCap size={17} className="text-brand-blue" />
+      {/* SECTION 2: WHAT SHOULD I DO NEXT? (ROADMAP) */}
+      {isExplorer ? (
+        // Explorer Roadmap (8-13)
+        <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-2">
+            <BookOpen size={16} />
+            <span>What You Naturally Enjoy</span>
+          </h3>
+          <ul className="space-y-2">
+            {viewData.superpowers?.map((power: string, idx: number) => (
+              <li key={idx} className="flex items-start gap-2 text-sm text-text-muted">
+                <Check size={14} className="text-brand-blue mt-0.5 shrink-0" />
+                <span>{power}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        // Navigator Roadmap (14+)
+        <div className="space-y-4 sm:space-y-6">
+          <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3">
+            <div className="flex items-center gap-2 pb-2 border-b border-border-subtle">
+              <GraduationCap size={18} className="text-brand-blue" />
               <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
-                Higher Secondary (+2) Stream Recommendation
+                Recommended Higher Secondary (+2) Stream
               </h3>
             </div>
-            <span className="px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-brand-blue-light text-brand-blue border border-brand-blue/20">
-              {archetype.recommendedStream.category} Stream
-            </span>
-          </div>
-
-          <div>
-            <h4 className="text-base font-bold text-text-main mb-1">
-              {archetype.recommendedStream.stream}
-            </h4>
-            <p className="text-xs sm:text-sm text-text-muted leading-relaxed font-normal">
-              {archetype.recommendedStream.why}
+            
+            <div className="flex items-center gap-3">
+              <span className="px-3 py-1 rounded text-sm font-bold uppercase tracking-wider bg-brand-blue text-white shadow-sm">
+                {viewData.simpleStream} Stream
+              </span>
+            </div>
+            <p className="text-sm text-text-muted leading-relaxed pt-1">
+              Based on your analytical reasoning, spatial skills, and problem-solving approach, the <strong className="text-text-main">{viewData.simpleStream}</strong> stream is the most natural fit. It will leverage your core strengths rather than working against them.
             </p>
           </div>
 
-          {archetype.recommendedStream.electives && (
-            <div className="pt-2.5 border-t border-border-subtle">
-              <span className="text-[11px] font-bold text-text-muted uppercase tracking-wider block mb-2">
-                Recommended 11th & 12th Subject Combinations / Electives:
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {archetype.recommendedStream.electives.map((ele: string, idx: number) => (
-                  <span 
-                    key={idx} 
-                    className="px-2.5 py-1 rounded-md bg-bg-subtle border border-border-subtle text-xs font-semibold text-text-main"
-                  >
-                    {ele}
-                  </span>
-                ))}
+          {viewData.broadCareers && (
+             <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-4">
+              <div className="flex items-center gap-2 pb-2 border-b border-border-subtle">
+                <Briefcase size={18} className="text-brand-blue" />
+                <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
+                  Aligned Career & Degree Pathways
+                </h3>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {viewData.broadCareers.map((career: any, idx: number) => {
+                  const title = career.title || career;
+                  const degrees = career.degrees;
+
+                  return (
+                    <div 
+                      key={idx} 
+                      className="p-4 rounded-lg bg-bg-subtle/50 border border-border-subtle hover:border-brand-blue/30 transition-colors flex flex-col justify-center space-y-1.5"
+                    >
+                      <h4 className="font-bold text-sm text-text-main">
+                        {title}
+                      </h4>
+                      {degrees && (
+                        <p className="text-xs text-text-muted font-medium">
+                          <strong className="text-text-subtle">Degree:</strong> {degrees}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}
         </div>
       )}
 
-      {/* SECTION 3: CAREER TRACKS & DEGREE PATHWAYS */}
-      {archetype.broadCareers && (
-        <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3.5">
-          <div className="flex items-center gap-2 pb-3 border-b border-border-subtle">
-            <Briefcase size={17} className="text-brand-blue" />
-            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
-              Aligned Career Tracks & Degree Pathways
-            </h3>
-          </div>
-          <p className="text-xs text-text-muted">
-            High-alignment career pathways matching this cognitive profile:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {archetype.broadCareers.map((career: any, idx: number) => {
-              const isObj = typeof career === "object" && career !== null;
-              const title = isObj ? career.title : career;
-              const desc = isObj ? career.description : "";
-              const degrees = isObj ? career.degrees : "";
-              const exams = isObj ? career.exams : "";
-
-              return (
-                <div 
-                  key={idx} 
-                  className="p-3.5 rounded-lg bg-bg-subtle/50 border border-border-subtle hover:border-brand-blue/30 transition-colors flex flex-col justify-between space-y-2"
-                >
-                  <div>
-                    <h4 className="font-bold text-xs sm:text-sm text-text-main">
-                      {title}
-                    </h4>
-                    {desc && (
-                      <p className="text-xs text-text-muted mt-1 leading-relaxed">
-                        {desc}
-                      </p>
-                    )}
-                  </div>
-                  {(degrees || exams) && (
-                    <div className="pt-2 border-t border-border-subtle space-y-1 text-[11px]">
-                      {degrees && (
-                        <div className="flex items-start gap-1.5">
-                          <span className="text-text-muted font-semibold shrink-0">Degrees:</span>
-                          <span className="text-brand-blue font-medium">{degrees}</span>
-                        </div>
-                      )}
-                      {exams && (
-                        <div className="flex items-start gap-1.5">
-                          <span className="text-text-muted font-semibold shrink-0">Key Exams:</span>
-                          <span className="text-brand-teal font-medium">{exams}</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* SECTION 4 & 5: RADAR CHART & CORE COMPETENCIES (Side-by-side grid) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-        {/* Radar Chart */}
-        <div className="formal-card rounded-xl p-4 sm:p-5 bg-bg-surface flex flex-col justify-between">
-          <RadarChart data={data.r} />
-          <p className="text-[10.5px] text-text-subtle text-center mt-1">
-            Measures intrinsic vocational orientation across Holland's RIASEC dimensions
-          </p>
-        </div>
-
-        {/* Core Competencies */}
-        <div className="formal-card rounded-xl p-4 sm:p-5 bg-bg-surface flex flex-col justify-between">
-          <div className="space-y-3">
-            <div className="flex items-center gap-2 pb-2.5 border-b border-border-subtle">
-              <BookOpen size={16} className="text-brand-blue" />
-              <h3 className="text-xs font-bold uppercase tracking-wider text-text-main">
-                Core Cognitive Competencies
-              </h3>
-            </div>
-            
-            <div className="space-y-2">
-              {(archetype.coreSkills || viewData.superpowers).map((skill: string, idx: number) => (
-                <div key={idx} className="flex items-center gap-2.5 p-2 rounded-lg bg-bg-subtle/50 border border-border-subtle text-xs font-medium text-text-main">
-                  <span className="w-5 h-5 rounded bg-brand-blue-light text-brand-blue font-bold text-[10px] flex items-center justify-center shrink-0">
-                    {idx + 1}
-                  </span>
-                  <span>{skill}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-3 pt-2.5 border-t border-border-subtle text-[10.5px] text-text-subtle">
-            Demonstrated natural strengths validated by standardized scoring
-          </div>
+      {/* SECTION 3: VISUAL PROFILE (Radar Chart) */}
+      <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface flex flex-col items-center">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-text-main mb-4 w-full text-left">
+          Your Interest Spectrum
+        </h3>
+        <div className="w-full max-w-sm">
+           <RadarChart data={data.r} />
         </div>
       </div>
 
-      {/* SECTION 6: INSTITUTIONAL ADVISORY */}
-      {isExplorer ? (
-        <div className="formal-card rounded-xl p-5 bg-bg-surface space-y-3">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-2">
-            <Compass size={15} />
-            <span>Developmental Milestones & Quests</span>
-          </h3>
-          <ul className="space-y-1.5">
-            {archetype.explorer.funQuests.map((quest: string, idx: number) => (
-              <li key={idx} className="flex items-start gap-2 text-xs text-text-muted leading-relaxed">
-                <Check size={13} className="text-brand-blue mt-0.5 shrink-0" />
-                <span>{quest}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="p-3 bg-brand-blue-light/50 border border-brand-blue/20 rounded-lg mt-2">
-            <h4 className="text-[10.5px] font-bold text-brand-blue uppercase mb-0.5">Parent & Teacher Recommendation</h4>
-            <p className="text-xs text-text-muted leading-relaxed">{archetype.explorer.parentTip}</p>
-          </div>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div className="formal-card p-4 rounded-xl bg-bg-surface border-t-3 border-t-brand-teal">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-brand-teal mb-1">Optimal Learning Flow State</h3>
-            <p className="text-xs text-text-muted leading-relaxed">{archetype.navigator.flowTriggers}</p>
-          </div>
-          <div className="formal-card p-4 rounded-xl bg-bg-surface border-t-3 border-t-brand-amber">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-brand-amber mb-1">Friction & Fatigue Triggers</h3>
-            <p className="text-xs text-text-muted leading-relaxed">{archetype.navigator.frictionTriggers}</p>
-          </div>
-        </div>
-      )}
-
-      {/* FOOTER BAR: Clean Retake & Scorecard CTA */}
+      {/* FOOTER BAR */}
       <div className="pt-4 border-t border-border-subtle flex items-center justify-between print:hidden">
         <button
           onClick={() => {
@@ -456,9 +325,10 @@ function ResultsContent() {
 
         <button
           onClick={() => setShowPreviewModal(true)}
-          className="text-xs font-semibold text-brand-blue hover:underline flex items-center gap-1 cursor-pointer"
+          className="text-xs font-semibold px-4 py-2 rounded-lg bg-brand-blue hover:bg-brand-blue-hover text-white shadow-sm flex items-center gap-1.5 cursor-pointer transition-colors"
         >
-          <span>View / Export Official Scorecard</span>
+          <Eye size={13} />
+          <span>View Scorecard</span>
         </button>
       </div>
 
@@ -488,7 +358,7 @@ function ResultsContent() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto">
           <div className="relative flex flex-col items-center max-w-[380px] w-full my-auto">
             <div className="w-full flex items-center justify-between pb-3 text-white">
-              <span className="text-xs font-bold uppercase tracking-wider">Official Scorecard Preview</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Shareable Scorecard</span>
               <button
                 onClick={() => setShowPreviewModal(false)}
                 className="p-1 rounded-md bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
@@ -515,7 +385,7 @@ function ResultsContent() {
                 className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-md transition-colors cursor-pointer"
               >
                 <Download size={14} />
-                <span>Save Scorecard (PNG)</span>
+                <span>Save Image (PNG)</span>
               </button>
             </div>
           </div>
