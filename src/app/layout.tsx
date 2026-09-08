@@ -52,11 +52,21 @@ export const metadata: Metadata = {
     siteName: "ur.aptitue.vercel.app",
     title: "Apti Test | Know Your Potential",
     description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
+    images: [
+      {
+        url: "https://ur.aptitue.vercel.app/og-image.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Apti Test - Know Your Potential",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Apti Test | Know Your Potential",
     description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
+    images: ["https://ur.aptitue.vercel.app/og-image.jpg"],
     creator: "@AptiTest",
   },
   robots: {
