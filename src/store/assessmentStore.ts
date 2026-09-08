@@ -42,6 +42,10 @@ interface AssessmentState {
   riasecScores: TraitScores;
   aptitudeScores: DomainScores;
 
+  // User Personalization
+  userName: string;
+  setUserName: (name: string) => void;
+
   // Actions
   setAgeGroup: (group: AgeGroup) => void;
   startAssessment: () => void;
@@ -67,12 +71,14 @@ export const useAssessmentStore = create<AssessmentState>()(
     (set, get) => ({
       stage: 'onboarding',
       ageGroup: null,
+      userName: '',
       sessionInterests: [],
       sessionAptitudes: [],
       currentQuestionIndex: 0,
       riasecScores: {},
       aptitudeScores: {},
 
+      setUserName: (name) => set({ userName: name }),
       setAgeGroup: (group) => set({ ageGroup: group }),
 
       startAssessment: () => {
@@ -221,6 +227,10 @@ export const useAssessmentStore = create<AssessmentState>()(
           r: rScores,
           apt: topAptitude
         });
+
+        if (state.userName && state.userName.trim()) {
+          params.set('name', state.userName.trim());
+        }
         
         set({ stage: 'results' });
         return `/results?${params.toString()}`;
@@ -230,6 +240,7 @@ export const useAssessmentStore = create<AssessmentState>()(
         set({
           stage: 'onboarding',
           ageGroup: null,
+          userName: '',
           sessionInterests: [],
           sessionAptitudes: [],
           currentQuestionIndex: 0,

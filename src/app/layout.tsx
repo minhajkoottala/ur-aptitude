@@ -18,8 +18,67 @@ const fontJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Apti Test | Know Your Potential",
-  description: "Test your aptitude with scientifically proven evaluation methods.",
+  metadataBase: new URL("https://ur.aptitude.vercel.app"),
+  title: {
+    default: "Apti Test | Know Your Potential",
+    template: "%s | Apti Test",
+  },
+  description: "Take the free 2-minute aptitude test to discover your mind archetype, practical strengths, and ideal higher secondary (+2) stream and career pathways. #WtsUrAptitude",
+  keywords: [
+    "Aptitude Test",
+    "Apti Test",
+    "Stream Selection",
+    "Higher Secondary Stream",
+    "Career Guidance",
+    "Holland RIASEC",
+    "Mind Archetype",
+    "Science Commerce Humanities",
+    "WtsUrAptitude",
+    "Cognitive Assessment",
+    "College Career Path"
+  ],
+  authors: [{ name: "Minhaj Engapuzha and team" }],
+  creator: "Minhaj Engapuzha and team",
+  publisher: "Apti Test",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://ur.aptitude.vercel.app",
+    siteName: "Apti Test",
+    title: "Apti Test | Know Your Potential",
+    description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Apti Test - Know Your Potential",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apti Test | Know Your Potential",
+    description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
+    images: ["/og-image.png"],
+    creator: "@AptiTest",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/icon.png" },

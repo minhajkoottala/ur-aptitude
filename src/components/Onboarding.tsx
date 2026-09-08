@@ -9,13 +9,16 @@ import {
   ArrowLeft, 
   ArrowRight, 
   Clock, 
-  FileText
+  FileText,
+  User
 } from "lucide-react";
 
 export default function Onboarding() {
-  const { setAgeGroup, startAssessment } = useAssessmentStore();
+  const { setAgeGroup, setUserName, startAssessment } = useAssessmentStore();
   const [step, setStep] = useState<"greeting" | "rules">("greeting");
   const [selectedGroup, setSelectedGroup] = useState<AgeGroup>(null);
+  const [nameInput, setNameInput] = useState("");
+  const [nameError, setNameError] = useState(false);
 
   const handleSelectAge = (group: "explorer" | "navigator") => {
     setSelectedGroup(group);
@@ -24,6 +27,11 @@ export default function Onboarding() {
   };
 
   const handleStart = () => {
+    if (!nameInput.trim()) {
+      setNameError(true);
+      return;
+    }
+    setUserName(nameInput.trim());
     startAssessment();
   };
 
@@ -189,6 +197,36 @@ export default function Onboarding() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* Name / Personalization */}
+            <div className={`formal-card p-4 rounded-xl bg-bg-surface space-y-2 border transition-colors ${nameError ? "border-rose-500 ring-1 ring-rose-500/20" : "border-border-subtle"}`}>
+              <label htmlFor="user-name" className="text-xs font-semibold text-text-main flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <User size={14} className={nameError ? "text-rose-500" : "text-brand-blue"} />
+                  <span>Your Name / Nickname <span className="text-rose-500 font-bold">*</span></span>
+                </span>
+                <span className={`text-[10px] ${nameError ? "text-rose-500 font-semibold" : "text-text-muted font-normal"}`}>
+                  {nameError ? "Please enter your name" : "Required for scorecard"}
+                </span>
+              </label>
+              <input
+                id="user-name"
+                type="text"
+                value={nameInput}
+                onChange={(e) => {
+                  setNameInput(e.target.value);
+                  if (nameError) setNameError(false);
+                }}
+                placeholder="Enter your name or nickname"
+                maxLength={25}
+                className={`w-full px-3.5 py-2.5 rounded-lg bg-bg-subtle border focus:bg-bg-surface focus:outline-none text-xs sm:text-sm text-text-main placeholder:text-text-muted/60 transition-all ${nameError ? "border-rose-400 focus:border-rose-500" : "border-border-subtle focus:border-brand-blue"}`}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handleStart();
+                  }
+                }}
+              />
             </div>
 
             {/* Start Button */}

@@ -98,17 +98,20 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-text-muted">
             <li>
+              <strong className="text-text-main">Optional Name / Nickname:</strong> An optional name or nickname provided solely to personalize your generated scorecard and results card. This name is stored ephemerally in browser session memory and client-side URL parameters—it is never transmitted to or stored on any central server or database.
+            </li>
+            <li>
               <strong className="text-text-main">Assessment Inputs:</strong> Track selection (Explorer vs. Navigator track), interest swipes (RIASEC preferences), and response selections to timed cognitive challenges.
             </li>
             <li>
               <strong className="text-text-main">Device & Display Preferences:</strong> Local storage flags for theme selection (light or dark mode) to maintain visual consistency.
             </li>
             <li>
-              <strong className="text-text-main">Generated Scorecard Payload:</strong> Evaluated archetype metrics and RIASEC sub-scores encoded within the browser URL query string.
+              <strong className="text-text-main">Generated Scorecard Payload:</strong> Evaluated archetype metrics, RIASEC sub-scores, and optional display name encoded within the browser URL query string.
             </li>
           </ul>
           <p>
-            We do <strong>not</strong> require user registration, mandatory email addresses, phone numbers, or government identification to take or view assessments.
+            We do <strong>not</strong> require user accounts, mandatory email addresses, phone numbers, or government identification to take or view assessments.
           </p>
         </section>
 

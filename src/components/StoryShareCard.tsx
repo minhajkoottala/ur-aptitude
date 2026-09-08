@@ -9,12 +9,13 @@ interface StoryShareCardProps {
   BadgeIcon: LucideIcon;
   rScores?: { key: string; count: number }[];
   isExplorer: boolean;
+  userName?: string;
 }
 
 const TRAITS = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"];
 
 export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
-  ({ archetype, viewData, BadgeIcon, rScores, isExplorer }, ref) => {
+  ({ archetype, viewData, BadgeIcon, rScores, isExplorer, userName }, ref) => {
     // Radar Chart Calculations
     const MAX_SCORE = 10;
     const scoreMap = (rScores || []).reduce((acc, curr) => {
@@ -79,8 +80,8 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
             <BadgeIcon size={24} className="text-[#1A73E8]" />
           </div>
 
-          <span className="text-[9.5px] font-bold uppercase tracking-widest text-[#1A73E8] block">
-            Your Mind Archetype
+          <span className="text-[9.5px] font-bold uppercase tracking-widest text-[#1A73E8] block truncate max-w-[280px] mx-auto">
+            {userName ? `${userName}'s Mind Archetype` : "Your Mind Archetype"}
           </span>
 
           <h1 className="text-[20px] font-bold text-slate-900 leading-tight tracking-tight">
@@ -171,36 +172,45 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
 
         {/* Roadmap / Strengths Summary */}
         <div className="bg-slate-50 border border-slate-200/90 rounded-lg p-2.5 space-y-1.5 text-left">
-          {!isExplorer && viewData?.simpleStream && (
-            <div className="flex items-center justify-between pb-1 border-b border-slate-200">
-              <span className="text-[9.5px] font-bold uppercase text-slate-500 flex items-center gap-1">
-                <GraduationCap size={12} className="text-[#1A73E8]" />
-                <span>Optimal +2 Stream</span>
+          {!isExplorer && viewData?.simpleStream ? (
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <span className="text-[9.5px] font-bold uppercase text-slate-500 flex items-center gap-1">
+                  <GraduationCap size={12} className="text-[#1A73E8]" />
+                  <span>Recommended +2 Stream</span>
+                </span>
+                <span className="text-[10.5px] font-bold text-[#1A73E8] bg-blue-50 px-2.5 py-0.5 rounded border border-blue-100">
+                  {viewData.simpleStream} Stream
+                </span>
+              </div>
+              <p className="text-[10px] text-slate-600 leading-normal pt-0.5">
+                Recommended path aligning with your cognitive aptitude and problem-solving strengths.
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-1">
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+                What You Naturally Enjoy:
               </span>
-              <span className="text-[10px] font-bold text-[#1A73E8] bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
-                {viewData.simpleStream} Stream
-              </span>
+              <div className="grid grid-cols-1 gap-1 text-[10.5px]">
+                {(viewData?.superpowers || []).map((power: string, idx: number) => (
+                  <div key={idx} className="flex items-center gap-1.5 text-slate-800 font-medium truncate">
+                    <CheckCircle2 size={12} className="text-[#1A73E8] shrink-0" />
+                    <span className="truncate">{power}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
-
-          <div className="space-y-1">
-            <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
-              Core Strengths:
-            </span>
-            <div className="grid grid-cols-1 gap-1 text-[10.5px]">
-              {(viewData?.superpowers || []).map((power: string, idx: number) => (
-                <div key={idx} className="flex items-center gap-1.5 text-slate-800 font-medium truncate">
-                  <CheckCircle2 size={12} className="text-[#1A73E8] shrink-0" />
-                  <span className="truncate">{power}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Card Footer */}
         <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500">
-          <span className="font-medium">Apti Test Result</span>
+          <div className="flex items-center gap-1 font-bold text-[#1A73E8]">
+            <span>#AptiTest</span>
+            <span className="text-slate-300">•</span>
+            <span>#WtsUrAptitude</span>
+          </div>
           <span className="font-bold text-slate-700">ur.aptitude.vercel.app</span>
         </div>
       </div>

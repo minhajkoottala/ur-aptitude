@@ -6,11 +6,12 @@ import { useAssessmentStore } from "@/store/assessmentStore";
 import archetypesData from "@/data/archetypes.json";
 import RadarChart from "@/components/RadarChart";
 import { StoryShareCard } from "@/components/StoryShareCard";
-import { 
+import {
   AlertTriangle, RefreshCw, Check, Copy, Printer,
   Cpu, Palette, TrendingUp, Code, HeartHandshake, Sliders, Binary,
   Crown, Laptop, Search, Users, Lightbulb, Wrench, Atom, Flame, Megaphone,
-  Download, Eye, X, BookOpen, GraduationCap, Compass, Briefcase, FileCheck, LucideIcon
+  Download, Eye, X, BookOpen, GraduationCap, Compass, Briefcase, FileCheck, LucideIcon,
+  Share2, MessageCircle, Sparkles
 } from "lucide-react";
 import { toPng } from "html-to-image";
 
@@ -40,6 +41,7 @@ interface ResultData {
   age: string;
   r: { key: string; count: number }[];
   apt: string;
+  name?: string;
 }
 
 type ArchetypeItem = (typeof archetypesData)[number];
@@ -48,11 +50,11 @@ function ResultsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const { resetAssessment } = useAssessmentStore();
-  
+
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [showPreviewModal, setShowPreviewModal] = useState(searchParams.get("story") === "1");
-  
+
   const storyCardRef = useRef<HTMLDivElement>(null);
 
   const { data, archetype, error } = useMemo(() => {
@@ -60,6 +62,7 @@ function ResultsContent() {
     const ageParam = searchParams.get("age");
     const rParam = searchParams.get("r");
     const dataParam = searchParams.get("data");
+    const nameParam = searchParams.get("name") || "";
 
     if (archParam) {
       const match = archetypesData.find((a) => a.id === archParam);
@@ -84,6 +87,7 @@ function ResultsContent() {
             age: ageParam || "navigator",
             r: rArray,
             apt: searchParams.get("apt") || "Logical",
+            name: nameParam,
           } as ResultData,
           archetype: match as ArchetypeItem,
           error: false,
@@ -148,7 +152,32 @@ function ResultsContent() {
   const copyCleanLink = () => {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href);
-      showToast("Report link copied to clipboard!");
+      showToast("Result link copied to clipboard!");
+    }
+  };
+
+  const handleWhatsAppShare = () => {
+    const nameStr = data?.name ? `${data.name}'s` : "my";
+    const text = encodeURIComponent(
+      `🎯 I just discovered ${nameStr} mind archetype on Apti Test: ${viewData?.title || "Apti Test"}!\n\nTake the 2-min aptitude challenge to discover your potential:\n${window.location.href}`
+    );
+    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+  };
+
+  const handleNativeShare = async () => {
+    const titleStr = data?.name ? `${data.name}'s Apti Test Result` : "My Apti Test Result";
+    if (typeof navigator !== "undefined" && navigator.share) {
+      try {
+        await navigator.share({
+          title: `${titleStr}: ${viewData?.title}`,
+          text: `Check out ${titleStr}: ${viewData?.title}. Discover your mind archetype on Apti Test:`,
+          url: window.location.href,
+        });
+      } catch (err) {
+        // User cancelled
+      }
+    } else {
+      copyCleanLink();
     }
   };
 
@@ -194,10 +223,20 @@ function ResultsContent() {
       )}
 
       {/* Header */}
-      <div className="pb-4 border-b border-border-subtle">
-        <h1 className="text-xl sm:text-2xl font-display font-bold text-text-main">
-          Your Profile
-        </h1>
+      <div className="pb-4 border-b border-border-subtle flex items-center justify-between">
+        <div>
+          <h1 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+            {data.name ? `${data.name}'s Profile` : "Your Profile"}
+          </h1>
+          <p className="text-xs text-text-muted mt-0.5">
+            Your natural strengths & directions
+          </p>
+        </div>
+        {data.name && (
+          <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-blue-light text-brand-blue border border-brand-blue/20">
+            {data.name}
+          </span>
+        )}
       </div>
 
       {/* SECTION 1: WHO AM I? (HERO CARD) */}
@@ -218,7 +257,7 @@ function ResultsContent() {
             </p>
           </div>
         </div>
-        
+
         {/* Practical Strength Explanation */}
         <div className="pt-4 border-t border-border-subtle">
           <p className="text-sm text-text-main leading-relaxed">
@@ -254,7 +293,7 @@ function ResultsContent() {
                 Recommended Higher Secondary (+2) Stream
               </h3>
             </div>
-            
+
             <div className="flex items-center gap-3">
               <span className="px-3 py-1 rounded text-sm font-bold uppercase tracking-wider bg-brand-blue text-white shadow-sm">
                 {viewData.simpleStream} Stream
@@ -266,22 +305,22 @@ function ResultsContent() {
           </div>
 
           {viewData.broadCareers && (
-             <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-4">
+            <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-4">
               <div className="flex items-center gap-2 pb-2 border-b border-border-subtle">
                 <Briefcase size={18} className="text-brand-blue" />
                 <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
                   Aligned Career & Degree Pathways
                 </h3>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {viewData.broadCareers.map((career: any, idx: number) => {
                   const title = career.title || career;
                   const degrees = career.degrees;
 
                   return (
-                    <div 
-                      key={idx} 
+                    <div
+                      key={idx}
                       className="p-4 rounded-lg bg-bg-subtle/50 border border-border-subtle hover:border-brand-blue/30 transition-colors flex flex-col justify-center space-y-1.5"
                     >
                       <h4 className="font-bold text-sm text-text-main">
@@ -307,7 +346,41 @@ function ResultsContent() {
           Your Interest Spectrum
         </h3>
         <div className="w-full max-w-sm">
-           <RadarChart data={data.r} />
+          <RadarChart data={data.r} />
+        </div>
+      </div>
+
+      {/* VIRAL SECTION: CHALLENGE A FRIEND */}
+      <div className="formal-card rounded-xl p-5 sm:p-6 bg-gradient-to-br from-brand-blue-light/50 via-bg-surface to-bg-surface border border-brand-blue/20 space-y-3">
+        <div className="flex items-start justify-between gap-4">
+          <div className="space-y-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-brand-blue flex items-center gap-1.5">
+              <Users size={13} />
+              <span>Compare with Friends</span>
+            </span>
+            <h3 className="text-base font-display font-bold text-text-main">
+              Challenge a Friend to take the Apti Test
+            </h3>
+            <p className="text-xs text-text-muted leading-relaxed max-w-lg">
+              See who matches your archetype or who gets a completely different profile. Takes only 2 minutes!
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          <button
+            onClick={handleWhatsAppShare}
+            className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold inline-flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+          >
+            <MessageCircle size={14} />
+            <span>Share on WhatsApp</span>
+          </button>
+          <button
+            onClick={handleNativeShare}
+            className="px-3.5 py-2 bg-bg-surface hover:bg-bg-subtle text-text-main border border-border-subtle rounded-lg text-xs font-bold inline-flex items-center gap-1.5 shadow-xs transition-colors cursor-pointer"
+          >
+            <Share2 size={14} />
+            <span>Copy Challenge Link</span>
+          </button>
         </div>
       </div>
 
@@ -327,8 +400,8 @@ function ResultsContent() {
           onClick={() => setShowPreviewModal(true)}
           className="text-xs font-semibold px-4 py-2 rounded-lg bg-brand-blue hover:bg-brand-blue-hover text-white shadow-sm flex items-center gap-1.5 cursor-pointer transition-colors"
         >
-          <Eye size={13} />
-          <span>View Scorecard</span>
+          <Share2 size={13} />
+          <span>Share Apti Test Result</span>
         </button>
       </div>
 
@@ -350,15 +423,16 @@ function ResultsContent() {
           BadgeIcon={BadgeIcon}
           rScores={data.r}
           isExplorer={isExplorer}
+          userName={data.name}
         />
       </div>
 
-      {/* Scorecard Preview Modal */}
+      {/* Scorecard Share Modal */}
       {showPreviewModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto">
           <div className="relative flex flex-col items-center max-w-[380px] w-full my-auto">
             <div className="w-full flex items-center justify-between pb-3 text-white">
-              <span className="text-xs font-bold uppercase tracking-wider">Shareable Scorecard</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Share Apti Test Result</span>
               <button
                 onClick={() => setShowPreviewModal(false)}
                 className="p-1 rounded-md bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
@@ -375,18 +449,44 @@ function ResultsContent() {
                 BadgeIcon={BadgeIcon}
                 rScores={data.r}
                 isExplorer={isExplorer}
+                userName={data.name}
               />
             </div>
 
-            <div className="w-full mt-3">
+            {/* Action Buttons */}
+            <div className="w-full mt-3 space-y-2">
               <button
                 onClick={handleDownloadScorecard}
                 disabled={isGeneratingImage}
-                className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-md transition-colors cursor-pointer"
+                className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-md transition-colors cursor-pointer disabled:opacity-50"
               >
                 <Download size={14} />
-                <span>Save Image (PNG)</span>
+                <span>{isGeneratingImage ? "Generating Image..." : "Save Image (PNG)"}</span>
               </button>
+
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={handleWhatsAppShare}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-xs transition-colors cursor-pointer"
+                >
+                  <MessageCircle size={13} />
+                  <span>WhatsApp</span>
+                </button>
+
+                <button
+                  onClick={handleNativeShare}
+                  className="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-xs transition-colors cursor-pointer"
+                >
+                  <Share2 size={13} />
+                  <span>Share / Copy</span>
+                </button>
+              </div>
+
+              {/* Instagram Story Tip */}
+              <div className="p-2.5 rounded-lg bg-white/10 border border-white/10 text-[11px] text-slate-200 flex items-center gap-2 text-left">
+                <Sparkles size={14} className="text-amber-400 shrink-0" />
+                <span><strong>Story Tip:</strong> Save the image and post to your Instagram Story with <strong>#WtsUrAptitude</strong>!</span>
+              </div>
             </div>
           </div>
         </div>
