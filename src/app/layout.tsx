@@ -18,7 +18,7 @@ const fontJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ur-aptitue.vercel.app"),
+  metadataBase: new URL("https://uraptitude.vercel.app"),
   title: {
     default: "Apti Test | Know Your Potential",
     template: "%s | Apti Test",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Minhaj Engapuzha and team" }],
   creator: "Minhaj Engapuzha and team",
-  publisher: "ur-aptitue.vercel.app",
+  publisher: "uraptitude.vercel.app",
   formatDetection: {
     email: false,
     address: false,
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ur-aptitue.vercel.app",
+    url: "https://uraptitude.vercel.app",
     siteName: "Apti Test",
     title: "Apti Test | Know Your Potential",
     description: "Discover your mind archetype, practical strengths, and ideal career stream in 2 minutes. #WtsUrAptitude",
