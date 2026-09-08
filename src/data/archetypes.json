@@ -19,7 +19,27 @@
         "Build a custom game level in Roblox or Scratch",
         "Assemble a DIY robotics or electronics kit"
       ],
-      "parentTip": "Nurture their curiosity with open-ended building tools, coding platforms, and mechanical toys rather than rigid instructions."
+      "parentTip": "Nurture their curiosity with open-ended building tools, coding platforms, and mechanical toys rather than rigid instructions.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Mathematics)",
+        "why": "Requires strong analytical rigor, abstract reasoning, and systematic problem-solving best cultivated through advanced mathematics and physical sciences.",
+        "electives": [
+          "Computer Science",
+          "Applied Mathematics",
+          "Physics",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        "Software & Cloud Systems Architect",
+        "AI & Robotics Engineer"
+      ],
+      "coreSkills": [
+        "High-Dimensional Logic",
+        "Systematic Problem Deconstruction",
+        "Algorithmic Thinking"
+      ]
     },
     "navigator": {
       "title": "The Systems Architect",
@@ -37,8 +57,80 @@
         "Robotics & Autonomous Mechatronics",
         "System Architecture & Engineering Physics"
       ],
-      "streamFit": "PCM with Computer Science / Applied Math"
-    }
+      "streamFit": "PCM with Computer Science / Applied Math",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Mathematics)",
+        "why": "Requires strong analytical rigor, abstract reasoning, and systematic problem-solving best cultivated through advanced mathematics and physical sciences.",
+        "electives": [
+          "Computer Science",
+          "Applied Mathematics",
+          "Physics",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Software & Cloud Systems Architect",
+          "description": "Designs large-scale digital platforms, cloud infrastructure, and distributed systems.",
+          "degrees": "B.Tech in Computer Science / Software Engineering",
+          "exams": "JEE Main & Advanced, BITSAT, State Engineering CETs"
+        },
+        {
+          "title": "AI & Robotics Engineer",
+          "description": "Builds autonomous machines, neural network models, and robotics automation.",
+          "degrees": "B.Tech in AI & Data Science / Robotics Engineering",
+          "exams": "JEE Main, BITSAT, VITEEE"
+        },
+        {
+          "title": "Tech Startup Co-Founder / CTO",
+          "description": "Architects core technological products and leads technical direction for high-growth ventures.",
+          "degrees": "B.Tech / B.S. in Computing",
+          "exams": "JEE, CUET, International SAT"
+        }
+      ],
+      "coreSkills": [
+        "High-Dimensional Logic",
+        "Systematic Problem Deconstruction",
+        "Algorithmic Thinking"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science (PCM: Physics, Chemistry, Mathematics)",
+      "why": "Requires strong analytical rigor, abstract reasoning, and systematic problem-solving best cultivated through advanced mathematics and physical sciences.",
+      "electives": [
+        "Computer Science",
+        "Applied Mathematics",
+        "Physics",
+        "Chemistry"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Software & Cloud Systems Architect",
+        "description": "Designs large-scale digital platforms, cloud infrastructure, and distributed systems.",
+        "degrees": "B.Tech in Computer Science / Software Engineering",
+        "exams": "JEE Main & Advanced, BITSAT, State Engineering CETs"
+      },
+      {
+        "title": "AI & Robotics Engineer",
+        "description": "Builds autonomous machines, neural network models, and robotics automation.",
+        "degrees": "B.Tech in AI & Data Science / Robotics Engineering",
+        "exams": "JEE Main, BITSAT, VITEEE"
+      },
+      {
+        "title": "Tech Startup Co-Founder / CTO",
+        "description": "Architects core technological products and leads technical direction for high-growth ventures.",
+        "degrees": "B.Tech / B.S. in Computing",
+        "exams": "JEE, CUET, International SAT"
+      }
+    ],
+    "coreSkills": [
+      "High-Dimensional Logic",
+      "Systematic Problem Deconstruction",
+      "Algorithmic Thinking"
+    ]
   },
   {
     "id": "creative-visionary",
@@ -60,7 +152,27 @@
         "Draw a comic book series or world map",
         "Experiment with digital animation & 3D design"
       ],
-      "parentTip": "Give them quiet time to create. Value their unique perspectives and encourage visual expression."
+      "parentTip": "Give them quiet time to create. Value their unique perspectives and encourage visual expression.",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Arts & Design with Applied Psychology",
+        "why": "Offers creative freedom, aesthetic critique, and human-behavior insights essential for conceptualizing groundbreaking products and media.",
+        "electives": [
+          "Fine Arts / Design",
+          "Psychology",
+          "Media Studies",
+          "Sociology / Economics"
+        ]
+      },
+      "broadCareers": [
+        "UI/UX & Digital Product Designer",
+        "Creative Director & Brand Visionary"
+      ],
+      "coreSkills": [
+        "Spatial Mental Rendering",
+        "Concept Synthesis & Storytelling",
+        "Aesthetic Innovation"
+      ]
     },
     "navigator": {
       "title": "The Creative Visionary",
@@ -78,8 +190,80 @@
         "Game Architecture & Virtual Production",
         "Industrial Design & Creative Technology"
       ],
-      "streamFit": "Design / Applied Arts / Humanities with Digital Media"
-    }
+      "streamFit": "Design / Applied Arts / Humanities with Digital Media",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Arts & Design with Applied Psychology",
+        "why": "Offers creative freedom, aesthetic critique, and human-behavior insights essential for conceptualizing groundbreaking products and media.",
+        "electives": [
+          "Fine Arts / Design",
+          "Psychology",
+          "Media Studies",
+          "Sociology / Economics"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "UI/UX & Digital Product Designer",
+          "description": "Designs user interfaces, apps, and interactive digital experiences for global audiences.",
+          "degrees": "B.Des (Bachelor of Design) in Interaction / Industrial Design",
+          "exams": "UCEED (IITs), NID DAT, NIFT"
+        },
+        {
+          "title": "Creative Director & Brand Visionary",
+          "description": "Steers artistic vision for top brands, ad agencies, gaming studios, and visual productions.",
+          "degrees": "B.Des, BFA, BA in Visual Communication",
+          "exams": "NID DAT, CUET, SEAT"
+        },
+        {
+          "title": "Game World & Virtual Reality Architect",
+          "description": "Conceptualizes immersive environments, 3D gaming worlds, and metaverse experiences.",
+          "degrees": "B.Sc in Game Design / Digital Animation, B.Des",
+          "exams": "NID, UCEED, Private Design Aptitude Tests"
+        }
+      ],
+      "coreSkills": [
+        "Spatial Mental Rendering",
+        "Concept Synthesis & Storytelling",
+        "Aesthetic Innovation"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Humanities",
+      "stream": "Humanities / Arts & Design with Applied Psychology",
+      "why": "Offers creative freedom, aesthetic critique, and human-behavior insights essential for conceptualizing groundbreaking products and media.",
+      "electives": [
+        "Fine Arts / Design",
+        "Psychology",
+        "Media Studies",
+        "Sociology / Economics"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "UI/UX & Digital Product Designer",
+        "description": "Designs user interfaces, apps, and interactive digital experiences for global audiences.",
+        "degrees": "B.Des (Bachelor of Design) in Interaction / Industrial Design",
+        "exams": "UCEED (IITs), NID DAT, NIFT"
+      },
+      {
+        "title": "Creative Director & Brand Visionary",
+        "description": "Steers artistic vision for top brands, ad agencies, gaming studios, and visual productions.",
+        "degrees": "B.Des, BFA, BA in Visual Communication",
+        "exams": "NID DAT, CUET, SEAT"
+      },
+      {
+        "title": "Game World & Virtual Reality Architect",
+        "description": "Conceptualizes immersive environments, 3D gaming worlds, and metaverse experiences.",
+        "degrees": "B.Sc in Game Design / Digital Animation, B.Des",
+        "exams": "NID, UCEED, Private Design Aptitude Tests"
+      }
+    ],
+    "coreSkills": [
+      "Spatial Mental Rendering",
+      "Concept Synthesis & Storytelling",
+      "Aesthetic Innovation"
+    ]
   },
   {
     "id": "growth-strategist",
@@ -101,7 +285,27 @@
         "Set up a fun game stall at school fest",
         "Run a mini squad challenge with prize pools"
       ],
-      "parentTip": "Support their entrepreneurial spark! Help them set up small projects where they manage a budget."
+      "parentTip": "Support their entrepreneurial spark! Help them set up small projects where they manage a budget.",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Applied Mathematics & Economics",
+        "why": "Empowers you with commercial intuition, financial models, market laws, and analytical tools to launch ventures and scale business growth.",
+        "electives": [
+          "Accountancy",
+          "Economics",
+          "Business Studies",
+          "Applied Mathematics"
+        ]
+      },
+      "broadCareers": [
+        "Businessman / Startup Founder",
+        "Investment Banker & Financial Strategist"
+      ],
+      "coreSkills": [
+        "Commercial Acumen & Strategy",
+        "Quantitative Risk Analysis",
+        "Persuasive Pitching & Negotiation"
+      ]
     },
     "navigator": {
       "title": "The Growth Strategist",
@@ -119,8 +323,80 @@
         "Product Growth & Quantitative Strategy",
         "Tech Entrepreneurship & Market Analysis"
       ],
-      "streamFit": "Commerce / Economics with Mathematics or Computer Applications"
-    }
+      "streamFit": "Commerce / Economics with Mathematics or Computer Applications",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Applied Mathematics & Economics",
+        "why": "Empowers you with commercial intuition, financial models, market laws, and analytical tools to launch ventures and scale business growth.",
+        "electives": [
+          "Accountancy",
+          "Economics",
+          "Business Studies",
+          "Applied Mathematics"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Businessman / Startup Founder",
+          "description": "Identifies market gaps, launches enterprises, raises investment, and scales commercial operations.",
+          "degrees": "BBA (Hons), BMS, B.Com (Hons), Integrated MBA",
+          "exams": "IPMAT (IIM Indore/Rohtak/Ranchi), CUET, NPAT"
+        },
+        {
+          "title": "Investment Banker & Financial Strategist",
+          "description": "Advises on corporate mergers, stock portfolios, capital allocation, and venture capital deals.",
+          "degrees": "B.Com (Hons), BA Economics (Hons), BBA Finance",
+          "exams": "CUET (SRCC, Hindu), IPMAT, SET"
+        },
+        {
+          "title": "Product Growth & Marketing Director",
+          "description": "Spearheads user acquisition, conversion analytics, and brand expansion strategies.",
+          "degrees": "BMS, BBA, BA Economics",
+          "exams": "CUET, NPAT, Christ Entrance"
+        }
+      ],
+      "coreSkills": [
+        "Commercial Acumen & Strategy",
+        "Quantitative Risk Analysis",
+        "Persuasive Pitching & Negotiation"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Commerce",
+      "stream": "Commerce with Applied Mathematics & Economics",
+      "why": "Empowers you with commercial intuition, financial models, market laws, and analytical tools to launch ventures and scale business growth.",
+      "electives": [
+        "Accountancy",
+        "Economics",
+        "Business Studies",
+        "Applied Mathematics"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Businessman / Startup Founder",
+        "description": "Identifies market gaps, launches enterprises, raises investment, and scales commercial operations.",
+        "degrees": "BBA (Hons), BMS, B.Com (Hons), Integrated MBA",
+        "exams": "IPMAT (IIM Indore/Rohtak/Ranchi), CUET, NPAT"
+      },
+      {
+        "title": "Investment Banker & Financial Strategist",
+        "description": "Advises on corporate mergers, stock portfolios, capital allocation, and venture capital deals.",
+        "degrees": "B.Com (Hons), BA Economics (Hons), BBA Finance",
+        "exams": "CUET (SRCC, Hindu), IPMAT, SET"
+      },
+      {
+        "title": "Product Growth & Marketing Director",
+        "description": "Spearheads user acquisition, conversion analytics, and brand expansion strategies.",
+        "degrees": "BMS, BBA, BA Economics",
+        "exams": "CUET, NPAT, Christ Entrance"
+      }
+    ],
+    "coreSkills": [
+      "Commercial Acumen & Strategy",
+      "Quantitative Risk Analysis",
+      "Persuasive Pitching & Negotiation"
+    ]
   },
   {
     "id": "tech-alchemist",
@@ -142,7 +418,27 @@
         "Mod a gaming controller or custom PC case",
         "Build a mini drone or RC car from scratch"
       ],
-      "parentTip": "Provide safe environments for physical tinkering, dismantling old electronics, and hands-on science."
+      "parentTip": "Provide safe environments for physical tinkering, dismantling old electronics, and hands-on science.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Math) with Electronics",
+        "why": "Provides foundational principles of electromagnetism, circuit design, materials, and mechanics needed for hands-on hardware engineering.",
+        "electives": [
+          "Physics",
+          "Mathematics",
+          "Computer Science / Electronics",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        "Hardware & IoT Systems Engineer",
+        "Aerospace & Drone Technology Specialist"
+      ],
+      "coreSkills": [
+        "Spatial Mechanics & Prototyping",
+        "Hardware-Software Integration",
+        "Empirical Troubleshooting"
+      ]
     },
     "navigator": {
       "title": "The Tech Alchemist",
@@ -160,8 +456,80 @@
         "Aerospace & Drone Technology",
         "Embedded Systems & Defense Tech"
       ],
-      "streamFit": "PCM with Physics & Electronics / Vocational Tech"
-    }
+      "streamFit": "PCM with Physics & Electronics / Vocational Tech",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Math) with Electronics",
+        "why": "Provides foundational principles of electromagnetism, circuit design, materials, and mechanics needed for hands-on hardware engineering.",
+        "electives": [
+          "Physics",
+          "Mathematics",
+          "Computer Science / Electronics",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Hardware & IoT Systems Engineer",
+          "description": "Designs embedded devices, microchips, smart home devices, and connected IoT hardware.",
+          "degrees": "B.Tech in Electronics & Communication (ECE) / Electrical",
+          "exams": "JEE Main & Advanced, BITSAT"
+        },
+        {
+          "title": "Aerospace & Drone Technology Specialist",
+          "description": "Develops unmanned aerial vehicles, flight control systems, and aerospace avionics.",
+          "degrees": "B.Tech in Aerospace / Aeronautical / Mechatronics",
+          "exams": "JEE Main, BITSAT, State CETs"
+        },
+        {
+          "title": "Automated Defense & Robotics Builder",
+          "description": "Prototypes military-grade sensors, robotic actuators, and physical technology.",
+          "degrees": "B.Tech in Mechatronics / Instrumentation",
+          "exams": "JEE Main, BITSAT, VITEEE"
+        }
+      ],
+      "coreSkills": [
+        "Spatial Mechanics & Prototyping",
+        "Hardware-Software Integration",
+        "Empirical Troubleshooting"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science (PCM: Physics, Chemistry, Math) with Electronics",
+      "why": "Provides foundational principles of electromagnetism, circuit design, materials, and mechanics needed for hands-on hardware engineering.",
+      "electives": [
+        "Physics",
+        "Mathematics",
+        "Computer Science / Electronics",
+        "Chemistry"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Hardware & IoT Systems Engineer",
+        "description": "Designs embedded devices, microchips, smart home devices, and connected IoT hardware.",
+        "degrees": "B.Tech in Electronics & Communication (ECE) / Electrical",
+        "exams": "JEE Main & Advanced, BITSAT"
+      },
+      {
+        "title": "Aerospace & Drone Technology Specialist",
+        "description": "Develops unmanned aerial vehicles, flight control systems, and aerospace avionics.",
+        "degrees": "B.Tech in Aerospace / Aeronautical / Mechatronics",
+        "exams": "JEE Main, BITSAT, State CETs"
+      },
+      {
+        "title": "Automated Defense & Robotics Builder",
+        "description": "Prototypes military-grade sensors, robotic actuators, and physical technology.",
+        "degrees": "B.Tech in Mechatronics / Instrumentation",
+        "exams": "JEE Main, BITSAT, VITEEE"
+      }
+    ],
+    "coreSkills": [
+      "Spatial Mechanics & Prototyping",
+      "Hardware-Software Integration",
+      "Empirical Troubleshooting"
+    ]
   },
   {
     "id": "empathetic-storyteller",
@@ -183,7 +551,27 @@
         "Write podcast scripts or short stories",
         "Host school events or drama performances"
       ],
-      "parentTip": "Encourage their writing, public speaking, and creative performance. Validate their high emotional intelligence."
+      "parentTip": "Encourage their writing, public speaking, and creative performance. Validate their high emotional intelligence.",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Social Sciences with Journalism & Psychology",
+        "why": "Cultivates rich narrative abilities, cultural awareness, and emotional depth required to craft moving stories and impactful journalism.",
+        "electives": [
+          "English Literature",
+          "Psychology",
+          "Sociology",
+          "Mass Media / Journalism"
+        ]
+      },
+      "broadCareers": [
+        "Journalist & Media Producer",
+        "Corporate Communications & PR Director"
+      ],
+      "coreSkills": [
+        "Verbal Synthesis & Narrative Framing",
+        "High Emotional Resonance",
+        "Persuasive Public Discourse"
+      ]
     },
     "navigator": {
       "title": "The Empathetic Storyteller",
@@ -201,8 +589,80 @@
         "Brand Communications & Narrative Design",
         "Psychology & Human Experience Research"
       ],
-      "streamFit": "Humanities / Psychology / Journalism & Mass Comm"
-    }
+      "streamFit": "Humanities / Psychology / Journalism & Mass Comm",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Social Sciences with Journalism & Psychology",
+        "why": "Cultivates rich narrative abilities, cultural awareness, and emotional depth required to craft moving stories and impactful journalism.",
+        "electives": [
+          "English Literature",
+          "Psychology",
+          "Sociology",
+          "Mass Media / Journalism"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Journalist & Media Producer",
+          "description": "Investigates compelling stories, hosts broadcasts, and produces investigative documentary pieces.",
+          "degrees": "BA in Journalism & Mass Communication (BJMC), BA English",
+          "exams": "CUET, IIMC Entrance, Xavier Entrance Test (XET)"
+        },
+        {
+          "title": "Corporate Communications & PR Director",
+          "description": "Shapes global brand narrative, investor communications, and public relationship strategies.",
+          "degrees": "BA Media & Comm, BBA / BMM (Mass Media)",
+          "exams": "CUET, Symbiosis SET, NPAT"
+        },
+        {
+          "title": "Screenwriter & Author / Podcast Host",
+          "description": "Creates viral narrative audio, scripts for cinema/OTT platforms, and bestselling literature.",
+          "degrees": "BA Creative Writing, Film & Television Studies",
+          "exams": "FTII Entrance, SRFTI, CUET"
+        }
+      ],
+      "coreSkills": [
+        "Verbal Synthesis & Narrative Framing",
+        "High Emotional Resonance",
+        "Persuasive Public Discourse"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Humanities",
+      "stream": "Humanities / Social Sciences with Journalism & Psychology",
+      "why": "Cultivates rich narrative abilities, cultural awareness, and emotional depth required to craft moving stories and impactful journalism.",
+      "electives": [
+        "English Literature",
+        "Psychology",
+        "Sociology",
+        "Mass Media / Journalism"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Journalist & Media Producer",
+        "description": "Investigates compelling stories, hosts broadcasts, and produces investigative documentary pieces.",
+        "degrees": "BA in Journalism & Mass Communication (BJMC), BA English",
+        "exams": "CUET, IIMC Entrance, Xavier Entrance Test (XET)"
+      },
+      {
+        "title": "Corporate Communications & PR Director",
+        "description": "Shapes global brand narrative, investor communications, and public relationship strategies.",
+        "degrees": "BA Media & Comm, BBA / BMM (Mass Media)",
+        "exams": "CUET, Symbiosis SET, NPAT"
+      },
+      {
+        "title": "Screenwriter & Author / Podcast Host",
+        "description": "Creates viral narrative audio, scripts for cinema/OTT platforms, and bestselling literature.",
+        "degrees": "BA Creative Writing, Film & Television Studies",
+        "exams": "FTII Entrance, SRFTI, CUET"
+      }
+    ],
+    "coreSkills": [
+      "Verbal Synthesis & Narrative Framing",
+      "High Emotional Resonance",
+      "Persuasive Public Discourse"
+    ]
   },
   {
     "id": "ops-maestro",
@@ -224,7 +684,27 @@
         "Create a master gaming schedule for friends",
         "Organize family trip itineraries"
       ],
-      "parentTip": "Appreciate their structure and organization! Let them take charge of planning family schedules."
+      "parentTip": "Appreciate their structure and organization! Let them take charge of planning family schedules.",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Business Studies & Information Tech",
+        "why": "Teaches systematic supply chain management, compliance, business accounting, and process automation frameworks.",
+        "electives": [
+          "Business Studies",
+          "Accountancy",
+          "Informatics Practices",
+          "Applied Math"
+        ]
+      },
+      "broadCareers": [
+        "Chief Operating Officer (COO) / Operations Director",
+        "Supply Chain & E-Commerce Logistical Lead"
+      ],
+      "coreSkills": [
+        "Process Optimization & Automation",
+        "Resource & Budget Allocation",
+        "Precision Execution"
+      ]
     },
     "navigator": {
       "title": "The Ops Maestro",
@@ -242,8 +722,80 @@
         "Project Management & Operations Tech",
         "Financial Operations & Compliance Systems"
       ],
-      "streamFit": "Commerce / Business Administration / Industrial Engineering"
-    }
+      "streamFit": "Commerce / Business Administration / Industrial Engineering",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Business Studies & Information Tech",
+        "why": "Teaches systematic supply chain management, compliance, business accounting, and process automation frameworks.",
+        "electives": [
+          "Business Studies",
+          "Accountancy",
+          "Informatics Practices",
+          "Applied Math"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Chief Operating Officer (COO) / Operations Director",
+          "description": "Oversees company-wide execution, team logistics, cost efficiency, and productivity pipelines.",
+          "degrees": "BBA Operations / Logistics, BMS, B.Com",
+          "exams": "IPMAT, CUET, NMIMS NPAT"
+        },
+        {
+          "title": "Supply Chain & E-Commerce Logistical Lead",
+          "description": "Architects warehouse flows, inventory algorithms, and delivery networks for retail giants.",
+          "degrees": "B.Tech / BBA in Supply Chain Management",
+          "exams": "CUET, IPMAT, State Engineering CETs"
+        },
+        {
+          "title": "Enterprise Project & Compliance Manager",
+          "description": "Guarantees mega-projects stay on time, inside budget, and strictly meet regulatory standards.",
+          "degrees": "BMS, B.Com, Integrated BBA-MBA",
+          "exams": "CUET, Christ Entrance, SET"
+        }
+      ],
+      "coreSkills": [
+        "Process Optimization & Automation",
+        "Resource & Budget Allocation",
+        "Precision Execution"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Commerce",
+      "stream": "Commerce with Business Studies & Information Tech",
+      "why": "Teaches systematic supply chain management, compliance, business accounting, and process automation frameworks.",
+      "electives": [
+        "Business Studies",
+        "Accountancy",
+        "Informatics Practices",
+        "Applied Math"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Chief Operating Officer (COO) / Operations Director",
+        "description": "Oversees company-wide execution, team logistics, cost efficiency, and productivity pipelines.",
+        "degrees": "BBA Operations / Logistics, BMS, B.Com",
+        "exams": "IPMAT, CUET, NMIMS NPAT"
+      },
+      {
+        "title": "Supply Chain & E-Commerce Logistical Lead",
+        "description": "Architects warehouse flows, inventory algorithms, and delivery networks for retail giants.",
+        "degrees": "B.Tech / BBA in Supply Chain Management",
+        "exams": "CUET, IPMAT, State Engineering CETs"
+      },
+      {
+        "title": "Enterprise Project & Compliance Manager",
+        "description": "Guarantees mega-projects stay on time, inside budget, and strictly meet regulatory standards.",
+        "degrees": "BMS, B.Com, Integrated BBA-MBA",
+        "exams": "CUET, Christ Entrance, SET"
+      }
+    ],
+    "coreSkills": [
+      "Process Optimization & Automation",
+      "Resource & Budget Allocation",
+      "Precision Execution"
+    ]
   },
   {
     "id": "quantitative-pioneer",
@@ -265,7 +817,27 @@
         "Solve Sudoku & math olympiad teasers",
         "Analyze stats of your favorite sports team"
       ],
-      "parentTip": "Feed their passion for math games, statistics, and logic puzzles. Support advanced math learning."
+      "parentTip": "Feed their passion for math games, statistics, and logic puzzles. Support advanced math learning.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science or Commerce with Advanced Mathematics & Statistics",
+        "why": "Builds deep mathematical maturity, statistical theory, and computational modeling critical for data science and quantitative finance.",
+        "electives": [
+          "Mathematics",
+          "Statistics",
+          "Computer Science / Economics",
+          "Physics / Accountancy"
+        ]
+      },
+      "broadCareers": [
+        "Quantitative Trader & Hedge Fund Manager",
+        "Principal Data Scientist & Machine Learning Modeler"
+      ],
+      "coreSkills": [
+        "Advanced Statistical Modeling",
+        "High Numerical Fluency",
+        "Algorithmic Risk Forecasting"
+      ]
     },
     "navigator": {
       "title": "The Quantitative Pioneer",
@@ -283,8 +855,80 @@
         "Quantitative Finance & Actuarial Science",
         "Biostatistics & Computational Economics"
       ],
-      "streamFit": "PCM / Economics with Statistics & Advanced Mathematics"
-    }
+      "streamFit": "PCM / Economics with Statistics & Advanced Mathematics",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science or Commerce with Advanced Mathematics & Statistics",
+        "why": "Builds deep mathematical maturity, statistical theory, and computational modeling critical for data science and quantitative finance.",
+        "electives": [
+          "Mathematics",
+          "Statistics",
+          "Computer Science / Economics",
+          "Physics / Accountancy"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Quantitative Trader & Hedge Fund Manager",
+          "description": "Builds algorithmic trading bots, mathematical arbitrage models, and manages portfolio risks.",
+          "degrees": "B.Stat / B.Math (ISI), B.Tech in CS/Math, B.Sc Economics",
+          "exams": "ISI Admission Test, CMI Entrance, JEE Advanced"
+        },
+        {
+          "title": "Principal Data Scientist & Machine Learning Modeler",
+          "description": "Discovers hidden statistical patterns in petabytes of data to power AI decision engines.",
+          "degrees": "B.S. in Data Science / Statistics, B.Tech CS",
+          "exams": "JEE Main, CUET, ISI"
+        },
+        {
+          "title": "Actuary & Risk Scientist",
+          "description": "Calculates probabilistic catastrophe risks and sets financial security reserves for insurance.",
+          "degrees": "B.Sc Mathematics / Statistics, Actuarial Common Entrance",
+          "exams": "ACET (Actuarial Society of India), CUET"
+        }
+      ],
+      "coreSkills": [
+        "Advanced Statistical Modeling",
+        "High Numerical Fluency",
+        "Algorithmic Risk Forecasting"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science or Commerce with Advanced Mathematics & Statistics",
+      "why": "Builds deep mathematical maturity, statistical theory, and computational modeling critical for data science and quantitative finance.",
+      "electives": [
+        "Mathematics",
+        "Statistics",
+        "Computer Science / Economics",
+        "Physics / Accountancy"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Quantitative Trader & Hedge Fund Manager",
+        "description": "Builds algorithmic trading bots, mathematical arbitrage models, and manages portfolio risks.",
+        "degrees": "B.Stat / B.Math (ISI), B.Tech in CS/Math, B.Sc Economics",
+        "exams": "ISI Admission Test, CMI Entrance, JEE Advanced"
+      },
+      {
+        "title": "Principal Data Scientist & Machine Learning Modeler",
+        "description": "Discovers hidden statistical patterns in petabytes of data to power AI decision engines.",
+        "degrees": "B.S. in Data Science / Statistics, B.Tech CS",
+        "exams": "JEE Main, CUET, ISI"
+      },
+      {
+        "title": "Actuary & Risk Scientist",
+        "description": "Calculates probabilistic catastrophe risks and sets financial security reserves for insurance.",
+        "degrees": "B.Sc Mathematics / Statistics, Actuarial Common Entrance",
+        "exams": "ACET (Actuarial Society of India), CUET"
+      }
+    ],
+    "coreSkills": [
+      "Advanced Statistical Modeling",
+      "High Numerical Fluency",
+      "Algorithmic Risk Forecasting"
+    ]
   },
   {
     "id": "human-centric-leader",
@@ -306,7 +950,27 @@
         "Run for school captain or club head",
         "Organize a charity drive or sports tourney"
       ],
-      "parentTip": "Guide their natural leadership skills with lessons in empathy, teamwork, and responsible influence."
+      "parentTip": "Guide their natural leadership skills with lessons in empathy, teamwork, and responsible influence.",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities or Commerce with Business Studies & Psychology",
+        "why": "Balances commercial literacy with human psychology, political strategy, and communication to lead large organizations.",
+        "electives": [
+          "Business Studies",
+          "Psychology",
+          "Political Science",
+          "Economics"
+        ]
+      },
+      "broadCareers": [
+        "Chief Executive Officer (CEO) / Business Leader",
+        "Human Resources & Talent Strategy VP"
+      ],
+      "coreSkills": [
+        "Strategic Team Alignment",
+        "Charismatic Public Diplomacy",
+        "High Emotional Intelligence"
+      ]
     },
     "navigator": {
       "title": "The Human-Centric Leader",
@@ -324,8 +988,80 @@
         "Organizational Strategy & Human Capital",
         "Public Policy & Educational Leadership"
       ],
-      "streamFit": "Humanities / Commerce / Business Studies with Public Speaking"
-    }
+      "streamFit": "Humanities / Commerce / Business Studies with Public Speaking",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities or Commerce with Business Studies & Psychology",
+        "why": "Balances commercial literacy with human psychology, political strategy, and communication to lead large organizations.",
+        "electives": [
+          "Business Studies",
+          "Psychology",
+          "Political Science",
+          "Economics"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Chief Executive Officer (CEO) / Business Leader",
+          "description": "Sets organizational vision, builds high-caliber leadership teams, and leads public strategy.",
+          "degrees": "BBA (Hons), BMS, BA Economics / Public Administration",
+          "exams": "IPMAT (IIMs), CUET, Symbiosis SET"
+        },
+        {
+          "title": "Human Resources & Talent Strategy VP",
+          "description": "Architects company culture, executive recruitment, and human development programs.",
+          "degrees": "BBA Human Resources, BA Psychology / Social Sciences",
+          "exams": "CUET, TISS BAT, Christ Entrance"
+        },
+        {
+          "title": "Social Impact Leader & Policy Advisor",
+          "description": "Leads NGOs, drives philanthropic foundations, or advises governments on public welfare initiatives.",
+          "degrees": "BA Public Policy / Social Work (BSW), BA Political Science",
+          "exams": "CUET, TISS BAT"
+        }
+      ],
+      "coreSkills": [
+        "Strategic Team Alignment",
+        "Charismatic Public Diplomacy",
+        "High Emotional Intelligence"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Humanities",
+      "stream": "Humanities or Commerce with Business Studies & Psychology",
+      "why": "Balances commercial literacy with human psychology, political strategy, and communication to lead large organizations.",
+      "electives": [
+        "Business Studies",
+        "Psychology",
+        "Political Science",
+        "Economics"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Chief Executive Officer (CEO) / Business Leader",
+        "description": "Sets organizational vision, builds high-caliber leadership teams, and leads public strategy.",
+        "degrees": "BBA (Hons), BMS, BA Economics / Public Administration",
+        "exams": "IPMAT (IIMs), CUET, Symbiosis SET"
+      },
+      {
+        "title": "Human Resources & Talent Strategy VP",
+        "description": "Architects company culture, executive recruitment, and human development programs.",
+        "degrees": "BBA Human Resources, BA Psychology / Social Sciences",
+        "exams": "CUET, TISS BAT, Christ Entrance"
+      },
+      {
+        "title": "Social Impact Leader & Policy Advisor",
+        "description": "Leads NGOs, drives philanthropic foundations, or advises governments on public welfare initiatives.",
+        "degrees": "BA Public Policy / Social Work (BSW), BA Political Science",
+        "exams": "CUET, TISS BAT"
+      }
+    ],
+    "coreSkills": [
+      "Strategic Team Alignment",
+      "Charismatic Public Diplomacy",
+      "High Emotional Intelligence"
+    ]
   },
   {
     "id": "digital-craftsman",
@@ -347,7 +1083,27 @@
         "Edit a viral-style video clip",
         "Design custom stickers or digital art"
       ],
-      "parentTip": "Support their interest in digital creative tools (Canva, Blender, Premiere, Figma)."
+      "parentTip": "Support their interest in digital creative tools (Canva, Blender, Premiere, Figma).",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science or Commerce with Computer Applications & Web Tech",
+        "why": "Gives early technical mastery of programming logic, databases, and digital architecture to build clean software products.",
+        "electives": [
+          "Computer Science / Informatics",
+          "Mathematics",
+          "Physics / Business Studies",
+          "Multimedia Arts"
+        ]
+      },
+      "broadCareers": [
+        "Full-Stack Web & Mobile App Developer",
+        "Independent Software Maker / Micro-SaaS Founder"
+      ],
+      "coreSkills": [
+        "Full-Stack Software Architecture",
+        "Pixel-Perfect UI Craftsmanship",
+        "Rapid Product Prototyping"
+      ]
     },
     "navigator": {
       "title": "The Digital Craftsman",
@@ -365,8 +1121,80 @@
         "Front-End Engineering & Creative Web",
         "VFX Production & Virtual Art"
       ],
-      "streamFit": "Arts / Applied Arts / Computer Graphics & Web Design"
-    }
+      "streamFit": "Arts / Applied Arts / Computer Graphics & Web Design",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science or Commerce with Computer Applications & Web Tech",
+        "why": "Gives early technical mastery of programming logic, databases, and digital architecture to build clean software products.",
+        "electives": [
+          "Computer Science / Informatics",
+          "Mathematics",
+          "Physics / Business Studies",
+          "Multimedia Arts"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Full-Stack Web & Mobile App Developer",
+          "description": "Engineers high-performance web applications, iOS/Android apps, and sleek interactive experiences.",
+          "degrees": "BCA (Computer Applications), B.Tech in CS/IT, B.Sc Computer Science",
+          "exams": "CUET, NIMCET, State CETs"
+        },
+        {
+          "title": "Independent Software Maker / Micro-SaaS Founder",
+          "description": "Builds and monetizes software tools, browser extensions, and online platforms independently.",
+          "degrees": "BCA, B.Tech, Self-directed technical portfolio",
+          "exams": "CUET, JEE Main"
+        },
+        {
+          "title": "Front-End Creative Technologist",
+          "description": "Blends interactive 3D graphics (Three.js/WebGL) with state-of-the-art web animations.",
+          "degrees": "B.Voc Digital Media, B.Tech CS, B.Des Interaction Design",
+          "exams": "CUET, UCEED"
+        }
+      ],
+      "coreSkills": [
+        "Full-Stack Software Architecture",
+        "Pixel-Perfect UI Craftsmanship",
+        "Rapid Product Prototyping"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science or Commerce with Computer Applications & Web Tech",
+      "why": "Gives early technical mastery of programming logic, databases, and digital architecture to build clean software products.",
+      "electives": [
+        "Computer Science / Informatics",
+        "Mathematics",
+        "Physics / Business Studies",
+        "Multimedia Arts"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Full-Stack Web & Mobile App Developer",
+        "description": "Engineers high-performance web applications, iOS/Android apps, and sleek interactive experiences.",
+        "degrees": "BCA (Computer Applications), B.Tech in CS/IT, B.Sc Computer Science",
+        "exams": "CUET, NIMCET, State CETs"
+      },
+      {
+        "title": "Independent Software Maker / Micro-SaaS Founder",
+        "description": "Builds and monetizes software tools, browser extensions, and online platforms independently.",
+        "degrees": "BCA, B.Tech, Self-directed technical portfolio",
+        "exams": "CUET, JEE Main"
+      },
+      {
+        "title": "Front-End Creative Technologist",
+        "description": "Blends interactive 3D graphics (Three.js/WebGL) with state-of-the-art web animations.",
+        "degrees": "B.Voc Digital Media, B.Tech CS, B.Des Interaction Design",
+        "exams": "CUET, UCEED"
+      }
+    ],
+    "coreSkills": [
+      "Full-Stack Software Architecture",
+      "Pixel-Perfect UI Craftsmanship",
+      "Rapid Product Prototyping"
+    ]
   },
   {
     "id": "data-detective",
@@ -388,7 +1216,27 @@
         "Solve mystery escape rooms or riddle threads",
         "Find hidden easter eggs in software/games"
       ],
-      "parentTip": "Challenge them with mystery books, logic puzzles, and forensic-style problem solving."
+      "parentTip": "Challenge them with mystery books, logic puzzles, and forensic-style problem solving.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM) or Commerce with Informatics & Statistics",
+        "why": "Instills rigorous logical deduction, audit standards, and data manipulation skills required for investigations and cybersecurity.",
+        "electives": [
+          "Computer Science / Cyber Security",
+          "Mathematics",
+          "Statistics",
+          "Physics / Accountancy"
+        ]
+      },
+      "broadCareers": [
+        "Cybersecurity Analyst & Ethical Hacker",
+        "Business Intelligence & Fraud Investigator"
+      ],
+      "coreSkills": [
+        "Anomaly Detection & Pattern Auditing",
+        "Logical Root-Cause Analysis",
+        "Unflappable Investigative Rigor"
+      ]
     },
     "navigator": {
       "title": "The Data Detective",
@@ -406,8 +1254,80 @@
         "Quality Assurance & Automated Testing",
         "Financial Crime Audit & Intelligence"
       ],
-      "streamFit": "PCM with Computer Science / Cyber Security"
-    }
+      "streamFit": "PCM with Computer Science / Cyber Security",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM) or Commerce with Informatics & Statistics",
+        "why": "Instills rigorous logical deduction, audit standards, and data manipulation skills required for investigations and cybersecurity.",
+        "electives": [
+          "Computer Science / Cyber Security",
+          "Mathematics",
+          "Statistics",
+          "Physics / Accountancy"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Cybersecurity Analyst & Ethical Hacker",
+          "description": "Protects critical national infrastructure, detects cyber intruders, and audits security flaws.",
+          "degrees": "B.Tech in Cyber Security / Information Security, BCA",
+          "exams": "JEE Main, BITSAT, State Engineering CETs"
+        },
+        {
+          "title": "Business Intelligence & Fraud Investigator",
+          "description": "Audits corporate financial systems, investigates fraud anomalies, and traces cyber crime.",
+          "degrees": "B.Sc Data Analytics, B.Com Cyber Crime Audit",
+          "exams": "CUET, NFSU Entrance (National Forensic Sciences Univ)"
+        },
+        {
+          "title": "Digital Forensics Expert",
+          "description": "Recovers encrypted digital evidence and conducts technological investigations for law enforcement.",
+          "degrees": "B.Sc Forensic Science / Cyber Forensics",
+          "exams": "NFSU Entrance Test, CUET"
+        }
+      ],
+      "coreSkills": [
+        "Anomaly Detection & Pattern Auditing",
+        "Logical Root-Cause Analysis",
+        "Unflappable Investigative Rigor"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science (PCM) or Commerce with Informatics & Statistics",
+      "why": "Instills rigorous logical deduction, audit standards, and data manipulation skills required for investigations and cybersecurity.",
+      "electives": [
+        "Computer Science / Cyber Security",
+        "Mathematics",
+        "Statistics",
+        "Physics / Accountancy"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Cybersecurity Analyst & Ethical Hacker",
+        "description": "Protects critical national infrastructure, detects cyber intruders, and audits security flaws.",
+        "degrees": "B.Tech in Cyber Security / Information Security, BCA",
+        "exams": "JEE Main, BITSAT, State Engineering CETs"
+      },
+      {
+        "title": "Business Intelligence & Fraud Investigator",
+        "description": "Audits corporate financial systems, investigates fraud anomalies, and traces cyber crime.",
+        "degrees": "B.Sc Data Analytics, B.Com Cyber Crime Audit",
+        "exams": "CUET, NFSU Entrance (National Forensic Sciences Univ)"
+      },
+      {
+        "title": "Digital Forensics Expert",
+        "description": "Recovers encrypted digital evidence and conducts technological investigations for law enforcement.",
+        "degrees": "B.Sc Forensic Science / Cyber Forensics",
+        "exams": "NFSU Entrance Test, CUET"
+      }
+    ],
+    "coreSkills": [
+      "Anomaly Detection & Pattern Auditing",
+      "Logical Root-Cause Analysis",
+      "Unflappable Investigative Rigor"
+    ]
   },
   {
     "id": "community-builder",
@@ -429,7 +1349,27 @@
         "Start a welcome buddy system at school",
         "Organize peer study groups"
       ],
-      "parentTip": "Celebrate their reliability, kindness, and skill in keeping friendships strong and harmonious."
+      "parentTip": "Celebrate their reliability, kindness, and skill in keeping friendships strong and harmonious.",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Social Sciences with Sociology & Media",
+        "why": "Exposes you to community psychology, mass communications, and social group dynamics to foster loyal collective movements.",
+        "electives": [
+          "Sociology",
+          "Psychology",
+          "Mass Communication",
+          "Economics"
+        ]
+      },
+      "broadCareers": [
+        "Head of Community & Developer Relations",
+        "Event & Festival Director"
+      ],
+      "coreSkills": [
+        "Community Ecosystem Building",
+        "Empathetic Public Engagement",
+        "Grassroots Viral Strategy"
+      ]
     },
     "navigator": {
       "title": "The Community Builder",
@@ -447,8 +1387,80 @@
         "Human Resources & Talent Experience",
         "Social Impact & Non-Profit Leadership"
       ],
-      "streamFit": "Humanities / Psychology / Social Work / HR"
-    }
+      "streamFit": "Humanities / Psychology / Social Work / HR",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Social Sciences with Sociology & Media",
+        "why": "Exposes you to community psychology, mass communications, and social group dynamics to foster loyal collective movements.",
+        "electives": [
+          "Sociology",
+          "Psychology",
+          "Mass Communication",
+          "Economics"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Head of Community & Developer Relations",
+          "description": "Builds worldwide user communities, runs conferences, and champions user ecosystems for tech giants.",
+          "degrees": "BA Mass Comm, BBA Marketing, BA Sociology",
+          "exams": "CUET, Christ Entrance, SET"
+        },
+        {
+          "title": "Event & Festival Director",
+          "description": "Produces massive cultural, sports, and business festivals, managing talent and guest experiences.",
+          "degrees": "BBA Event Management, BMM, BA Media",
+          "exams": "CUET, Private Univ Entrances"
+        },
+        {
+          "title": "Influencer Campaign Strategist & PR Head",
+          "description": "Manages influencer partnerships, social network growth, and grassroots viral campaigns.",
+          "degrees": "BA Advertising & PR, BBA Marketing",
+          "exams": "CUET, Xavier Entrance Test (XET)"
+        }
+      ],
+      "coreSkills": [
+        "Community Ecosystem Building",
+        "Empathetic Public Engagement",
+        "Grassroots Viral Strategy"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Humanities",
+      "stream": "Humanities / Social Sciences with Sociology & Media",
+      "why": "Exposes you to community psychology, mass communications, and social group dynamics to foster loyal collective movements.",
+      "electives": [
+        "Sociology",
+        "Psychology",
+        "Mass Communication",
+        "Economics"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Head of Community & Developer Relations",
+        "description": "Builds worldwide user communities, runs conferences, and champions user ecosystems for tech giants.",
+        "degrees": "BA Mass Comm, BBA Marketing, BA Sociology",
+        "exams": "CUET, Christ Entrance, SET"
+      },
+      {
+        "title": "Event & Festival Director",
+        "description": "Produces massive cultural, sports, and business festivals, managing talent and guest experiences.",
+        "degrees": "BBA Event Management, BMM, BA Media",
+        "exams": "CUET, Private Univ Entrances"
+      },
+      {
+        "title": "Influencer Campaign Strategist & PR Head",
+        "description": "Manages influencer partnerships, social network growth, and grassroots viral campaigns.",
+        "degrees": "BA Advertising & PR, BBA Marketing",
+        "exams": "CUET, Xavier Entrance Test (XET)"
+      }
+    ],
+    "coreSkills": [
+      "Community Ecosystem Building",
+      "Empathetic Public Engagement",
+      "Grassroots Viral Strategy"
+    ]
   },
   {
     "id": "product-strategist",
@@ -470,7 +1482,27 @@
         "Pitch a new app idea to your family",
         "Design a futuristic vehicle concept"
       ],
-      "parentTip": "Encourage them to balance creative ideation with simple logical feasibility tests."
+      "parentTip": "Encourage them to balance creative ideation with simple logical feasibility tests.",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Math or Science (PCM)",
+        "why": "Combines technical feasibility with commercial viability to invent products that solve genuine customer pain points profitably.",
+        "electives": [
+          "Economics / Physics",
+          "Mathematics",
+          "Business Studies / Computer Science",
+          "Accountancy"
+        ]
+      },
+      "broadCareers": [
+        "Technology Product Manager (PM)",
+        "Management Consultant"
+      ],
+      "coreSkills": [
+        "Cross-Functional Product Vision",
+        "User Problem-Solution Mapping",
+        "Data-Informed Strategic Tradeoffs"
+      ]
     },
     "navigator": {
       "title": "The Product Strategist",
@@ -488,8 +1520,80 @@
         "Design Strategy & UX Research",
         "Tech Innovation & EdTech / Consumer Tech"
       ],
-      "streamFit": "Interdisciplinary: Science or Commerce with Design / IT"
-    }
+      "streamFit": "Interdisciplinary: Science or Commerce with Design / IT",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Math or Science (PCM)",
+        "why": "Combines technical feasibility with commercial viability to invent products that solve genuine customer pain points profitably.",
+        "electives": [
+          "Economics / Physics",
+          "Mathematics",
+          "Business Studies / Computer Science",
+          "Accountancy"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Technology Product Manager (PM)",
+          "description": "Owns the vision, roadmap, and design iterations for flagship digital applications and software suites.",
+          "degrees": "B.Tech + MBA / BBA / B.Des",
+          "exams": "JEE Main, CUET, IPMAT"
+        },
+        {
+          "title": "Management Consultant",
+          "description": "Advises Fortune 500 executives on digital transformation, pricing strategy, and efficiency.",
+          "degrees": "B.Com (Hons), BA Economics, B.Tech",
+          "exams": "CUET (SRCC/St. Stephen's), JEE, CAT (Postgrad)"
+        },
+        {
+          "title": "Chief Product Officer (CPO)",
+          "description": "Leads cross-functional engineering, design, and marketing teams to launch market-defining products.",
+          "degrees": "B.Tech / BBA + Advanced Management",
+          "exams": "JEE, CUET, IPMAT"
+        }
+      ],
+      "coreSkills": [
+        "Cross-Functional Product Vision",
+        "User Problem-Solution Mapping",
+        "Data-Informed Strategic Tradeoffs"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Commerce",
+      "stream": "Commerce with Math or Science (PCM)",
+      "why": "Combines technical feasibility with commercial viability to invent products that solve genuine customer pain points profitably.",
+      "electives": [
+        "Economics / Physics",
+        "Mathematics",
+        "Business Studies / Computer Science",
+        "Accountancy"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Technology Product Manager (PM)",
+        "description": "Owns the vision, roadmap, and design iterations for flagship digital applications and software suites.",
+        "degrees": "B.Tech + MBA / BBA / B.Des",
+        "exams": "JEE Main, CUET, IPMAT"
+      },
+      {
+        "title": "Management Consultant",
+        "description": "Advises Fortune 500 executives on digital transformation, pricing strategy, and efficiency.",
+        "degrees": "B.Com (Hons), BA Economics, B.Tech",
+        "exams": "CUET (SRCC/St. Stephen's), JEE, CAT (Postgrad)"
+      },
+      {
+        "title": "Chief Product Officer (CPO)",
+        "description": "Leads cross-functional engineering, design, and marketing teams to launch market-defining products.",
+        "degrees": "B.Tech / BBA + Advanced Management",
+        "exams": "JEE, CUET, IPMAT"
+      }
+    ],
+    "coreSkills": [
+      "Cross-Functional Product Vision",
+      "User Problem-Solution Mapping",
+      "Data-Informed Strategic Tradeoffs"
+    ]
   },
   {
     "id": "mechanical-innovator",
@@ -511,7 +1615,27 @@
         "Build complex LEGO Technic sets",
         "Help fix household appliances safely"
       ],
-      "parentTip": "Provide structural building challenges, woodwork/robotics workshops, and precision crafts."
+      "parentTip": "Provide structural building challenges, woodwork/robotics workshops, and precision crafts.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Math) with Engineering Graphics",
+        "why": "Essential for mastering Newton's laws of motion, thermodynamics, structural forces, and mechanical CAD drawing.",
+        "electives": [
+          "Physics",
+          "Mathematics",
+          "Engineering Graphics / Drawing",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        "Automotive & Electric Vehicle (EV) Engineer",
+        "Robotics & Industrial CAD Designer"
+      ],
+      "coreSkills": [
+        "3D Spatial Mechanical Reasoning",
+        "Physical Stress & Materials Simulation",
+        "Kinematic Problem Solving"
+      ]
     },
     "navigator": {
       "title": "The Mechanical Innovator",
@@ -529,8 +1653,80 @@
         "Automotive & EV Technology",
         "Robotics Fabrication & Additive Manufacturing"
       ],
-      "streamFit": "PCM with Mechanical / Automobile / Civil Engineering"
-    }
+      "streamFit": "PCM with Mechanical / Automobile / Civil Engineering",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCM: Physics, Chemistry, Math) with Engineering Graphics",
+        "why": "Essential for mastering Newton's laws of motion, thermodynamics, structural forces, and mechanical CAD drawing.",
+        "electives": [
+          "Physics",
+          "Mathematics",
+          "Engineering Graphics / Drawing",
+          "Chemistry"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Automotive & Electric Vehicle (EV) Engineer",
+          "description": "Designs chassis dynamics, battery powertrains, and aerodynamics for future mobility vehicles.",
+          "degrees": "B.Tech in Mechanical / Automobile Engineering",
+          "exams": "JEE Main & Advanced, BITSAT, State CETs"
+        },
+        {
+          "title": "Robotics & Industrial CAD Designer",
+          "description": "Engineers robotic assembly arms, CNC machines, and factory automation equipment.",
+          "degrees": "B.Tech in Robotics / Mechatronics / Mechanical",
+          "exams": "JEE Main, BITSAT, VITEEE"
+        },
+        {
+          "title": "Smart Manufacturing & Plant Director",
+          "description": "Runs advanced high-precision factories producing consumer goods and industrial hardware.",
+          "degrees": "B.Tech in Production / Industrial Engineering",
+          "exams": "JEE Main, State CETs"
+        }
+      ],
+      "coreSkills": [
+        "3D Spatial Mechanical Reasoning",
+        "Physical Stress & Materials Simulation",
+        "Kinematic Problem Solving"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science (PCM: Physics, Chemistry, Math) with Engineering Graphics",
+      "why": "Essential for mastering Newton's laws of motion, thermodynamics, structural forces, and mechanical CAD drawing.",
+      "electives": [
+        "Physics",
+        "Mathematics",
+        "Engineering Graphics / Drawing",
+        "Chemistry"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Automotive & Electric Vehicle (EV) Engineer",
+        "description": "Designs chassis dynamics, battery powertrains, and aerodynamics for future mobility vehicles.",
+        "degrees": "B.Tech in Mechanical / Automobile Engineering",
+        "exams": "JEE Main & Advanced, BITSAT, State CETs"
+      },
+      {
+        "title": "Robotics & Industrial CAD Designer",
+        "description": "Engineers robotic assembly arms, CNC machines, and factory automation equipment.",
+        "degrees": "B.Tech in Robotics / Mechatronics / Mechanical",
+        "exams": "JEE Main, BITSAT, VITEEE"
+      },
+      {
+        "title": "Smart Manufacturing & Plant Director",
+        "description": "Runs advanced high-precision factories producing consumer goods and industrial hardware.",
+        "degrees": "B.Tech in Production / Industrial Engineering",
+        "exams": "JEE Main, State CETs"
+      }
+    ],
+    "coreSkills": [
+      "3D Spatial Mechanical Reasoning",
+      "Physical Stress & Materials Simulation",
+      "Kinematic Problem Solving"
+    ]
   },
   {
     "id": "scientific-explorer",
@@ -552,7 +1748,27 @@
         "Create a mini biology/space blog",
         "Conduct fun home chemistry experiments"
       ],
-      "parentTip": "Feed their passion for nature, science museums, space, and medical breakthroughs."
+      "parentTip": "Feed their passion for nature, science museums, space, and medical breakthroughs.",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCB / PCMB: Physics, Chemistry, Biology, Math)",
+        "why": "Provides foundational training in organic chemistry, cell biology, genetics, and scientific method necessary for medicine and biotechnology.",
+        "electives": [
+          "Biology",
+          "Chemistry",
+          "Physics",
+          "Mathematics / Biotechnology"
+        ]
+      },
+      "broadCareers": [
+        "Medical Doctor / Surgeon",
+        "Biotechnology & Genetic Research Scientist"
+      ],
+      "coreSkills": [
+        "Empirical Scientific Inquiry",
+        "Biological & Chemical Synthesis",
+        "Diagnostic Root-Cause Precision"
+      ]
     },
     "navigator": {
       "title": "The Scientific Explorer",
@@ -570,8 +1786,80 @@
         "Medicine, Neuroscience & Healthcare Tech",
         "Environmental Science & CleanTech"
       ],
-      "streamFit": "PCB (Physics, Chemistry, Biology) / Bio-Tech"
-    }
+      "streamFit": "PCB (Physics, Chemistry, Biology) / Bio-Tech",
+      "recommendedStream": {
+        "category": "Science",
+        "stream": "Science (PCB / PCMB: Physics, Chemistry, Biology, Math)",
+        "why": "Provides foundational training in organic chemistry, cell biology, genetics, and scientific method necessary for medicine and biotechnology.",
+        "electives": [
+          "Biology",
+          "Chemistry",
+          "Physics",
+          "Mathematics / Biotechnology"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Medical Doctor / Surgeon",
+          "description": "Diagnoses complex illnesses, performs specialized surgical operations, and saves human lives.",
+          "degrees": "MBBS (Bachelor of Medicine & Surgery)",
+          "exams": "NEET-UG (National Eligibility cum Entrance Test)"
+        },
+        {
+          "title": "Biotechnology & Genetic Research Scientist",
+          "description": "Edits genes with CRISPR, develops mRNA vaccines, and uncovers life-saving molecular therapies.",
+          "degrees": "B.Sc / B.Tech in Biotechnology / Genetics, BS-MS (IISER)",
+          "exams": "IAT (IISER Aptitude Test), CUET, NEET"
+        },
+        {
+          "title": "Pharmaceutical Developer & Neuroscientist",
+          "description": "Invents novel pharmaceutical compounds and maps human brain neural circuitry.",
+          "degrees": "B.Pharm / B.Sc Neuroscience / MBBS",
+          "exams": "NEET-UG, CUET, State Pharmacy CETs"
+        }
+      ],
+      "coreSkills": [
+        "Empirical Scientific Inquiry",
+        "Biological & Chemical Synthesis",
+        "Diagnostic Root-Cause Precision"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Science",
+      "stream": "Science (PCB / PCMB: Physics, Chemistry, Biology, Math)",
+      "why": "Provides foundational training in organic chemistry, cell biology, genetics, and scientific method necessary for medicine and biotechnology.",
+      "electives": [
+        "Biology",
+        "Chemistry",
+        "Physics",
+        "Mathematics / Biotechnology"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Medical Doctor / Surgeon",
+        "description": "Diagnoses complex illnesses, performs specialized surgical operations, and saves human lives.",
+        "degrees": "MBBS (Bachelor of Medicine & Surgery)",
+        "exams": "NEET-UG (National Eligibility cum Entrance Test)"
+      },
+      {
+        "title": "Biotechnology & Genetic Research Scientist",
+        "description": "Edits genes with CRISPR, develops mRNA vaccines, and uncovers life-saving molecular therapies.",
+        "degrees": "B.Sc / B.Tech in Biotechnology / Genetics, BS-MS (IISER)",
+        "exams": "IAT (IISER Aptitude Test), CUET, NEET"
+      },
+      {
+        "title": "Pharmaceutical Developer & Neuroscientist",
+        "description": "Invents novel pharmaceutical compounds and maps human brain neural circuitry.",
+        "degrees": "B.Pharm / B.Sc Neuroscience / MBBS",
+        "exams": "NEET-UG, CUET, State Pharmacy CETs"
+      }
+    ],
+    "coreSkills": [
+      "Empirical Scientific Inquiry",
+      "Biological & Chemical Synthesis",
+      "Diagnostic Root-Cause Precision"
+    ]
   },
   {
     "id": "venture-catalyst",
@@ -593,7 +1881,27 @@
         "Organize a local recycling or yard sale drive",
         "Build a simple service project"
       ],
-      "parentTip": "Encourage practical projects that combine real-world physical action with financial planning."
+      "parentTip": "Encourage practical projects that combine real-world physical action with financial planning.",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Entrepreneurship, Economics & Accountancy",
+        "why": "Teaches capital raising, contract negotiations, corporate governance, and early-stage startup unit economics.",
+        "electives": [
+          "Entrepreneurship",
+          "Economics",
+          "Accountancy",
+          "Business Studies"
+        ]
+      },
+      "broadCareers": [
+        "Businessman / Serial Venture Founder",
+        "Venture Capitalist & Angel Investor"
+      ],
+      "coreSkills": [
+        "Commercial Risk Assessment",
+        "High-Stakes Deal Negotiation",
+        "Venture Scaling Intuition"
+      ]
     },
     "navigator": {
       "title": "The Venture Catalyst",
@@ -611,8 +1919,80 @@
         "Real Estate Tech & Infrastructure",
         "Agritech & Industrial Hardware Operations"
       ],
-      "streamFit": "Commerce / Vocational Business & Applied Tech"
-    }
+      "streamFit": "Commerce / Vocational Business & Applied Tech",
+      "recommendedStream": {
+        "category": "Commerce",
+        "stream": "Commerce with Entrepreneurship, Economics & Accountancy",
+        "why": "Teaches capital raising, contract negotiations, corporate governance, and early-stage startup unit economics.",
+        "electives": [
+          "Entrepreneurship",
+          "Economics",
+          "Accountancy",
+          "Business Studies"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Businessman / Serial Venture Founder",
+          "description": "Spawns new companies, secures venture backing, and scales multiple businesses profitably.",
+          "degrees": "BBA Entrepreneurship, BMS, B.Com (Hons)",
+          "exams": "IPMAT (IIMs), CUET, NPAT"
+        },
+        {
+          "title": "Venture Capitalist & Angel Investor",
+          "description": "Invests funds in groundbreaking tech founders and guides startup board decisions.",
+          "degrees": "BA Economics, BBA Finance, B.Com",
+          "exams": "CUET, IPMAT, CAT (Postgrad)"
+        },
+        {
+          "title": "Private Equity Associate & Corporate Strategist",
+          "description": "Restructures legacy companies, arranges debt financing, and fuels massive corporate buyouts.",
+          "degrees": "B.Com (Hons), BBA Finance",
+          "exams": "CUET, NPAT, SET"
+        }
+      ],
+      "coreSkills": [
+        "Commercial Risk Assessment",
+        "High-Stakes Deal Negotiation",
+        "Venture Scaling Intuition"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Commerce",
+      "stream": "Commerce with Entrepreneurship, Economics & Accountancy",
+      "why": "Teaches capital raising, contract negotiations, corporate governance, and early-stage startup unit economics.",
+      "electives": [
+        "Entrepreneurship",
+        "Economics",
+        "Accountancy",
+        "Business Studies"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Businessman / Serial Venture Founder",
+        "description": "Spawns new companies, secures venture backing, and scales multiple businesses profitably.",
+        "degrees": "BBA Entrepreneurship, BMS, B.Com (Hons)",
+        "exams": "IPMAT (IIMs), CUET, NPAT"
+      },
+      {
+        "title": "Venture Capitalist & Angel Investor",
+        "description": "Invests funds in groundbreaking tech founders and guides startup board decisions.",
+        "degrees": "BA Economics, BBA Finance, B.Com",
+        "exams": "CUET, IPMAT, CAT (Postgrad)"
+      },
+      {
+        "title": "Private Equity Associate & Corporate Strategist",
+        "description": "Restructures legacy companies, arranges debt financing, and fuels massive corporate buyouts.",
+        "degrees": "B.Com (Hons), BBA Finance",
+        "exams": "CUET, NPAT, SET"
+      }
+    ],
+    "coreSkills": [
+      "Commercial Risk Assessment",
+      "High-Stakes Deal Negotiation",
+      "Venture Scaling Intuition"
+    ]
   },
   {
     "id": "expressive-communicator",
@@ -634,7 +2014,27 @@
         "Direct a short skit with friends",
         "Write catchy lyrics or poetry"
       ],
-      "parentTip": "Celebrate their expressive energy in drama, debate, creative writing, and social performance."
+      "parentTip": "Celebrate their expressive energy in drama, debate, creative writing, and social performance.",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Liberal Arts with Political Science & Journalism",
+        "why": "Trains you in debate rhetoric, constitutional law, public policy, and mass media communication to speak with conviction.",
+        "electives": [
+          "Political Science",
+          "Legal Studies / Journalism",
+          "Psychology",
+          "English Literature"
+        ]
+      },
+      "broadCareers": [
+        "Broadcast Anchor, Podcaster & Keynote Speaker",
+        "Corporate Communications VP & Brand Spokesperson"
+      ],
+      "coreSkills": [
+        "Dynamic Verbal Persuasion",
+        "Rapid Rhetorical Articulation",
+        "Crisis Narrative Management"
+      ]
     },
     "navigator": {
       "title": "The Expressive Communicator",
@@ -652,7 +2052,79 @@
         "Public Relations & Influencer Strategy",
         "Podcast Hosting & Broadcasting"
       ],
-      "streamFit": "Arts & Humanities / Performing Arts / Mass Media"
-    }
+      "streamFit": "Arts & Humanities / Performing Arts / Mass Media",
+      "recommendedStream": {
+        "category": "Humanities",
+        "stream": "Humanities / Liberal Arts with Political Science & Journalism",
+        "why": "Trains you in debate rhetoric, constitutional law, public policy, and mass media communication to speak with conviction.",
+        "electives": [
+          "Political Science",
+          "Legal Studies / Journalism",
+          "Psychology",
+          "English Literature"
+        ]
+      },
+      "broadCareers": [
+        {
+          "title": "Broadcast Anchor, Podcaster & Keynote Speaker",
+          "description": "Commands television studios, leads live debate discussions, and interviews world leaders.",
+          "degrees": "BA Journalism & Mass Media, BA English / Communication",
+          "exams": "CUET, IIMC Entrance, Symbiosis SET"
+        },
+        {
+          "title": "Corporate Communications VP & Brand Spokesperson",
+          "description": "Represents global companies during press conferences, crises, and key product unveilings.",
+          "degrees": "BA Media Studies, BBA Strategic Marketing",
+          "exams": "CUET, Xavier Entrance Test (XET)"
+        },
+        {
+          "title": "Litigation Advocate / Public Policy Lawyer",
+          "description": "Argues landmark cases before the courts and drafts government legislative policy.",
+          "degrees": "BA LL.B (5-Year Integrated Law Degree)",
+          "exams": "CLAT (Common Law Admission Test), AILET"
+        }
+      ],
+      "coreSkills": [
+        "Dynamic Verbal Persuasion",
+        "Rapid Rhetorical Articulation",
+        "Crisis Narrative Management"
+      ]
+    },
+    "recommendedStream": {
+      "category": "Humanities",
+      "stream": "Humanities / Liberal Arts with Political Science & Journalism",
+      "why": "Trains you in debate rhetoric, constitutional law, public policy, and mass media communication to speak with conviction.",
+      "electives": [
+        "Political Science",
+        "Legal Studies / Journalism",
+        "Psychology",
+        "English Literature"
+      ]
+    },
+    "broadCareers": [
+      {
+        "title": "Broadcast Anchor, Podcaster & Keynote Speaker",
+        "description": "Commands television studios, leads live debate discussions, and interviews world leaders.",
+        "degrees": "BA Journalism & Mass Media, BA English / Communication",
+        "exams": "CUET, IIMC Entrance, Symbiosis SET"
+      },
+      {
+        "title": "Corporate Communications VP & Brand Spokesperson",
+        "description": "Represents global companies during press conferences, crises, and key product unveilings.",
+        "degrees": "BA Media Studies, BBA Strategic Marketing",
+        "exams": "CUET, Xavier Entrance Test (XET)"
+      },
+      {
+        "title": "Litigation Advocate / Public Policy Lawyer",
+        "description": "Argues landmark cases before the courts and drafts government legislative policy.",
+        "degrees": "BA LL.B (5-Year Integrated Law Degree)",
+        "exams": "CLAT (Common Law Admission Test), AILET"
+      }
+    ],
+    "coreSkills": [
+      "Dynamic Verbal Persuasion",
+      "Rapid Rhetorical Articulation",
+      "Crisis Narrative Management"
+    ]
   }
 ]

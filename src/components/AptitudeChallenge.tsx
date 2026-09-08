@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useAssessmentStore } from "@/store/assessmentStore";
 import { motion, AnimatePresence } from "framer-motion";
-import { Timer, AlertTriangle, ArrowRight, Brain, Clock, Target } from "lucide-react";
+import { Timer, AlertTriangle, ArrowRight, Brain, Clock, CheckCircle2, ShieldCheck } from "lucide-react";
 
 const SECONDS_PER_QUESTION = 20;
 
@@ -43,7 +43,7 @@ export default function AptitudeChallenge() {
         setTimeLeft(SECONDS_PER_QUESTION);
         startTimeRef.current = Date.now();
         setIsAnimating(false);
-      }, 280);
+      }, 220);
     } catch (error) {
       console.error("Error processing aptitude answer:", error);
       setHasError(true);
@@ -69,10 +69,16 @@ export default function AptitudeChallenge() {
 
   if (hasError) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center text-center p-6">
-        <AlertTriangle className="text-brand-amber mb-4" size={48} />
-        <h2 className="text-2xl font-display font-bold mb-2">Something went wrong</h2>
-        <p className="text-text-muted">We hit a snag loading this puzzle. Refreshing the app should fix it!</p>
+      <div className="w-full max-w-2xl mx-auto py-8 text-center space-y-3">
+        <AlertTriangle className="text-brand-amber mx-auto" size={36} />
+        <h2 className="text-lg font-display font-bold">Item Load Error</h2>
+        <p className="text-xs text-text-muted">A technical issue occurred loading this question.</p>
+        <button 
+          onClick={() => window.location.reload()}
+          className="px-4 py-2 bg-brand-blue text-white rounded-lg text-xs font-semibold"
+        >
+          Refresh Page
+        </button>
       </div>
     );
   }
@@ -84,89 +90,112 @@ export default function AptitudeChallenge() {
     return null;
   }
 
-  const progressPercent = (currentQuestionIndex / sessionAptitudes.length) * 100;
+  const progressPercent = ((currentQuestionIndex + 1) / sessionAptitudes.length) * 100;
+  const timerPercent = (timeLeft / SECONDS_PER_QUESTION) * 100;
 
   const variants = {
-    enter: (dir: number) => ({ x: dir > 0 ? 80 : -80, opacity: 0, scale: 0.96 }),
-    center: { z: 0, x: 0, opacity: 1, scale: 1 },
-    exit: (dir: number) => ({ z: 0, x: dir < 0 ? 80 : -80, opacity: 0, scale: 0.96 }),
+    enter: (dir: number) => ({ x: dir > 0 ? 40 : -40, opacity: 0 }),
+    center: { z: 0, x: 0, opacity: 1 },
+    exit: (dir: number) => ({ z: 0, x: dir < 0 ? 40 : -40, opacity: 0 }),
   };
 
   // Section 2 Intro Screen
   if (showIntro) {
     return (
-      <div className="flex-1 flex flex-col justify-between h-full w-full max-w-sm mx-auto py-4">
+      <div className="w-full max-w-2xl mx-auto py-6 sm:py-10 px-3 sm:px-4 space-y-6">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex-1 flex flex-col justify-center items-center text-center my-auto"
+          transition={{ duration: 0.2 }}
+          className="space-y-6"
         >
-          {/* Round Pill */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-xs font-bold uppercase tracking-wider mb-4">
-            <Brain size={14} />
-            <span>Round 2 of 2</span>
+          {/* Module Pill */}
+          <div className="text-center space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blue-light text-brand-blue text-xs font-semibold uppercase tracking-wider border border-brand-blue/20">
+              <Brain size={14} />
+              <span>Section 2 of 2</span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-text-main">
+              Timed Cognitive Aptitude Battery
+            </h2>
+
+            <p className="text-text-muted text-xs sm:text-sm leading-relaxed max-w-lg mx-auto font-normal">
+              Evaluate your core problem-solving faculties across Numerical, Logical, Spatial, and Verbal reasoning domains.
+            </p>
           </div>
 
-          <h2 className="text-3xl font-display font-extrabold text-text-main mb-3">
-            Aptitude Speed Challenge
-          </h2>
-
-          <p className="text-text-muted text-sm leading-relaxed mb-6">
-            Solve quick logic, spatial, and numerical puzzles. Think fast—the countdown begins when you tap start!
-          </p>
-
-          <div className="w-full space-y-2.5 text-left mb-6">
-            <div className="glass-card p-3.5 rounded-2xl flex items-center gap-3 border-l-4 border-l-brand-cyan">
-              <Brain size={16} className="text-brand-cyan shrink-0" />
-              <span className="text-xs text-text-main font-medium">15 Cognitive puzzle challenges</span>
+          <div className="formal-card p-4 sm:p-5 rounded-xl space-y-3 bg-bg-surface">
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
+              <CheckCircle2 size={16} className="text-brand-blue shrink-0" />
+              <span>15 Standardized aptitude problem sets</span>
             </div>
-            <div className="glass-card p-3.5 rounded-2xl flex items-center gap-3 border-l-4 border-l-brand-amber">
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
               <Clock size={16} className="text-brand-amber shrink-0" />
-              <span className="text-xs text-text-main font-medium">20 Seconds timer per question</span>
+              <span>20-second strict countdown timer per question</span>
             </div>
-            <div className="glass-card p-3.5 rounded-2xl flex items-center gap-3 border-l-4 border-l-brand-violet">
-              <Target size={16} className="text-brand-violet shrink-0" />
-              <span className="text-xs text-text-main font-medium">Scores accuracy & raw problem-solving speed</span>
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-text-muted">
+              <ShieldCheck size={16} className="text-brand-teal shrink-0" />
+              <span>Calibrates accuracy, response latency, and domain aptitude strength</span>
             </div>
           </div>
-        </motion.div>
 
-        <button
-          onClick={handleStart}
-          className="w-full bg-gradient-to-r from-brand-cyan to-brand-violet hover:opacity-95 text-white font-display font-bold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg active:scale-98 transition-all"
-        >
-          <span>Start Challenge</span>
-          <ArrowRight size={18} />
-        </button>
+          <button
+            onClick={handleStart}
+            className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-display font-bold py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer text-sm sm:text-base"
+          >
+            <span>Start Timed Battery</span>
+            <ArrowRight size={18} />
+          </button>
+        </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="flex-1 flex flex-col h-full w-full">
+    <div className="w-full max-w-2xl mx-auto py-3 sm:py-6 px-3 sm:px-4 space-y-4 select-none">
       {/* Header & Progress */}
-      <div className="w-full pt-4 pb-3">
-        <div className="flex justify-between items-center text-xs text-text-muted mb-2 font-display uppercase tracking-wider">
-          <span className="flex items-center gap-1.5">
-            <Timer size={14} className={timeLeft <= 5 ? "text-brand-pink animate-pulse" : "text-brand-cyan"} />
-            <span className={timeLeft <= 5 ? "text-brand-pink font-bold" : "text-text-main font-bold"}>
-              00:{timeLeft.toString().padStart(2, '0')}
+      <div className="space-y-1.5">
+        <div className="flex justify-between items-center text-xs text-text-muted font-medium">
+          <div className="flex items-center gap-2">
+            <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md text-xs font-bold ${
+              timeLeft <= 5 
+                ? "bg-red-50 text-red-600 border border-red-200 animate-pulse" 
+                : "bg-brand-blue-light text-brand-blue border border-brand-blue/20"
+            }`}>
+              <Timer size={13} />
+              <span>00:{timeLeft.toString().padStart(2, '0')}</span>
             </span>
+            <span className="text-xs text-text-subtle hidden sm:inline">Time Remaining</span>
+          </div>
+          <span className="font-semibold text-xs px-2.5 py-0.5 rounded-full bg-bg-subtle text-text-muted border border-border-subtle">
+            Item {currentQuestionIndex + 1} of {sessionAptitudes.length}
           </span>
-          <span className="font-semibold">{currentQuestionIndex + 1} / {sessionAptitudes.length}</span>
         </div>
-        <div className="h-2 w-full bg-bg-card rounded-full overflow-hidden border border-border-glass relative">
-          <motion.div 
-            className="h-full bg-gradient-to-r from-brand-cyan to-brand-violet"
-            initial={{ width: 0 }}
-            animate={{ width: `${progressPercent}%` }}
-            transition={{ duration: 0.3 }}
-          />
+
+        {/* Dual Progress: Overall items + Question timer */}
+        <div className="space-y-1">
+          <div className="h-1.5 w-full bg-bg-subtle rounded-full overflow-hidden border border-border-subtle">
+            <motion.div 
+              className="h-full bg-brand-blue rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: `${progressPercent}%` }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            />
+          </div>
+          <div className="h-1 w-full bg-bg-subtle/60 rounded-full overflow-hidden">
+            <div 
+              className={`h-full rounded-full transition-all duration-1000 linear ${
+                timeLeft <= 5 ? "bg-red-500" : "bg-brand-blue/50"
+              }`}
+              style={{ width: `${timerPercent}%` }}
+            />
+          </div>
         </div>
       </div>
 
       {/* Question Card */}
-      <div className="flex-1 relative flex flex-col items-center overflow-y-auto overflow-x-hidden pt-2">
+      <div className="relative pt-2">
         <AnimatePresence mode="popLayout" custom={direction}>
           <motion.div
             key={currentQ.id}
@@ -175,31 +204,41 @@ export default function AptitudeChallenge() {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ type: "spring", stiffness: 320, damping: 28 }}
-            className="w-full flex flex-col h-full"
+            transition={{ duration: 0.18, ease: "easeInOut" }}
+            className="space-y-3.5"
           >
-            <div className="text-center mb-6 px-2 flex-shrink-0">
-              <span className="inline-block px-3 py-1 bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-xs rounded-full uppercase tracking-widest font-bold mb-3">
+            <div className="formal-card p-4 sm:p-5 rounded-xl text-center bg-bg-surface space-y-1.5">
+              <div className="inline-block px-2.5 py-0.5 bg-brand-blue-light border border-brand-blue/20 text-brand-blue text-[10px] rounded-md uppercase tracking-wider font-bold">
                 {currentQ.domain}
-              </span>
-              <h2 className="text-lg sm:text-xl font-body font-semibold leading-relaxed text-text-main">
+              </div>
+              <h2 className="text-sm sm:text-base md:text-lg font-display font-bold leading-relaxed text-text-main">
                 {currentQ.question}
               </h2>
             </div>
 
-            <div className="flex flex-col gap-3 flex-1 overflow-y-auto pb-6 px-1">
+            {/* Multiple Choice Options */}
+            <div className="space-y-2">
               {currentQ.options.map((option, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleSelect(idx)}
-                  className="glass-card w-full p-4 sm:p-5 rounded-2xl text-left border border-border-glass hover:border-brand-cyan/50 active:scale-98 transition-all text-sm sm:text-base font-medium group shadow-sm flex items-center gap-3"
+                  className="formal-card-interactive w-full p-3.5 rounded-xl text-left group cursor-pointer flex items-center gap-3"
                 >
-                  <span className="w-7 h-7 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan font-bold flex items-center justify-center text-xs shrink-0 group-hover:bg-brand-cyan group-hover:text-white transition-colors">
+                  <span className="w-6 h-6 rounded-md bg-bg-subtle group-hover:bg-brand-blue group-hover:text-white text-text-muted font-bold flex items-center justify-center text-xs shrink-0 transition-colors">
                     {String.fromCharCode(65 + idx)}
                   </span>
-                  <span className="text-text-main flex-1">{option}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-text-main group-hover:text-brand-blue transition-colors flex-1 leading-snug">
+                    {option}
+                  </span>
                 </button>
               ))}
+            </div>
+
+            {/* Footer */}
+            <div className="text-center pt-1">
+              <span className="text-[11px] text-text-subtle">
+                {timeLeft <= 5 ? "⚠️ Time running out for this item" : "Accuracy and response speed contribute to domain score"}
+              </span>
             </div>
           </motion.div>
         </AnimatePresence>

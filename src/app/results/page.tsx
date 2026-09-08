@@ -7,16 +7,15 @@ import archetypesData from "@/data/archetypes.json";
 import RadarChart from "@/components/RadarChart";
 import { StoryShareCard } from "@/components/StoryShareCard";
 import { 
-  AlertTriangle, RefreshCw, Camera, Check, Copy, Sparkles,
-  Gamepad2, Cpu, Palette, TrendingUp, Code, HeartHandshake, Sliders, Binary,
+  AlertTriangle, RefreshCw, Check, Copy, Printer,
+  Cpu, Palette, TrendingUp, Code, HeartHandshake, Sliders, Binary,
   Crown, Laptop, Search, Users, Lightbulb, Wrench, Atom, Flame, Megaphone,
-  Eye, Download, X, Smartphone, LucideIcon
+  Download, Eye, X, BookOpen, GraduationCap, Compass, Briefcase, FileCheck, LucideIcon
 } from "lucide-react";
 import { toPng } from "html-to-image";
 
 const TRAITS_ORDER = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"];
 
-// High-tech vector icon mapping for every archetype (no raw OS emojis)
 const ARCHETYPE_ICONS: Record<string, LucideIcon> = {
   "systems-architect": Cpu,
   "creative-visionary": Palette,
@@ -54,11 +53,9 @@ function ResultsContent() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [showPreviewModal, setShowPreviewModal] = useState(searchParams.get("story") === "1");
   
-  const shareCardRef = useRef<HTMLDivElement>(null);
   const storyCardRef = useRef<HTMLDivElement>(null);
 
   const { data, archetype, error } = useMemo(() => {
-    // 1. Try clean short query params: ?arch=...&age=...&r=4,8,2,10,7,1
     const archParam = searchParams.get("arch");
     const ageParam = searchParams.get("age");
     const rParam = searchParams.get("r");
@@ -94,7 +91,6 @@ function ResultsContent() {
       }
     }
 
-    // 2. Legacy base64 fallback: ?data=...
     if (dataParam) {
       try {
         const decodedStr = Buffer.from(dataParam, "base64").toString("utf-8");
@@ -117,73 +113,26 @@ function ResultsContent() {
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 3500);
+    setTimeout(() => setToastMessage(null), 3000);
   };
 
-  // Generate & Share Viral 9:16 Story Snapshot (1080x1920)
-  const handleShareStorySnapshot = async () => {
-    if (!storyCardRef.current || isGeneratingImage || !archetype || !viewData) return;
-
-    try {
-      setIsGeneratingImage(true);
-      showToast("Generating 9:16 Story snapshot...");
-
-      const dataUrl = await toPng(storyCardRef.current, {
-        cacheBust: true,
-        pixelRatio: 3, // 360x640 -> 1080x1920 HD
-      });
-
-      const res = await fetch(dataUrl);
-      const blob = await res.blob();
-      const file = new File([blob], `${archetype.id}-story-9x16.png`, { type: "image/png" });
-
-      if (navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          files: [file],
-          title: `My Cognitive Archetype: ${viewData.title}`,
-          text: `I got ${viewData.title}! Discover your cognitive superpowers on Aptitude: ${window.location.href}`,
-        });
-        showToast("Shared successfully!");
-      } else {
-        const link = document.createElement("a");
-        link.download = `${archetype.id}-story-9x16.png`;
-        link.href = dataUrl;
-        link.click();
-        
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(window.location.href);
-        }
-        showToast("9:16 Story downloaded! Link copied to clipboard.");
-      }
-    } catch (err) {
-      console.error("Failed to generate image share:", err);
-      showToast("Link copied to clipboard!");
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(window.location.href);
-      }
-    } finally {
-      setIsGeneratingImage(false);
-    }
-  };
-
-  // Direct Download 9:16 HD Image
-  const handleDownloadStoryImage = async () => {
+  const handleDownloadScorecard = async () => {
     if (!storyCardRef.current || isGeneratingImage || !archetype) return;
 
     try {
       setIsGeneratingImage(true);
-      showToast("Generating 9:16 HD Image (1080x1920)...");
+      showToast("Generating official scorecard...");
 
       const dataUrl = await toPng(storyCardRef.current, {
         cacheBust: true,
-        pixelRatio: 3,
+        pixelRatio: 2.5,
       });
 
       const link = document.createElement("a");
-      link.download = `${archetype.id}-story-9x16.png`;
+      link.download = `${archetype.id}-scorecard.png`;
       link.href = dataUrl;
       link.click();
-      showToast("9:16 Story Image downloaded!");
+      showToast("Scorecard downloaded!");
     } catch (err) {
       console.error("Failed to download image:", err);
       showToast("Download failed. Link copied!");
@@ -192,32 +141,31 @@ function ResultsContent() {
     }
   };
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   const copyCleanLink = () => {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href);
-      showToast("Result link copied!");
+      showToast("Report link copied to clipboard!");
     }
-  };
-
-  const shareToWhatsApp = () => {
-    const text = encodeURIComponent(`I took the Aptitude test and got *${viewData?.title}*!\nDiscover your cognitive archetype: ${window.location.href}`);
-    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
 
   if (error) {
     return (
-      <main className="flex-1 w-full h-full flex flex-col items-center justify-center bg-bg-dark text-text-main p-6 text-center">
-        <AlertTriangle className="text-brand-pink mb-4" size={48} />
-        <h1 className="text-2xl font-display font-bold mb-2">Signal Lost</h1>
-        <p className="text-text-muted mb-8">This result link is broken or expired.</p>
+      <main className="w-full max-w-2xl mx-auto py-12 px-4 text-center space-y-4">
+        <AlertTriangle className="text-brand-amber mx-auto" size={36} />
+        <h1 className="text-xl font-display font-bold">Evaluation Record Not Found</h1>
+        <p className="text-xs text-text-muted">The evaluation link is broken or has expired.</p>
         <button
           onClick={() => {
             resetAssessment();
             router.push("/");
           }}
-          className="glass-card px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-brand-violet/10 transition-colors"
+          className="px-4 py-2.5 bg-brand-blue hover:bg-brand-blue-hover text-white rounded-lg text-xs font-semibold inline-flex items-center gap-2 shadow-xs cursor-pointer"
         >
-          <RefreshCw size={18} /> Take the Test
+          <RefreshCw size={13} /> Start New Assessment
         </button>
       </main>
     );
@@ -225,231 +173,296 @@ function ResultsContent() {
 
   if (!data || !archetype) {
     return (
-      <main className="flex-1 w-full h-full flex flex-col items-center justify-center bg-bg-dark text-text-main p-6">
-        <div className="w-8 h-8 border-2 border-brand-cyan border-t-transparent rounded-full animate-spin" />
+      <main className="w-full max-w-2xl mx-auto py-16 text-center">
+        <div className="w-8 h-8 border-3 border-brand-blue border-t-transparent rounded-full animate-spin mx-auto" />
       </main>
     );
   }
 
   const isExplorer = data.age === "explorer";
   const viewData = isExplorer ? archetype.explorer : archetype.navigator;
-  const BadgeIcon = ARCHETYPE_ICONS[archetype.id] || Sparkles;
-
-  // Direct 9:16 Card Mode (for clean headless capture or iframe embed)
-  if (searchParams.get("card") === "1") {
-    return (
-      <main className="w-screen h-screen flex items-center justify-center bg-[#07090E] p-0 m-0 overflow-hidden">
-        <StoryShareCard
-          archetype={archetype}
-          viewData={viewData}
-          BadgeIcon={BadgeIcon}
-          rScores={data.r}
-          isExplorer={isExplorer}
-        />
-      </main>
-    );
-  }
+  const BadgeIcon = ARCHETYPE_ICONS[archetype.id] || Compass;
 
   return (
-    <main className="flex-1 w-full h-full overflow-y-auto flex flex-col relative bg-bg-dark text-text-main p-4 sm:p-6 pb-24">
+    <main className="w-full max-w-4xl mx-auto py-4 sm:py-8 px-3 sm:px-6 space-y-6">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-2xl bg-brand-violet text-white text-xs sm:text-sm font-bold shadow-2xl flex items-center gap-2 animate-bounce">
-          <Check size={16} />
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-lg bg-text-main text-bg-surface text-xs sm:text-sm font-semibold shadow-lg flex items-center gap-2 animate-in fade-in zoom-in-95">
+          <Check size={16} className="text-brand-blue" />
           <span>{toastMessage}</span>
         </div>
       )}
 
-      {/* Top Bar */}
-      <div className="flex justify-between items-center mb-6">
-        <div className="text-xs font-display font-bold tracking-widest text-text-muted uppercase">
-          {isExplorer ? "Explorer Result" : "Navigator Result"}
-        </div>
-        <button 
-          onClick={copyCleanLink}
-          className="p-2 glass-card rounded-full hover:bg-brand-violet/20 transition-colors"
-          title="Copy Link"
-        >
-          <Copy size={16} />
-        </button>
-      </div>
-
-      {/* ARCHETYPE CARD (Target for Snapshot Generation, with shrink-0 to prevent flex squashing) */}
-      <div 
-        ref={shareCardRef}
-        className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center relative mb-6 border border-brand-violet/30 shadow-xl shrink-0"
-      >
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-violet via-brand-pink to-brand-amber rounded-t-3xl" />
-        
-        {/* Sleek Vector Archetype Badge */}
-        <div className="w-16 h-16 rounded-2xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet mb-3 shadow-sm shrink-0">
-          <BadgeIcon size={30} />
-        </div>
-
-        <span className="text-xs font-bold text-brand-violet mb-2 tracking-widest uppercase">
-          Your Archetype
-        </span>
-        
-        <h1 className="text-2xl sm:text-3xl font-display font-extrabold text-text-main mb-3 leading-tight">
-          {viewData.title}
-        </h1>
-        
-        <p className="text-sm sm:text-base text-brand-cyan font-medium italic leading-relaxed mb-4">
-          &ldquo;{viewData.tagline}&rdquo;
-        </p>
-
-        {/* Mini Watermark badge for stories */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-border-glass text-[10px] text-text-muted font-display tracking-widest uppercase">
-          <Sparkles size={11} className="text-brand-violet" />
-          <span>Aptitude Engine</span>
-        </div>
-      </div>
-
-      {/* Radar Chart */}
-      <div className="glass-card rounded-3xl p-6 mb-6 shrink-0">
-        <RadarChart data={data.r} />
-      </div>
-
-      {/* Superpowers */}
-      <div className="glass-card rounded-3xl p-6 mb-6 shrink-0">
-        <h3 className="text-sm font-display tracking-widest text-brand-pink uppercase mb-4 font-bold flex items-center gap-1.5">
-          <Sparkles size={14} className="text-brand-pink" />
-          <span>Core Superpowers</span>
-        </h3>
-        <ul className="space-y-3">
-          {viewData.superpowers.map((sp: string, idx: number) => (
-            <li key={idx} className="flex items-start gap-3">
-              <Sparkles size={14} className="text-brand-pink mt-1 shrink-0" />
-              <span className="text-text-main font-medium leading-snug">{sp}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Dynamic Section based on Age Group */}
-      {isExplorer ? (
-        <div className="glass-card rounded-3xl p-6 mb-8 border-brand-cyan/20 shrink-0">
-          <h3 className="text-sm font-display tracking-widest text-brand-cyan uppercase mb-4 font-bold flex items-center gap-1.5">
-            <Gamepad2 size={16} className="text-brand-cyan" />
-            <span>Quests to Level Up</span>
-          </h3>
-          <ul className="space-y-3 mb-6">
-            {archetype.explorer.funQuests.map((quest: string, idx: number) => (
-              <li key={idx} className="flex items-start gap-3">
-                <Gamepad2 size={15} className="text-brand-cyan mt-1 shrink-0" />
-                <span className="text-text-muted font-medium">{quest}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="p-4 bg-brand-violet/15 rounded-xl border border-brand-violet/30">
-            <h4 className="text-xs font-bold text-brand-violet uppercase mb-2">For Parents</h4>
-            <p className="text-sm text-text-main font-medium italic">{archetype.explorer.parentTip}</p>
+      {/* Official Report Header Banner with Streamlined Actions */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-border-subtle">
+        <div>
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-semibold bg-brand-blue-light text-brand-blue border border-brand-blue/20 mb-1">
+            <FileCheck size={12} />
+            <span>Official Assessment Report</span>
           </div>
+          <h1 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+            Cognitive Aptitude & Stream Guidance Profile
+          </h1>
+          <p className="text-xs text-text-muted mt-0.5">
+            Track: {isExplorer ? "Explorer Track (Ages 8–13)" : "Navigator Track (Ages 14+ / High School)"} • Verified Evaluation
+          </p>
         </div>
-      ) : (
-        <div className="space-y-4 mb-8 shrink-0">
-          <div className="flex gap-4">
-            <div className="flex-1 glass-card p-5 rounded-3xl border-t-2 border-t-brand-mint">
-              <h3 className="text-xs font-display font-extrabold text-brand-mint uppercase mb-2">State of Flow</h3>
-              <p className="text-sm text-text-muted font-medium">{archetype.navigator.flowTriggers}</p>
-            </div>
-            <div className="flex-1 glass-card p-5 rounded-3xl border-t-2 border-t-brand-pink">
-              <h3 className="text-xs font-display font-extrabold text-brand-pink uppercase mb-2">Friction</h3>
-              <p className="text-sm text-text-muted font-medium">{archetype.navigator.frictionTriggers}</p>
-            </div>
+
+        {/* Consolidated Action Bar */}
+        <div className="flex items-center gap-2 print:hidden shrink-0">
+          <button 
+            onClick={copyCleanLink}
+            className="px-3 py-1.5 rounded-lg border border-border-subtle bg-bg-surface hover:bg-bg-subtle text-xs font-semibold text-text-muted hover:text-text-main transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
+            title="Copy Report Link"
+          >
+            <Copy size={13} />
+            <span className="hidden sm:inline">Copy Link</span>
+          </button>
+
+          <button 
+            onClick={handlePrint}
+            className="px-3 py-1.5 rounded-lg border border-border-subtle bg-bg-surface hover:bg-bg-subtle text-xs font-semibold text-text-muted hover:text-text-main transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
+            title="Print or Save PDF"
+          >
+            <Printer size={13} />
+            <span>Print / PDF</span>
+          </button>
+
+          <button 
+            onClick={() => setShowPreviewModal(true)}
+            className="px-3.5 py-1.5 rounded-lg bg-brand-blue hover:bg-brand-blue-hover text-white text-xs font-semibold transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
+          >
+            <Eye size={13} />
+            <span>Scorecard</span>
+          </button>
+        </div>
+      </div>
+
+      {/* SECTION 1: PRIMARY COGNITIVE PROFILE */}
+      <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface border-l-4 border-l-brand-blue">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="w-14 h-14 rounded-xl bg-brand-blue-light text-brand-blue flex items-center justify-center shrink-0">
+            <BadgeIcon size={28} />
           </div>
 
-          {archetype.navigator.strategicFields && (
-            <div className="glass-card p-5 rounded-3xl border-t-2 border-t-brand-violet">
-              <h3 className="text-xs font-display font-extrabold text-brand-violet uppercase mb-3">Strategic Career Pathways</h3>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {archetype.navigator.strategicFields.map((field: string, idx: number) => (
-                  <span key={idx} className="px-3 py-1 bg-brand-violet/15 border border-brand-violet/30 rounded-full text-xs text-text-main font-bold">
-                    {field}
+          <div className="flex-1 space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-brand-blue">
+                Primary Cognitive Profile
+              </span>
+              {archetype.primaryAptitude && (
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-bg-subtle text-text-muted border border-border-subtle">
+                  Aptitude: {archetype.primaryAptitude}
+                </span>
+              )}
+            </div>
+
+            <h2 className="text-xl sm:text-2xl font-display font-bold text-text-main">
+              {viewData.title}
+            </h2>
+
+            <p className="text-xs sm:text-sm text-text-muted font-medium italic">
+              &ldquo;{viewData.tagline}&rdquo;
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 2: HIGHER SECONDARY (+2) STREAM RECOMMENDATION */}
+      {archetype.recommendedStream && (
+        <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3.5">
+          <div className="flex items-center justify-between pb-3 border-b border-border-subtle">
+            <div className="flex items-center gap-2">
+              <GraduationCap size={17} className="text-brand-blue" />
+              <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
+                Higher Secondary (+2) Stream Recommendation
+              </h3>
+            </div>
+            <span className="px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-brand-blue-light text-brand-blue border border-brand-blue/20">
+              {archetype.recommendedStream.category} Stream
+            </span>
+          </div>
+
+          <div>
+            <h4 className="text-base font-bold text-text-main mb-1">
+              {archetype.recommendedStream.stream}
+            </h4>
+            <p className="text-xs sm:text-sm text-text-muted leading-relaxed font-normal">
+              {archetype.recommendedStream.why}
+            </p>
+          </div>
+
+          {archetype.recommendedStream.electives && (
+            <div className="pt-2.5 border-t border-border-subtle">
+              <span className="text-[11px] font-bold text-text-muted uppercase tracking-wider block mb-2">
+                Recommended 11th & 12th Subject Combinations / Electives:
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {archetype.recommendedStream.electives.map((ele: string, idx: number) => (
+                  <span 
+                    key={idx} 
+                    className="px-2.5 py-1 rounded-md bg-bg-subtle border border-border-subtle text-xs font-semibold text-text-main"
+                  >
+                    {ele}
                   </span>
                 ))}
               </div>
-              {archetype.navigator.streamFit && (
-                <p className="text-xs text-text-muted font-medium">
-                  <strong className="text-text-main font-bold">Stream Fit: </strong>{archetype.navigator.streamFit}
-                </p>
-              )}
             </div>
           )}
         </div>
       )}
 
-      {/* VIRAL SHARE & ACTIONS */}
-      <div className="mt-auto space-y-3 shrink-0">
-        {/* Main Viral Screenshot Button */}
-        <button
-          onClick={handleShareStorySnapshot}
-          disabled={isGeneratingImage}
-          className="w-full bg-gradient-to-r from-brand-violet via-brand-pink to-brand-amber hover:opacity-95 text-white font-display font-bold py-4 rounded-2xl flex items-center justify-center gap-2.5 shadow-xl active:scale-98 transition-all disabled:opacity-50"
-        >
-          <Camera size={20} />
-          <span>{isGeneratingImage ? "Generating 9:16 Snapshot..." : "Share 9:16 Story Snapshot"}</span>
-        </button>
+      {/* SECTION 3: CAREER TRACKS & DEGREE PATHWAYS */}
+      {archetype.broadCareers && (
+        <div className="formal-card rounded-xl p-5 sm:p-6 bg-bg-surface space-y-3.5">
+          <div className="flex items-center gap-2 pb-3 border-b border-border-subtle">
+            <Briefcase size={17} className="text-brand-blue" />
+            <h3 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-main">
+              Aligned Career Tracks & Degree Pathways
+            </h3>
+          </div>
+          <p className="text-xs text-text-muted">
+            High-alignment career pathways matching this cognitive profile:
+          </p>
 
-        {/* Preview 9:16 Card Modal Trigger */}
-        <button
-          onClick={() => setShowPreviewModal(true)}
-          className="w-full glass-card py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs font-bold hover:bg-brand-violet/20 transition-colors text-text-main"
-        >
-          <Eye size={15} className="text-brand-cyan" />
-          <span>Preview 9:16 Story Card</span>
-        </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {archetype.broadCareers.map((career: any, idx: number) => {
+              const isObj = typeof career === "object" && career !== null;
+              const title = isObj ? career.title : career;
+              const desc = isObj ? career.description : "";
+              const degrees = isObj ? career.degrees : "";
+              const exams = isObj ? career.exams : "";
 
-        {/* Quick Social Shares */}
-        <div className="grid grid-cols-3 gap-2">
-          {/* WhatsApp Button with Official WhatsApp Vector Icon */}
-          <button
-            onClick={shareToWhatsApp}
-            className="glass-card py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 text-xs font-bold hover:bg-[#25D366]/20 transition-colors text-text-main"
-          >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" className="text-[#25D366]">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.461c-1.928 0-3.816-.51-5.474-1.476l-.393-.231-4.071 1.067 1.087-3.969-.255-.406c-1.062-1.691-1.625-3.663-1.625-5.682 0-5.834 4.746-10.58 10.58-10.58 2.827 0 5.484 1.101 7.483 3.101 1.999 1.999 3.099 4.656 3.099 7.484 0 5.836-4.748 10.582-10.584 10.582M12 0C5.373 0 0 5.373 0 12c0 2.119.555 4.184 1.611 6.002L0 24l6.166-1.617C7.944 23.38 9.957 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0"/>
-            </svg>
-            <span>WhatsApp</span>
-          </button>
-
-          {/* Instagram Story Button */}
-          <button
-            onClick={handleShareStorySnapshot}
-            disabled={isGeneratingImage}
-            className="glass-card py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 text-xs font-bold hover:bg-brand-pink/20 transition-colors text-text-main disabled:opacity-50"
-          >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-pink">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-            </svg>
-            <span>Insta Story</span>
-          </button>
-
-          {/* Copy Link Button */}
-          <button
-            onClick={copyCleanLink}
-            className="glass-card py-3 px-2 rounded-xl flex items-center justify-center gap-1.5 text-xs font-bold hover:bg-brand-violet/20 transition-colors text-text-main"
-          >
-            <Copy size={15} className="text-brand-violet" />
-            <span>Copy Link</span>
-          </button>
+              return (
+                <div 
+                  key={idx} 
+                  className="p-3.5 rounded-lg bg-bg-subtle/50 border border-border-subtle hover:border-brand-blue/30 transition-colors flex flex-col justify-between space-y-2"
+                >
+                  <div>
+                    <h4 className="font-bold text-xs sm:text-sm text-text-main">
+                      {title}
+                    </h4>
+                    {desc && (
+                      <p className="text-xs text-text-muted mt-1 leading-relaxed">
+                        {desc}
+                      </p>
+                    )}
+                  </div>
+                  {(degrees || exams) && (
+                    <div className="pt-2 border-t border-border-subtle space-y-1 text-[11px]">
+                      {degrees && (
+                        <div className="flex items-start gap-1.5">
+                          <span className="text-text-muted font-semibold shrink-0">Degrees:</span>
+                          <span className="text-brand-blue font-medium">{degrees}</span>
+                        </div>
+                      )}
+                      {exams && (
+                        <div className="flex items-start gap-1.5">
+                          <span className="text-text-muted font-semibold shrink-0">Key Exams:</span>
+                          <span className="text-brand-teal font-medium">{exams}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        
-        {/* Retake */}
+      )}
+
+      {/* SECTION 4 & 5: RADAR CHART & CORE COMPETENCIES (Side-by-side grid) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        {/* Radar Chart */}
+        <div className="formal-card rounded-xl p-4 sm:p-5 bg-bg-surface flex flex-col justify-between">
+          <RadarChart data={data.r} />
+          <p className="text-[10.5px] text-text-subtle text-center mt-1">
+            Measures intrinsic vocational orientation across Holland's RIASEC dimensions
+          </p>
+        </div>
+
+        {/* Core Competencies */}
+        <div className="formal-card rounded-xl p-4 sm:p-5 bg-bg-surface flex flex-col justify-between">
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 pb-2.5 border-b border-border-subtle">
+              <BookOpen size={16} className="text-brand-blue" />
+              <h3 className="text-xs font-bold uppercase tracking-wider text-text-main">
+                Core Cognitive Competencies
+              </h3>
+            </div>
+            
+            <div className="space-y-2">
+              {(archetype.coreSkills || viewData.superpowers).map((skill: string, idx: number) => (
+                <div key={idx} className="flex items-center gap-2.5 p-2 rounded-lg bg-bg-subtle/50 border border-border-subtle text-xs font-medium text-text-main">
+                  <span className="w-5 h-5 rounded bg-brand-blue-light text-brand-blue font-bold text-[10px] flex items-center justify-center shrink-0">
+                    {idx + 1}
+                  </span>
+                  <span>{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-3 pt-2.5 border-t border-border-subtle text-[10.5px] text-text-subtle">
+            Demonstrated natural strengths validated by standardized scoring
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 6: INSTITUTIONAL ADVISORY */}
+      {isExplorer ? (
+        <div className="formal-card rounded-xl p-5 bg-bg-surface space-y-3">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-2">
+            <Compass size={15} />
+            <span>Developmental Milestones & Quests</span>
+          </h3>
+          <ul className="space-y-1.5">
+            {archetype.explorer.funQuests.map((quest: string, idx: number) => (
+              <li key={idx} className="flex items-start gap-2 text-xs text-text-muted leading-relaxed">
+                <Check size={13} className="text-brand-blue mt-0.5 shrink-0" />
+                <span>{quest}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="p-3 bg-brand-blue-light/50 border border-brand-blue/20 rounded-lg mt-2">
+            <h4 className="text-[10.5px] font-bold text-brand-blue uppercase mb-0.5">Parent & Teacher Recommendation</h4>
+            <p className="text-xs text-text-muted leading-relaxed">{archetype.explorer.parentTip}</p>
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div className="formal-card p-4 rounded-xl bg-bg-surface border-t-3 border-t-brand-teal">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-brand-teal mb-1">Optimal Learning Flow State</h3>
+            <p className="text-xs text-text-muted leading-relaxed">{archetype.navigator.flowTriggers}</p>
+          </div>
+          <div className="formal-card p-4 rounded-xl bg-bg-surface border-t-3 border-t-brand-amber">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-brand-amber mb-1">Friction & Fatigue Triggers</h3>
+            <p className="text-xs text-text-muted leading-relaxed">{archetype.navigator.frictionTriggers}</p>
+          </div>
+        </div>
+      )}
+
+      {/* FOOTER BAR: Clean Retake & Scorecard CTA */}
+      <div className="pt-4 border-t border-border-subtle flex items-center justify-between print:hidden">
         <button
           onClick={() => {
             resetAssessment();
             router.push("/");
           }}
-          className="w-full text-text-muted text-xs hover:text-text-main transition-colors underline py-2 block text-center"
+          className="text-xs text-text-muted hover:text-text-main transition-colors flex items-center gap-1.5 font-medium underline cursor-pointer"
         >
-          Retake Assessment
+          <RefreshCw size={12} /> Retake Assessment
+        </button>
+
+        <button
+          onClick={() => setShowPreviewModal(true)}
+          className="text-xs font-semibold text-brand-blue hover:underline flex items-center gap-1 cursor-pointer"
+        >
+          <span>View / Export Official Scorecard</span>
         </button>
       </div>
 
-      {/* Hidden 9:16 Story Card for Snapshot Capture (Always rendered for toPng) */}
+      {/* Hidden Scorecard for Image Generation */}
       <div
         style={{
           position: "fixed",
@@ -470,55 +483,39 @@ function ResultsContent() {
         />
       </div>
 
-      {/* Modal: Live Preview of 9:16 Story Card */}
+      {/* Scorecard Preview Modal */}
       {showPreviewModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md p-4 overflow-y-auto">
-          <div className="relative flex flex-col items-center max-w-[360px] w-full animate-in fade-in zoom-in-95 duration-200 my-auto">
-            {/* Header & Close */}
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto">
+          <div className="relative flex flex-col items-center max-w-[380px] w-full my-auto">
             <div className="w-full flex items-center justify-between pb-3 text-white">
-              <div className="flex items-center gap-2">
-                <Smartphone size={16} className="text-brand-pink" />
-                <span className="text-xs font-bold uppercase tracking-wider">9:16 Story Preview</span>
-              </div>
+              <span className="text-xs font-bold uppercase tracking-wider">Official Scorecard Preview</span>
               <button
                 onClick={() => setShowPreviewModal(false)}
-                className="p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
-                title="Close Preview"
+                className="p-1 rounded-md bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
+                title="Close"
               >
-                <X size={18} />
+                <X size={16} />
               </button>
             </div>
 
-            {/* Exact 9:16 Preview Card with clean dimensions */}
-            <div className="w-[300px] h-[533px] sm:w-[340px] sm:h-[604px] rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(124,58,237,0.35)] border border-white/20 relative">
-              <div className="w-[360px] h-[640px] origin-top-left scale-[0.833] sm:scale-[0.944]">
-                <StoryShareCard
-                  archetype={archetype}
-                  viewData={viewData}
-                  BadgeIcon={BadgeIcon}
-                  rScores={data.r}
-                  isExplorer={isExplorer}
-                />
-              </div>
+            <div className="rounded-xl overflow-hidden shadow-2xl border border-slate-200">
+              <StoryShareCard
+                archetype={archetype}
+                viewData={viewData}
+                BadgeIcon={BadgeIcon}
+                rScores={data.r}
+                isExplorer={isExplorer}
+              />
             </div>
 
-            {/* Action Buttons directly below card */}
-            <div className="flex gap-2.5 w-full mt-4">
+            <div className="w-full mt-3">
               <button
-                onClick={handleDownloadStoryImage}
+                onClick={handleDownloadScorecard}
                 disabled={isGeneratingImage}
-                className="flex-1 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-3 px-3 rounded-2xl flex items-center justify-center gap-1.5 text-xs transition-colors"
+                className="w-full bg-brand-blue hover:bg-brand-blue-hover text-white font-bold py-2.5 px-4 rounded-lg flex items-center justify-center gap-1.5 text-xs shadow-md transition-colors cursor-pointer"
               >
-                <Download size={15} />
-                <span>Save 9:16 (HD)</span>
-              </button>
-              <button
-                onClick={handleShareStorySnapshot}
-                disabled={isGeneratingImage}
-                className="flex-1 bg-gradient-to-r from-brand-violet to-brand-pink text-white font-bold py-3 px-3 rounded-2xl flex items-center justify-center gap-1.5 text-xs shadow-lg active:scale-98 transition-all"
-              >
-                <Camera size={15} />
-                <span>Share Story</span>
+                <Download size={14} />
+                <span>Save Scorecard (PNG)</span>
               </button>
             </div>
           </div>
@@ -532,8 +529,8 @@ export default function ResultsPage() {
   return (
     <Suspense
       fallback={
-        <main className="flex-1 w-full h-full flex flex-col items-center justify-center bg-bg-dark text-text-main p-6">
-          <div className="w-8 h-8 border-2 border-brand-cyan border-t-transparent rounded-full animate-spin" />
+        <main className="w-full max-w-2xl mx-auto py-16 text-center">
+          <div className="w-8 h-8 border-3 border-brand-blue border-t-transparent rounded-full animate-spin mx-auto" />
         </main>
       }
     >

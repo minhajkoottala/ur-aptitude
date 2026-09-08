@@ -6,26 +6,23 @@ import React from "react";
 const TRAITS = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"];
 
 interface RadarChartProps {
-  data: { key: string; count: number }[]; // Raw RIASEC scores
+  data: { key: string; count: number }[];
 }
 
 export default function RadarChart({ data }: RadarChartProps) {
-  // Normalize scores to a 0-1 scale (assuming max possible score is 10)
   const MAX_SCORE = 10;
   
-  // Create a map for quick lookup
   const scoreMap = data.reduce((acc, curr) => {
     acc[curr.key] = Math.min(curr.count, MAX_SCORE) / MAX_SCORE;
     return acc;
   }, {} as Record<string, number>);
 
-  const size = 200;
+  const size = 240;
   const center = size / 2;
-  const radius = (size / 2) - 30; // Leave room for labels
+  const radius = (size / 2) - 38;
 
-  // Generate points for a 6-sided polygon (hexagon)
   const getPoint = (value: number, index: number) => {
-    const angle = (Math.PI * 2 * index) / 6 - Math.PI / 2; // Start at top
+    const angle = (Math.PI * 2 * index) / 6 - Math.PI / 2;
     const r = value * radius;
     return {
       x: center + r * Math.cos(angle),
@@ -33,16 +30,19 @@ export default function RadarChart({ data }: RadarChartProps) {
     };
   };
 
-  // Build the polygon path for the user's data
-  const dataPoints = TRAITS.map((trait, i) => getPoint(scoreMap[trait] || 0.1, i)); // 0.1 minimum so shape doesn't collapse
+  const dataPoints = TRAITS.map((trait, i) => getPoint(Math.max(scoreMap[trait] || 0.15, 0.12), i));
   const polygonPath = dataPoints.map(p => `${p.x},${p.y}`).join(" ");
-
-  // Build background grid (web)
   const gridLevels = [0.25, 0.5, 0.75, 1];
   
   return (
-    <div className="w-full flex flex-col items-center justify-center my-6">
-      <h3 className="text-sm font-display tracking-widest text-brand-violet uppercase mb-4">Cognitive Footprint</h3>
+    <div className="w-full flex flex-col items-center justify-center my-2">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="w-2 h-2 rounded-full bg-brand-blue" />
+        <h3 className="text-xs font-display tracking-wider text-text-main uppercase font-bold">
+          RIASEC Trait Orientation Profile
+        </h3>
+      </div>
+
       <svg width={size} height={size} className="overflow-visible">
         {/* Draw Web Grid */}
         {gridLevels.map((level, i) => {
@@ -54,8 +54,9 @@ export default function RadarChart({ data }: RadarChartProps) {
               points={path} 
               fill="none" 
               stroke="currentColor" 
-              strokeWidth="1"
-              className="text-text-muted/40" 
+              strokeWidth={i === gridLevels.length - 1 ? "1.5" : "1"}
+              strokeDasharray={i < gridLevels.length - 1 ? "3 3" : undefined}
+              className="text-border-subtle" 
             />
           );
         })}
@@ -72,7 +73,7 @@ export default function RadarChart({ data }: RadarChartProps) {
               y2={outerPoint.y} 
               stroke="currentColor" 
               strokeWidth="1" 
-              className="text-text-muted/40"
+              className="text-border-subtle"
             />
           );
         })}
@@ -80,30 +81,33 @@ export default function RadarChart({ data }: RadarChartProps) {
         {/* Draw User Data Polygon */}
         <polygon 
           points={polygonPath} 
-          fill="rgba(52, 211, 153, 0.25)" 
-          stroke="#34D399" 
-          strokeWidth="2.5" 
+          fill="rgba(26, 115, 232, 0.22)" 
+          stroke="#1A73E8" 
+          strokeWidth="2" 
         />
         
         {/* Draw Dots */}
         {dataPoints.map((p, i) => (
-          <circle key={i} cx={p.x} cy={p.y} r="4" fill="#06B6D4" /> 
+          <g key={i}>
+            <circle cx={p.x} cy={p.y} r="4" fill="#1A73E8" />
+            <circle cx={p.x} cy={p.y} r="2" fill="#FFFFFF" />
+          </g>
         ))}
 
         {/* Draw Labels */}
         {TRAITS.map((trait, i) => {
-          const labelPoint = getPoint(1.25, i); // Push labels outside
+          const labelPoint = getPoint(1.24, i);
           return (
             <text
               key={i}
               x={labelPoint.x}
               y={labelPoint.y}
               fill="currentColor"
-              fontSize="11"
-              fontWeight="800"
+              fontSize="9.5"
+              fontWeight="700"
               textAnchor="middle"
               dominantBaseline="middle"
-              className="uppercase tracking-wider font-display text-text-main font-extrabold"
+              className="uppercase tracking-wider font-display text-text-muted"
             >
               {trait.slice(0, 3)}
             </text>

@@ -1,70 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg-base: #E2E8F0; /* Body background slate-200 */
-  --color-bg-dark: #FFFFFF; /* App container background */
-  --color-bg-card: rgba(255, 255, 255, 0.88);
-  --color-border-glass: rgba(0, 0, 0, 0.12);
+  --color-bg-base: #F8FAFC;         /* Clean Google-style soft canvas */
+  --color-bg-surface: #FFFFFF;      /* Pure white card */
+  --color-bg-subtle: #F1F5F9;       /* Slate 100 soft background */
+  --color-border-subtle: #E2E8F0;   /* Slate 200 crisp border */
+  --color-border-focus: #1A73E8;    /* Google Blue focus border */
 
-  --color-brand-violet: #6D28D9; /* High-contrast violet for light mode */
-  --color-brand-mint: #047857;   /* High-contrast emerald for light mode */
-  --color-brand-pink: #BE185D;   /* High-contrast pink for light mode */
-  --color-brand-cyan: #0369A1;   /* High-contrast sky for light mode */
-  --color-brand-amber: #B45309;  /* High-contrast amber for light mode */
+  --color-brand-blue: #1A73E8;       /* Primary Google Blue */
+  --color-brand-blue-hover: #1557B0; /* Hover Blue */
+  --color-brand-blue-light: #E8F0FE; /* Google light blue tint */
+  --color-brand-teal: #0D9488;       /* Clean Teal for specific skills */
+  --color-brand-amber: #D97706;      /* Academic Amber */
 
-  --color-text-main: #0F172A;  /* Deep Slate 900 for ultra-sharp text */
-  --color-text-muted: #334155; /* Slate 700 for high-contrast secondary text */
+  --color-text-main: #0F172A;       /* Slate 900 primary text */
+  --color-text-muted: #475569;      /* Slate 600 secondary text */
+  --color-text-subtle: #94A3B8;     /* Slate 400 helper text */
 }
 
 .dark {
-  --color-bg-base: #050505; /* Body background */
-  --color-bg-dark: #0B0D12; /* App container background */
-  --color-bg-card: rgba(15, 23, 42, 0.78);
-  --color-border-glass: rgba(255, 255, 255, 0.14);
+  --color-bg-base: #0B1120;         /* Deep formal navy */
+  --color-bg-surface: #131E36;      /* Formal navy card */
+  --color-bg-subtle: #1C2B4C;       /* Slate navy container */
+  --color-border-subtle: #24355A;   /* Navy slate border */
+  --color-border-focus: #38BDF8;    /* Crisp light blue focus */
 
-  --color-brand-violet: #A78BFA; /* Bright violet for dark mode */
-  --color-brand-mint: #34D399;   /* Bright emerald for dark mode */
-  --color-brand-pink: #F472B6;   /* Bright pink for dark mode */
-  --color-brand-cyan: #38BDF8;   /* Bright sky for dark mode */
-  --color-brand-amber: #FBBF24;  /* Bright amber for dark mode */
+  --color-brand-blue: #38BDF8;       /* Crisp light blue */
+  --color-brand-blue-hover: #60A5FA; /* Blue hover */
+  --color-brand-blue-light: rgba(56, 189, 248, 0.15); /* Light blue tint */
+  --color-brand-teal: #2DD4BF;
+  --color-brand-amber: #FBBF24;
 
-  --color-text-main: #F8FAFC;  /* Slate 50 for max brightness */
-  --color-text-muted: #CBD5E1; /* Slate 300 for clear secondary text */
+  --color-text-main: #F8FAFC;       /* Slate 50 primary text */
+  --color-text-muted: #94A3B8;      /* Slate 400 secondary text */
+  --color-text-subtle: #64748B;     /* Slate 500 helper text */
 }
 
 @theme {
-  --font-display: var(--font-outfit), sans-serif;
-  --font-body: var(--font-plus-jakarta), sans-serif;
+  --font-display: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   --color-bg-base: var(--color-bg-base);
-  --color-bg-dark: var(--color-bg-dark);
-  --color-bg-card: var(--color-bg-card);
-  --color-border-glass: var(--color-border-glass);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-focus: var(--color-border-focus);
 
-  --color-brand-violet: var(--color-brand-violet);
-  --color-brand-mint: var(--color-brand-mint);
-  --color-brand-pink: var(--color-brand-pink);
-  --color-brand-cyan: var(--color-brand-cyan);
+  --color-brand-blue: var(--color-brand-blue);
+  --color-brand-blue-hover: var(--color-brand-blue-hover);
+  --color-brand-blue-light: var(--color-brand-blue-light);
+  --color-brand-teal: var(--color-brand-teal);
   --color-brand-amber: var(--color-brand-amber);
 
   --color-text-main: var(--color-text-main);
   --color-text-muted: var(--color-text-muted);
+  --color-text-subtle: var(--color-text-subtle);
 }
 
-/* Base resets & styles */
+/* Base resets & clean academic styles */
 body {
   background-color: var(--color-bg-base);
   color: var(--color-text-main);
-  /* Optional subtle pattern for desktop background */
-  background-image: radial-gradient(var(--color-border-glass) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
 
-/* Glassmorphism utility class */
-@utility glass-card {
-  background-color: var(--color-bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--color-border-glass);
+/* Crisp formal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Formal Google-Style Card Utilities */
+@utility formal-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+@utility formal-card-interactive {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    border-color: var(--color-brand-blue);
+    box-shadow: 0 4px 12px -2px rgba(26, 115, 232, 0.15);
+    transform: translateY(-1px);
+  }
+}

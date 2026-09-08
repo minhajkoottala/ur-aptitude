@@ -1,13 +1,21 @@
 "use client";
 
 import React, { forwardRef } from "react";
-import { Sparkles, LucideIcon, Zap, Target } from "lucide-react";
+import { LucideIcon, Briefcase, GraduationCap, CheckCircle2 } from "lucide-react";
 
 interface StoryShareCardProps {
   archetype: {
     id: string;
     traits: string[];
     primaryAptitude?: string;
+    recommendedStream?: {
+      category: string;
+      stream: string;
+      why: string;
+      electives?: string[];
+    };
+    broadCareers?: Array<string | { title: string; description: string; degrees: string; exams: string }>;
+    coreSkills?: string[];
   };
   viewData: {
     title: string;
@@ -26,16 +34,16 @@ const TRAITS = ["Realistic", "Investigative", "Artistic", "Social", "Enterprisin
 
 export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
   ({ archetype, viewData, BadgeIcon, rScores, isExplorer }, ref) => {
-    // Mini Radar Chart for the 9:16 card (360x640px)
+    // Mini Radar Chart for the 9:16 formal card (360x640px)
     const MAX_SCORE = 10;
     const scoreMap = (rScores || []).reduce((acc, curr) => {
       acc[curr.key] = Math.min(curr.count, MAX_SCORE) / MAX_SCORE;
       return acc;
     }, {} as Record<string, number>);
 
-    const size = 154;
+    const size = 130;
     const center = size / 2;
-    const radius = size / 2 - 24;
+    const radius = size / 2 - 20;
 
     const getPoint = (value: number, index: number) => {
       const angle = (Math.PI * 2 * index) / 6 - Math.PI / 2;
@@ -50,83 +58,79 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
     const polygonPath = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
     const gridLevels = [0.33, 0.66, 1];
 
+    const streamCategory = archetype.recommendedStream?.category || "Commerce";
+    const topCareer = archetype.broadCareers?.[0];
+    const topCareerTitle = typeof topCareer === "object" ? topCareer.title : topCareer;
+
     return (
       <div
         ref={ref}
         style={{
           width: "360px",
           height: "640px",
-          backgroundColor: "#07090E",
+          backgroundColor: "#FFFFFF",
           fontFamily: "var(--font-outfit), system-ui, -apple-system, sans-serif",
+          color: "#0F172A",
         }}
-        className="relative text-white flex flex-col justify-between p-4 sm:p-5 overflow-hidden select-none box-border"
+        className="relative flex flex-col justify-between p-5 overflow-hidden select-none box-border border border-slate-200"
       >
-        {/* Ambient Glowing Gradient Orbs */}
-        <div 
-          className="absolute -top-12 -left-12 w-48 h-48 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(124, 58, 237, 0.45) 0%, rgba(124, 58, 237, 0) 70%)" }}
-        />
-        <div 
-          className="absolute -bottom-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(244, 114, 182, 0.35) 0%, rgba(244, 114, 182, 0) 70%)" }}
-        />
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(6, 182, 212, 0) 70%)" }}
-        />
-
-        {/* Subtle decorative border outline */}
-        <div className="absolute inset-2 rounded-2xl border border-white/10 pointer-events-none" />
-
-        {/* 1. Header Bar */}
-        <div className="relative z-10 flex items-center justify-between pt-1 px-1">
-          <div className="flex items-center gap-1.5">
-            <div className="w-5 h-5 rounded-lg bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center">
-              <Sparkles size={11} className="text-white" />
+        {/* Top Header Banner */}
+        <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-[#1A73E8] flex items-center justify-center text-white text-xs font-bold">
+              ✦
             </div>
-            <span className="text-[11px] font-black tracking-widest text-white uppercase">
-              APTITUDE ENGINE
-            </span>
+            <div>
+              <span className="text-[11px] font-bold tracking-tight text-slate-900 block leading-tight">
+                Aptitude<span className="text-[#1A73E8]">Engine</span>
+              </span>
+              <span className="text-[8px] text-slate-500 uppercase tracking-wider block">
+                Standard Assessment Report
+              </span>
+            </div>
           </div>
-          <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/[0.12] border border-white/20 text-[9px] font-black text-slate-100 tracking-wider uppercase">
-            <span>{isExplorer ? "Explorer" : "Navigator"}</span>
-            <span className="text-purple-300 font-black">9:16</span>
-          </div>
+          <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-blue-50 text-[#1A73E8] border border-blue-100">
+            {isExplorer ? "Explorer (Ages 8-13)" : "Navigator (14+)"}
+          </span>
         </div>
 
-        {/* 2. Archetype Hero Block */}
-        <div className="relative z-10 flex flex-col items-center text-center mt-2">
-          {/* Badge Icon */}
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600/30 to-pink-600/20 border border-purple-400/40 flex items-center justify-center text-white mb-2 shadow-[0_0_24px_rgba(124,58,237,0.35)]">
-            <BadgeIcon size={28} className="text-purple-300" />
+        {/* Profile Card Header */}
+        <div className="text-center mt-1">
+          <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1A73E8] mx-auto mb-2 shadow-xs">
+            <BadgeIcon size={24} className="text-[#1A73E8]" />
           </div>
 
-          <div className="flex items-center gap-1 text-[9px] font-black tracking-widest text-pink-400 uppercase mb-1">
-            <Zap size={10} className="text-pink-400" />
-            <span>Cognitive Archetype</span>
-          </div>
+          <span className="text-[9px] font-bold uppercase tracking-widest text-[#1A73E8] block mb-0.5">
+            Verified Cognitive Profile
+          </span>
 
-          <h1 className="text-[22px] font-black text-white leading-tight mb-1.5 tracking-tight px-2">
+          <h1 className="text-[19px] font-bold text-slate-900 leading-tight mb-1 tracking-tight">
             {viewData.title}
           </h1>
 
-          <p className="text-[11px] text-cyan-300 italic font-semibold leading-snug px-4 line-clamp-2">
+          <p className="text-[10px] text-slate-600 font-medium leading-snug italic px-4 line-clamp-2">
             &ldquo;{viewData.tagline}&rdquo;
           </p>
-
-          {/* Primary Aptitude Pill */}
-          {archetype.primaryAptitude && (
-            <div className="mt-2 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-400/40 text-[9px] font-black text-purple-200">
-              <Target size={10} className="text-purple-300" />
-              <span>{archetype.primaryAptitude} Aptitude</span>
-            </div>
-          )}
         </div>
 
-        {/* 3. Radar Chart (RIASEC) */}
-        <div className="relative z-10 flex flex-col items-center my-auto py-1">
+        {/* +2 Stream Fit Banner */}
+        {archetype.recommendedStream && (
+          <div className="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mx-1">
+            <div className="flex items-center justify-between text-[9px] font-bold uppercase text-slate-500 mb-1">
+              <span>+2 Stream Fit</span>
+              <span className="text-[#1A73E8] bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
+                {streamCategory}
+              </span>
+            </div>
+            <div className="text-[11px] font-bold text-slate-900 leading-snug">
+              {archetype.recommendedStream.stream}
+            </div>
+          </div>
+        )}
+
+        {/* Mini RIASEC Radar */}
+        <div className="flex flex-col items-center my-0.5">
           <svg width={size} height={size} className="overflow-visible">
-            {/* Background Grid Rings */}
             {gridLevels.map((level, i) => {
               const points = TRAITS.map((_, j) => getPoint(level, j));
               const path = points.map((p) => `${p.x},${p.y}`).join(" ");
@@ -135,13 +139,12 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
                   key={i}
                   points={path}
                   fill="none"
-                  stroke="rgba(255, 255, 255, 0.2)"
+                  stroke="#E2E8F0"
                   strokeWidth="1"
                 />
               );
             })}
 
-            {/* Spokes / Axes */}
             {TRAITS.map((_, i) => {
               const outerPoint = getPoint(1, i);
               return (
@@ -151,39 +154,36 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
                   y1={center}
                   x2={outerPoint.x}
                   y2={outerPoint.y}
-                  stroke="rgba(255, 255, 255, 0.2)"
+                  stroke="#E2E8F0"
                   strokeWidth="1"
                 />
               );
             })}
 
-            {/* Radar Filled Shape */}
             <polygon
               points={polygonPath}
-              fill="rgba(52, 211, 153, 0.35)"
-              stroke="#34D399"
-              strokeWidth="2.5"
+              fill="rgba(26, 115, 232, 0.18)"
+              stroke="#1A73E8"
+              strokeWidth="1.75"
             />
 
-            {/* Radar Data Vertex Dots */}
             {dataPoints.map((p, i) => (
-              <circle key={i} cx={p.x} cy={p.y} r="3.5" fill="#38BDF8" stroke="#ffffff" strokeWidth="1.5" />
+              <circle key={i} cx={p.x} cy={p.y} r="2.5" fill="#1A73E8" />
             ))}
 
-            {/* RIASEC Labels */}
             {TRAITS.map((trait, i) => {
-              const labelPoint = getPoint(1.3, i);
+              const labelPoint = getPoint(1.28, i);
               return (
                 <text
                   key={i}
                   x={labelPoint.x}
                   y={labelPoint.y}
-                  fill="#E2E8F0"
-                  fontSize="9"
-                  fontWeight="900"
+                  fill="#64748B"
+                  fontSize="7.5"
+                  fontWeight="700"
                   textAnchor="middle"
                   dominantBaseline="middle"
-                  className="uppercase tracking-widest"
+                  className="uppercase tracking-wider"
                 >
                   {trait.slice(0, 3)}
                 </text>
@@ -192,48 +192,37 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
           </svg>
         </div>
 
-        {/* 4. Superpowers Summary */}
-        <div className="relative z-10 bg-white/[0.07] border border-white/15 rounded-xl p-3 mx-1">
-          <div className="text-[9px] font-black text-pink-400 uppercase tracking-widest mb-1.5 flex items-center gap-1">
-            <Sparkles size={11} className="text-pink-400" />
-            <span>Core Superpowers</span>
-          </div>
-          <div className="space-y-1">
-            {viewData.superpowers.slice(0, 3).map((sp, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-[11px] text-slate-100">
-                <span className="text-pink-400 text-[10px] font-extrabold">✦</span>
-                <span className="font-bold leading-tight truncate">{sp}</span>
-              </div>
-            ))}
-          </div>
+        {/* Career & Skills Summary */}
+        <div className="bg-slate-50 border border-slate-200 rounded-lg p-2.5 mx-1 space-y-1.5">
+          {topCareerTitle && (
+            <div className="flex items-center justify-between text-[10px] pb-1 border-b border-slate-200">
+              <span className="text-slate-500 font-semibold flex items-center gap-1">
+                <Briefcase size={11} className="text-[#1A73E8]" />
+                <span>Primary Pathway:</span>
+              </span>
+              <span className="text-slate-900 font-bold truncate max-w-[170px]">{topCareerTitle}</span>
+            </div>
+          )}
 
-          {/* Optional Stream Fit / Quest preview */}
-          {viewData.streamFit ? (
-            <div className="mt-2 pt-1.5 border-t border-white/15 flex items-center justify-between text-[9px] gap-2">
-              <span className="text-slate-300 uppercase font-bold shrink-0">Stream Fit</span>
-              <span className="text-emerald-400 font-extrabold text-right truncate flex-1">{viewData.streamFit}</span>
+          <div className="space-y-1">
+            <span className="text-[8px] font-bold text-slate-500 uppercase tracking-wider block">
+              Core Competencies:
+            </span>
+            <div className="grid grid-cols-2 gap-1 text-[9.5px]">
+              {(archetype.coreSkills || viewData.superpowers).slice(0, 4).map((skill, idx) => (
+                <div key={idx} className="flex items-center gap-1 text-slate-700 truncate">
+                  <CheckCircle2 size={10} className="text-[#1A73E8] shrink-0" />
+                  <span className="truncate">{skill}</span>
+                </div>
+              ))}
             </div>
-          ) : viewData.funQuests?.[0] ? (
-            <div className="mt-2 pt-1.5 border-t border-white/15 flex items-center justify-between text-[9px] gap-2">
-              <span className="text-slate-300 uppercase font-bold shrink-0">Top Quest</span>
-              <span className="text-cyan-300 font-semibold text-right truncate flex-1">{viewData.funQuests[0]}</span>
-            </div>
-          ) : null}
+          </div>
         </div>
 
-        {/* 5. Watermark & Branding Footer */}
-        <div className="relative z-10 pt-2 px-1 border-t border-white/15 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="text-[8px] font-black uppercase tracking-widest text-slate-300">
-              Discover your archetype
-            </span>
-            <span className="text-[11px] font-black text-white tracking-wide">
-              aptitude.app
-            </span>
-          </div>
-          <div className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 text-[9px] font-black text-white shadow-md">
-            #MyArchetype
-          </div>
+        {/* Card Footer */}
+        <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[9px] text-slate-400">
+          <span>Official Evaluation Summary</span>
+          <span className="font-semibold text-slate-600">aptitude.app</span>
         </div>
       </div>
     );
