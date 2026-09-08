@@ -300,7 +300,18 @@ function ResultsContent() {
               </span>
             </div>
             <p className="text-sm text-text-muted leading-relaxed pt-1">
-              Based on your analytical reasoning, spatial skills, and problem-solving approach, the <strong className="text-text-main">{viewData.simpleStream}</strong> stream is the most natural fit. It will leverage your core strengths rather than working against them.
+              {viewData.simpleStream === "Commerce" && (
+                <>Your numerical thinking, strategic planning, and practical decision-making align naturally with the <strong className="text-text-main">Commerce</strong> stream.</>
+              )}
+              {viewData.simpleStream === "Humanities" && (
+                <>Your expressive communication, social perception, and creative thinking align naturally with the <strong className="text-text-main">Humanities</strong> stream.</>
+              )}
+              {viewData.simpleStream === "Science" && (
+                <>Your logical problem-solving and analytical curiosity align naturally with the <strong className="text-text-main">Science</strong> stream.</>
+              )}
+              {!["Science", "Commerce", "Humanities"].includes(viewData.simpleStream) && (
+                <>Your cognitive aptitude and problem-solving strengths align naturally with the <strong className="text-text-main">{viewData.simpleStream}</strong> stream.</>
+              )}
             </p>
           </div>
 

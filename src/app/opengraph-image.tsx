@@ -194,7 +194,7 @@ export default async function Image() {
               letterSpacing: "0.5px",
             }}
           >
-            ur.aptitude.vercel.app
+            ur.aptitue.vercel.app
           </span>
         </div>
       </div>

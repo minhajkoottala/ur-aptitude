@@ -211,7 +211,7 @@ export const StoryShareCard = forwardRef<HTMLDivElement, StoryShareCardProps>(
             <span className="text-slate-300">•</span>
             <span>#WtsUrAptitude</span>
           </div>
-          <span className="font-bold text-slate-700">ur.aptitude.vercel.app</span>
+          <span className="font-bold text-slate-700">ur.aptitue.vercel.app</span>
         </div>
       </div>
     );
