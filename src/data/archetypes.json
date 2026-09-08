@@ -7,9 +7,9 @@
     ],
     "primaryAptitude": "Logical",
     "explorer": {
-      "title": "The Master Builder",
+      "title": "The Systems Thinker",
       "badge": "🛠️",
-      "tagline": "You figure out how complex gadgets, games, and machines work from the inside out!",
+      "tagline": "Enjoys understanding how gadgets, puzzles, and machines work from the inside out.",
       "superpowers": [
         "Solving intricate puzzles fast",
         "Designing & building models",
@@ -63,9 +63,9 @@
     ],
     "primaryAptitude": "Spatial",
     "explorer": {
-      "title": "The Imagitative Designer",
+      "title": "The Creative Explorer",
       "badge": "🎨",
-      "tagline": "You blend wild creativity with deep curiosity to create things nobody else has thought of!",
+      "tagline": "Blends imagination with curiosity to create original designs and visual concepts.",
       "superpowers": [
         "Visualizing 3D worlds",
         "Original storytelling",
@@ -119,9 +119,9 @@
     ],
     "primaryAptitude": "Numerical",
     "explorer": {
-      "title": "The Business Mind",
+      "title": "The Strategic Planner",
       "badge": "🚀",
-      "tagline": "You spot great ideas quickly and love turning fun plans into big team wins!",
+      "tagline": "Spots good ideas quickly and loves planning projects to achieve great results.",
       "superpowers": [
         "Quick math & trade-offs",
         "Convincing squad leader",
@@ -175,9 +175,9 @@
     ],
     "primaryAptitude": "Spatial",
     "explorer": {
-      "title": "The Hardware Wizard",
+      "title": "The Practical Tinkerer",
       "badge": "🔬",
-      "tagline": "You love hands-on experiments, modding gear, and figuring out what makes tech tick!",
+      "tagline": "Enjoys hands-on experiments, tinkering with gear, and understanding practical tech.",
       "superpowers": [
         "Hands-on tinkering",
         "3D visual memory",
@@ -231,9 +231,9 @@
     ],
     "primaryAptitude": "Verbal",
     "explorer": {
-      "title": "The Heart & Voice",
+      "title": "The Storyteller",
       "badge": "🌟",
-      "tagline": "You express feelings amazingly well and always make people feel connected and understood!",
+      "tagline": "Expresses ideas creatively and helps people feel connected and understood.",
       "superpowers": [
         "Word magic & storytelling",
         "Deep empathy",
@@ -287,9 +287,9 @@
     ],
     "primaryAptitude": "Logical",
     "explorer": {
-      "title": "The Master Organizer",
+      "title": "The Organizer",
       "badge": "📋",
-      "tagline": "You keep everything running smoothly, on schedule, and neatly organized!",
+      "tagline": "Keeps tasks neatly organized, on schedule, and running smoothly.",
       "superpowers": [
         "Super schedule management",
         "Accuracy & detail precision",
@@ -343,9 +343,9 @@
     ],
     "primaryAptitude": "Numerical",
     "explorer": {
-      "title": "The Number Ninja",
+      "title": "The Pattern Seeker",
       "badge": "🔢",
-      "tagline": "You see patterns in numbers that others miss and love cracking math puzzles!",
+      "tagline": "Notices numerical patterns easily and enjoys solving math puzzles.",
       "superpowers": [
         "Mental math speed",
         "Pattern spotter",
@@ -399,9 +399,9 @@
     ],
     "primaryAptitude": "Verbal",
     "explorer": {
-      "title": "The Captain",
+      "title": "The Team Leader",
       "badge": "👑",
-      "tagline": "You naturally lead the squad, inspire confidence, and bring out the best in everyone!",
+      "tagline": "Naturally guides group efforts, inspires confidence, and brings people together.",
       "superpowers": [
         "Rallying people together",
         "Persuasive speaking",
@@ -457,7 +457,7 @@
     "explorer": {
       "title": "The Digital Creator",
       "badge": "🎬",
-      "tagline": "You love making things look cool, editing videos, designing graphics, and building visuals!",
+      "tagline": "Loves designing graphics, editing media, and crafting digital visuals.",
       "superpowers": [
         "Eye for visual detail",
         "Hands-on creation",
@@ -511,9 +511,9 @@
     ],
     "primaryAptitude": "Logical",
     "explorer": {
-      "title": "The Sleuth",
+      "title": "The Detail Investigator",
       "badge": "🕵️",
-      "tagline": "Nothing gets past you! You love hunting for clues, finding mistakes, and solving mysteries.",
+      "tagline": "Enjoys investigating clues, spotting mistakes, and solving detailed mysteries.",
       "superpowers": [
         "Eagle-eye accuracy",
         "Deductive detective work",
@@ -567,9 +567,9 @@
     ],
     "primaryAptitude": "Verbal",
     "explorer": {
-      "title": "The Squad Anchor",
+      "title": "The Community Connector",
       "badge": "🤝",
-      "tagline": "You make sure everyone feels safe, included, and cared for in any group setting!",
+      "tagline": "Ensures group spaces feel welcoming, structured, and collaborative.",
       "superpowers": [
         "Friendly listening",
         "Keeping promises",
@@ -623,9 +623,9 @@
     ],
     "primaryAptitude": "Logical",
     "explorer": {
-      "title": "The Idea Catalyst",
+      "title": "The Concept Architect",
       "badge": "💡",
-      "tagline": "You come up with creative concepts that look amazing AND actually work in real life!",
+      "tagline": "Creates innovative concepts that are both creative and practical.",
       "superpowers": [
         "Creative vision + logic",
         "Cool product ideas",
@@ -679,9 +679,9 @@
     ],
     "primaryAptitude": "Spatial",
     "explorer": {
-      "title": "The Master Mechanic",
+      "title": "The Physical Builder",
       "badge": "🔩",
-      "tagline": "You love precision tools, clean assemblies, and making machines run flawlessly!",
+      "tagline": "Focuses on precision tools, clean assembly, and practical physical structures.",
       "superpowers": [
         "Spatial precision",
         "Tool mastery",
@@ -735,7 +735,7 @@
     ],
     "primaryAptitude": "Logical",
     "explorer": {
-      "title": "The Curiosity Champ",
+      "title": "The Scientific Explorer",
       "badge": "🧬",
       "tagline": "Curious about how nature, science, and the world work, with a knack for explaining ideas clearly.",
       "superpowers": [
@@ -791,9 +791,9 @@
     ],
     "primaryAptitude": "Numerical",
     "explorer": {
-      "title": "The Action Leader",
+      "title": "The Action Taker",
       "badge": "⚡",
-      "tagline": "You get things done fast in the real world and love building practical things that earn!",
+      "tagline": "Prefers practical real-world action and loves building things that bring value.",
       "superpowers": [
         "Practical hustle",
         "Real-world speed",
@@ -847,9 +847,9 @@
     ],
     "primaryAptitude": "Verbal",
     "explorer": {
-      "title": "The Story Creator",
+      "title": "The Expressive Communicator",
       "badge": "🎭",
-      "tagline": "You bring stories, plays, and ideas to life with amazing enthusiasm and charm!",
+      "tagline": "Brings stories, ideas, and presentations to life with enthusiasm and clarity.",
       "superpowers": [
         "Expressive speaking",
         "Creative imagination",
